@@ -5,13 +5,17 @@
   border-radius: 30px;
   margin-bottom: 30px;
   padding: 10px 20px 10px 20px;
-  font-family: 'Daruma';
+  font-family: 'Exo 2';
+  font-weight: bold;
+
   background-color: rgb(218, 206, 206);
 
  }
  .title{
   text-align: center;
   font-size: 45px;
+  font-family: "Daruma";
+  font-weight: bold;
  }
  .hz-separator{
   border: 1px solid rgb(68, 67, 67);

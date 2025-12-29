@@ -8,7 +8,8 @@
   margin: 0px 65px 20px 65px;
   padding: 5px 30px 70px 30px;
   font-size: 1.5rem;
-  font-family: 'Daruma';
+  font-family: 'Exo 2';
+  font-weight: bold;
   transition: height .3s, transform .2s;
   overflow: hidden;
   &:hover{
