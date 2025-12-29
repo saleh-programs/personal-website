@@ -7,11 +7,14 @@ import Home from './pages/Home.jsx'
 import Education from './pages/Education.jsx';
 import Projects from './pages/Projects.jsx';
 import Experience from './pages/Experience.jsx';
+import Animation from './assets/Animation.jsx';
 
 function App() {
 
   return (
-    <>
+    <div className='intro-container dragIn'>
+      <Animation path="/willowIntro?16" type="loop" loopStart={11} speed={6}/> 
+      <img src="/bench.png" alt="willow" />
       <div className='page-container'>
         <Navbar/>
         <div className='routes'>
@@ -24,8 +27,7 @@ function App() {
         </div>
         <Footer/>
       </div>
-
-    </>
+    </div>
   )
 }
 
