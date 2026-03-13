@@ -88,6 +88,10 @@ html, #root, body{
   margin: 0;
   /* transform: translateX(50%); */
   position: relative;
+
+  &::-webkit-scrollbar {
+  display: none;
+}
 }
 
 
@@ -104,7 +108,7 @@ html, #root, body{
   justify-content: space-between;
   align-items: center;
   width: 100%;
-    gap: 10px;
+  gap: 10px;
 }
 
 .columncontainer{

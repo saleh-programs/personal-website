@@ -4,30 +4,37 @@ import styles from '../../styles/components/Bar.module.css'
 import contentDict from './InnerContent';
 
 function Bar({name, contentID, date, link}){
-  const [status,setStatus] = useState(false);
-  const [size,setSize] = useState({width: window.innerWidth,height: window.innerHeight})
-  useEffect(() => {
-    function handleResize() {
-      setSize({
-        width: window.innerWidth,
-        height: window.innerHeight
-      });
-    }
-
-    window.addEventListener('resize', handleResize);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
+  const [isExpanded,setIsExpanded] = useState(false);
+  const [contentMaxHeight, setContentMaxHeight] = useState("0");
   const elem = useRef(null);
+
+  useEffect(() => {
+    if (!elem.current) return;
+
+    let currentMax = 0;
+    const observer = new ResizeObserver(() => {
+      if (isExpanded && currentMax !== `${elem.current.scrollHeight}px`){  
+        currentMax = `${elem.current.scrollHeight}px`
+        setContentMaxHeight(currentMax)
+      }else if (!isExpanded && currentMax !== `0`){
+        currentMax = "0"
+        setContentMaxHeight(currentMax)
+      }
+    })
+    observer.observe(elem.current);
+
+    return () => {
+      observer.disconnect()
+    }
+  },[isExpanded])
 
   return(
       <div className={styles['dropdown-ref']}>
-        <div className={`${styles.dropdown} ${status ? styles.rotateDropdown:""}`} onClick={()=>{setStatus(!status);}}>
-          &gt;
+        <div className={`${styles.dropdown} ${isExpanded ? styles.rotateDropdown:""}`} onClick={()=>setIsExpanded(prev => !prev)}>
+          <span>&gt;</span>
         </div>
-        <div className={styles.bar} style={{height: status ? (120 + elem.current.scrollHeight)+"px" : "60px"}} onClick={()=>{setStatus(!status);}}>
-          <div className={"rowcontainer"} style={{marginBottom:"20px"}}>
+        <div className={styles.bar} onClick={()=>setIsExpanded(prev => !prev)}>
+          <div className={styles.barHeader}>
             <div className={styles.left}>
               {name}
             </div>
@@ -42,7 +49,7 @@ function Bar({name, contentID, date, link}){
               </div> 
             }
           </div>
-          <div ref={elem}>
+          <div className={styles.contentContainer} style={{maxHeight: contentMaxHeight}} ref={elem}>
             {contentDict[contentID]}
           </div>
         </div>
