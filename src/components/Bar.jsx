@@ -3,7 +3,7 @@ import styles from '../../styles/components/Bar.module.css'
 
 import contentDict from './InnerContent';
 
-function Bar({name, contentID, date, link}){
+function Bar({name, subname, contentID, date, link}){
   const [isExpanded,setIsExpanded] = useState(false);
   const [contentMaxHeight, setContentMaxHeight] = useState("0");
   const elem = useRef(null);
@@ -37,6 +37,10 @@ function Bar({name, contentID, date, link}){
           <div className={styles.barHeader}>
             <div className={styles.left}>
               {name}
+              {subname && <span style={{
+                fontSize: ".7em",
+                opacity: ".6"
+              }}><br />{subname}</span>}
             </div>
             {link 
             ? 

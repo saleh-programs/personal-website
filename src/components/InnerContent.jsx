@@ -110,7 +110,6 @@ function AchievementsEducation(){
     </div>
   );
 }
-
 function ProjectPlaceProject(){
     return(
       <div className={styles.inside}> 
@@ -278,37 +277,51 @@ function CarMaintenanceProject(){
       </div>
     );
 }
-
 function SecureS3FSProject(){
     return(
       <div className={styles.inside}> 
-          <div className={styles.demo_imgs_car}> 
+          <div className={styles.demo_imgs_s3fs}> 
             <img src={s3fsflowGIF} alt="" />
             <img src={s3fsflowPNG} alt="" />
-            <img src={car3} alt="" />
+
+            <iframe src="https://www.youtube.com/embed/_VpKkgdseCU?autoplay=1&mute=1&loop=1&playlist=_VpKkgdseCU" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen/>
 
           </div>
           <div className={"rowcontainer"}>
             <div className={styles.description}>
               <h2 >Description</h2>
-              Get reminders to service your vehicle and keep track of what needs maintenance!
-              <br/><br/>
-              A full-stack car maintenance app with the following features:
+              An extension of the S3FS tool that allows users to upload their files to the cloud as: 
               <ul>
-                <li>Create Account / Log In</li>
-                <li>Find Local Services</li>
-                <li>Add / View Service History</li>
-                <li>View Service Deadlines</li>
-                <li>AI Customer Support</li>
-                <li>View Browser Notifications</li>
+                <li>Encrypted</li>
+                <li>Compressed</li>
+                <li>Encrypted and Compressed</li>
+                <li>Standard <small style={{fontSize: ".8em"}}>(no modification)</small></li>
               </ul>
-               Integrates APIs for maps, images, geocoding, and AI.<br/><br />
+
+              This project is heavily based in C++. 
+              <br />This implementation is fully compatible with base S3FS,
+              yet adds encryption and compression capabilities. 
+              <br /><br />You'll have the option of passing the following arguments: 
+              <ul>
+                <li><strong>"secure_mode":</strong> Specifies how you'd like files to be uploaded.</li>
+                <li><strong>"crypt_password":</strong>  The password used for all encryption and decryption.</li>
+              </ul>
+ 
+
+              <h3><strong>What is S3?</strong></h3>
+              S3 is an Amazon service short for "Simple Storage Service". It allows you to store files on the cloud.
+              <h3><strong>What is S3FS?</strong></h3>
+              S3FS is a command line tool that works with S3, allowing users to interact with the files stored on S3 as if they were on their local
+              file system. 
+              <br /><br />
+               
               <a href="https://github.com/saleh-programs/Car_Maintenance_Site" target='_blank'>Github Repo</a>
             </div>
             <div className={styles.concepts}>
               <h2>Concepts & Technologies</h2>
               <ul>
-                <li>Database: SQLite</li>
+                <li>Language(s): C++</li>
+                <li>Base Tool: s3fs</li>
                 <li>Frontend: React</li>
                 <li>Backend: NodeJS</li>
                 <li>Hosting: Netlify (Frontend), Render (Backend)</li>
@@ -337,7 +350,6 @@ function SecureS3FSProject(){
       </div>
     );
 }
-
 function FileAdventurerProject(){
       return(
       <div className={styles.inside}> 

@@ -21,8 +21,9 @@ function Experience(){
     </div>
 
     <div className={styles.page_divider}>
-        <div style={{flex:'4'}}>
-          <Bar name="La Gelati Ice Cream" contentID='laGelati' date="09/2021-10/2022"/>
+        <div>
+          <Bar name="WSU Engineering Camp" subname={"Lead Coding Instructor"} contentID='laGelati' date="09/2021-10/2022"/>
+          <Bar name="La Gelati Ice Cream" subname={"Assistant Manager"} contentID='laGelati' date="09/2021-10/2022"/>
         </div>
         <div style={{flex:'1'}}>
           <div className={styles.skills}>
