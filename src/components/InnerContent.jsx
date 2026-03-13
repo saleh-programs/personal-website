@@ -30,6 +30,13 @@ import fileadv1 from "../assets/images/fileadv1.gif"
 import fileadv2 from "../assets/images/fileadv2.gif" 
 import fileadv3 from "../assets/images/fileadv3.gif" 
 import fileadv4 from "../assets/images/fileadv4.gif" 
+import projectplace1 from "../assets/images/projectplace_solo.gif"
+import projectplace2 from "../assets/images/projectplace_chat.gif"
+import projectplace3 from "../assets/images/projectplace_whiteboard.gif"
+import projectplace4 from "../assets/images/projectplace_video.gif"
+import s3fsflowGIF from "../assets/images/s3fs_flow.gif"
+import s3fsflowPNG from "../assets/images/s3fs_flow.png"
+
 
 function FordsonEducation(){
   return(
@@ -103,6 +110,115 @@ function AchievementsEducation(){
     </div>
   );
 }
+
+function ProjectPlaceProject(){
+    return(
+      <div className={styles.inside}> 
+          <div className={styles.demo_imgs_car}> 
+            <img src={projectplace1} alt="" />
+            <img src={projectplace2} alt="" />
+            <img src={projectplace3} alt="" />
+            <img src={projectplace4} alt="" />
+
+          </div>
+          <div className={"rowcontainer"}>
+            <div className={styles.description}>
+              <h2 >Description</h2>
+              Project Place is a communication platform for teams inspired by what I believed was missing from similar applications.
+              <br /><br />
+              Teams need several forms of communication. They often need to send messages, upload files, have meetings, or illustrate ideas to others in the team.
+              This project was built with these ideas in mind.
+
+              <h3>Major Features</h3>
+              <ul>
+                <li>Chat
+                  <ul>
+                    <li>Send messages and files</li>
+                  </ul>
+                </li>
+                <li>Video Chat
+                  <ul>
+                    <li>Call members individually</li>
+                    <li>Call the entire team</li>
+                  </ul>
+                </li>
+                <li>Collaborative Whiteboard 
+                  <ul>
+                    <li>Explain ideas visually</li>
+                    <li>Add to a member's visual</li>
+                    <li>Draw diagrams</li>
+                    <li>Mess with eachother!</li>
+                  </ul>
+                </li>
+              </ul>
+              <h3>All Features</h3>
+              <ul>
+                <li>Signup + Login</li>
+                <li>Create + join rooms</li>
+                <li>Change site appearance</li>
+                <li>Select, upload, and change avatar</li>
+                <li>See who's online</li>
+                <br />
+                <li style={{listStyle: "none"}}><strong>Chat</strong></li>
+                <li>Send messages + files</li>
+                <li>Edit + delete chats</li>
+                <li>Show pending/failed chats</li>
+                <br />
+                <li style={{listStyle: "none"}}><strong>Video Chat</strong></li>
+                <li>Send individual call requests</li>
+                <li>Join group calls</li>
+                <li>Show + hide video or audio</li>
+                <br />
+                <li style={{listStyle: "none"}}><strong>Whiteboard</strong></li>
+                <li>Includes many tools: <ul>
+                  <li>Draw + Erase + Fill + Clear</li>
+                  <li>Select + Move</li>
+                  <li>Undo + Redo</li>
+                  <li>Import images</li>
+                  <li>Download entire or selected region</li>
+                  <li>...other tools</li>
+                  </ul></li>
+                <li>Build together in real time</li>
+                <li>Saved states</li>
+
+              </ul>
+              <a href="https://github.com/saleh-programs/ProjectPlace" target='_blank'>Github Repo</a>
+            </div>
+            <div className={styles.concepts}>
+              <h2>Concepts & Technologies</h2>
+              <ul>
+                <li>Database: MySQL</li>
+                <li>Frontend: Next.js</li>
+                <li>Backend: 
+                  <ul>
+                    <li>REST API: Flask / Python</li>
+                    <li>Websocket Server: Express / JavaScript</li>
+                    <li>Turn Server: Coturn</li>
+                  </ul>
+                </li>
+                <li>Hosting: AWS EC2</li>
+                <li>Image Storage: AWS S3 </li>
+                <br />
+                <li>UI / UX design</li>
+                <li>Chat</li>
+                <ul>
+                  <li>Infinite Scroll</li>
+                  <li>Virtualization</li>
+                  <li>Loading File Logic/Animation</li>
+                </ul>
+                <li>Whiteboard</li>
+                <ul>
+                  <li>Canvas / Canvas Context API Fluency</li>
+                  <li>Queue Ordering</li>
+                  <li>WASM optimizations</li>
+
+                </ul>
+              </ul>
+              </div>
+          </div>
+      </div>
+    );
+}
 function CarMaintenanceProject(){
     return(
       <div className={styles.inside}> 
@@ -162,6 +278,66 @@ function CarMaintenanceProject(){
       </div>
     );
 }
+
+function SecureS3FSProject(){
+    return(
+      <div className={styles.inside}> 
+          <div className={styles.demo_imgs_car}> 
+            <img src={s3fsflowGIF} alt="" />
+            <img src={s3fsflowPNG} alt="" />
+            <img src={car3} alt="" />
+
+          </div>
+          <div className={"rowcontainer"}>
+            <div className={styles.description}>
+              <h2 >Description</h2>
+              Get reminders to service your vehicle and keep track of what needs maintenance!
+              <br/><br/>
+              A full-stack car maintenance app with the following features:
+              <ul>
+                <li>Create Account / Log In</li>
+                <li>Find Local Services</li>
+                <li>Add / View Service History</li>
+                <li>View Service Deadlines</li>
+                <li>AI Customer Support</li>
+                <li>View Browser Notifications</li>
+              </ul>
+               Integrates APIs for maps, images, geocoding, and AI.<br/><br />
+              <a href="https://github.com/saleh-programs/Car_Maintenance_Site" target='_blank'>Github Repo</a>
+            </div>
+            <div className={styles.concepts}>
+              <h2>Concepts & Technologies</h2>
+              <ul>
+                <li>Database: SQLite</li>
+                <li>Frontend: React</li>
+                <li>Backend: NodeJS</li>
+                <li>Hosting: Netlify (Frontend), Render (Backend)</li>
+                <li>Password Hashing: Bcrypt</li>
+                <li>Error Handling: Consistent try/catch error handling</li>
+                <li>Documentation: All functions/actions commented </li>
+                <li>External APIs:
+                  <ul style={{fontSize:'.8em'}}> 
+                  <li>Groq (for AI support)</li> 
+                  <li>Web Push (for notifications)</li>
+                  <li>Google Places (for business images)</li>
+                  <li>Overpass (for finding nearby mechanics / geocoding)</li> 
+                  </ul>
+                </li>
+                <li>Miscellaneous:
+                  <ul style={{fontSize:'.8em'}}> 
+                  <li>Input Validation</li> 
+                  <li>Large Vehicle Database</li>
+                  <li>Local Storage</li>
+                  <li>Overpass (for finding nearby mechanics / geocoding)</li> 
+                  </ul>
+                </li>
+              </ul>
+              </div>
+          </div>
+      </div>
+    );
+}
+
 function FileAdventurerProject(){
       return(
       <div className={styles.inside}> 
@@ -346,11 +522,13 @@ const contentDict = {
   "fordson": <FordsonEducation/>,
   "wayne": <WayneEducation/>,
   "achievements": <AchievementsEducation/>,
+  "projectPlace": <ProjectPlaceProject/>,
   "carMaintenance": <CarMaintenanceProject/>,
   "fileAdventure": <FileAdventurerProject/>,
   "physicsTool": <PhysicsToolProject/>,
   "platformer": <PlatformerProject/>,
   "stockMarket": <StockMarketProject/>,
-  "laGelati": <LaGelatiExperience/>
+  "laGelati": <LaGelatiExperience/>,
+  "secureS3FS": <SecureS3FSProject/>
 }
 export default contentDict;
