@@ -123,16 +123,18 @@ function ProjectPlaceProject(){
           <div className={"rowcontainer"}>
             <div className={styles.description}>
               <h2 >Description</h2>
-              Project Place is a communication platform for teams inspired by what I believed was missing from similar applications.
+              Project Place is a communication platform for teams inspired by what I believe is missing from similar applications.
               <br /><br />
-              Teams need several forms of communication. They often need to send messages, upload files, have meetings, or illustrate ideas to others in the team.
+              Teams often need to send messages, share files, hold meetings, and illustrate ideas to others.
               This project was built with these ideas in mind.
 
               <h3>Major Features</h3>
               <ul>
                 <li>Chat
                   <ul>
-                    <li>Send messages and files</li>
+                    <li>Send / Edit / Delete messages</li>
+                    <li>Display message statuses</li>
+                    <li>Share files</li>
                   </ul>
                 </li>
                 <li>Video Chat
@@ -144,74 +146,77 @@ function ProjectPlaceProject(){
                 <li>Collaborative Whiteboard 
                   <ul>
                     <li>Explain ideas visually</li>
-                    <li>Add to a member's visual</li>
-                    <li>Draw diagrams</li>
-                    <li>Mess with eachother!</li>
+                    <li>Build together in real time</li>
+                    <li>Load a saved history</li>
+                    <li>Includes many tools: 
+                      <ul>
+                        <li>Draw / Erase / Fill / Clear</li>
+                        <li>Select / Move</li>
+                        <li>Undo / Redo</li>
+                        <li>Import Images</li>
+                        <li>Download canvas / selected region</li>
+                        <li>...other tools</li>
+                      </ul>
+                    </li>
                   </ul>
                 </li>
               </ul>
-              <h3>All Features</h3>
+              <h3>Other Features</h3>
               <ul>
                 <li>Signup + Login</li>
                 <li>Create + join rooms</li>
+                <li>Create + join protected rooms</li>
                 <li>Change site appearance</li>
                 <li>Select, upload, and change avatar</li>
-                <li>See who's online</li>
-                <br />
-                <li style={{listStyle: "none"}}><strong>Chat</strong></li>
-                <li>Send messages + files</li>
-                <li>Edit + delete chats</li>
-                <li>Show pending/failed chats</li>
-                <br />
-                <li style={{listStyle: "none"}}><strong>Video Chat</strong></li>
-                <li>Send individual call requests</li>
-                <li>Join group calls</li>
-                <li>Show + hide video or audio</li>
-                <br />
-                <li style={{listStyle: "none"}}><strong>Whiteboard</strong></li>
-                <li>Includes many tools: <ul>
-                  <li>Draw + Erase + Fill + Clear</li>
-                  <li>Select + Move</li>
-                  <li>Undo + Redo</li>
-                  <li>Import images</li>
-                  <li>Download entire or selected region</li>
-                  <li>...other tools</li>
-                  </ul></li>
-                <li>Build together in real time</li>
-                <li>Saved states</li>
-
+                <li>View active members</li>
               </ul>
               <a href="https://github.com/saleh-programs/ProjectPlace" target='_blank'>Github Repo</a>
             </div>
             <div className={styles.concepts}>
               <h2>Concepts & Technologies</h2>
               <ul>
+                <strong>Technologies</strong>
+                <li>Language(s): JavaScript, Python, HTML, CSS <br />(C++ for some whiteboard actions)</li>
                 <li>Database: MySQL</li>
                 <li>Frontend: Next.js</li>
                 <li>Backend: 
                   <ul>
-                    <li>REST API: Flask / Python</li>
-                    <li>Websocket Server: Express / JavaScript</li>
+                    <li>REST API: Flask</li>
+                    <li>Media SFU + Signaling Server: Node.js </li>
                     <li>Turn Server: Coturn</li>
                   </ul>
                 </li>
                 <li>Hosting: AWS EC2</li>
                 <li>Image Storage: AWS S3 </li>
+                <li>Signup + Login + Access Tokens: Auth0</li>
+                <li>Group Calls: mediasoup</li>
+                <li>Signaling: WebSockets</li>
                 <br />
-                <li>UI / UX design</li>
+                <strong>Concepts</strong>
                 <li>Chat</li>
                 <ul>
                   <li>Infinite Scroll</li>
                   <li>Virtualization</li>
-                  <li>Loading File Logic/Animation</li>
+                  <li>Loading File Logic/Animations</li>
                 </ul>
                 <li>Whiteboard</li>
                 <ul>
-                  <li>Canvas / Canvas Context API Fluency</li>
-                  <li>Queue Ordering</li>
+                  <li>Canvas + 2D Context API Fluency</li>
+                  <li>Operations queue</li>
                   <li>WASM optimizations</li>
-
+                  <li>Optimized canvas storage (snapshot + recent instructions)</li>
                 </ul>
+                <li>Video Chat</li>
+                <ul>
+                  <li>SFU server management</li>
+                  <li>Debugging packet delivery</li>
+                  <li>Managing video / audio tracks</li>
+                </ul>
+                <li>UI / UX design</li>
+                <li>Signup + Login</li>
+                <li>Token enforced permissions</li>
+                <li>Direct uploads with temporary S3 URLs</li>
+                
               </ul>
               </div>
           </div>
@@ -243,34 +248,37 @@ function CarMaintenanceProject(){
                 <li>View Browser Notifications</li>
               </ul>
                Integrates APIs for maps, images, geocoding, and AI.<br/><br />
+               Worked with a team of 3 people as the primary developer and team lead, implementing nearly all core features end to end (except the initial "Find local services" page, the home page, and some frontend work).
+               <br /><br />
+               
               <a href="https://github.com/saleh-programs/Car_Maintenance_Site" target='_blank'>Github Repo</a>
             </div>
             <div className={styles.concepts}>
               <h2>Concepts & Technologies</h2>
               <ul>
+                <strong>Technologies</strong>
+                <li>Language(s): JavaScript, Python</li>
                 <li>Database: SQLite</li>
                 <li>Frontend: React</li>
-                <li>Backend: NodeJS</li>
-                <li>Hosting: Netlify (Frontend), Render (Backend)</li>
-                <li>Password Hashing: Bcrypt</li>
-                <li>Error Handling: Consistent try/catch error handling</li>
-                <li>Documentation: All functions/actions commented </li>
-                <li>External APIs:
-                  <ul style={{fontSize:'.8em'}}> 
-                  <li>Groq (for AI support)</li> 
-                  <li>Web Push (for notifications)</li>
-                  <li>Google Places (for business images)</li>
-                  <li>Overpass (for finding nearby mechanics / geocoding)</li> 
+                <li>Backend: Node.js</li>
+                <li>Hosting: 
+                  <ul>
+                    <li>Frontend: Netlify</li>
+                    <li>Backend: Render</li>
                   </ul>
                 </li>
-                <li>Miscellaneous:
-                  <ul style={{fontSize:'.8em'}}> 
-                  <li>Input Validation</li> 
-                  <li>Large Vehicle Database</li>
-                  <li>Local Storage</li>
-                  <li>Overpass (for finding nearby mechanics / geocoding)</li> 
-                  </ul>
-                </li>
+                <li>AI chatbot: Groq API</li>
+                <li>Guided data generation with OpenAI API</li>
+                <li>Google Places API for business images</li>
+                <li>Overpass API for nearby mechanics / geocoding</li>
+                <br />
+                <strong>Concepts</strong>
+                <li>Automating data generation with AI  <br />(using reference vehicle data)</li>
+
+                <li>Password hashing</li>
+                <li>Consistent error handling</li>
+                <li>Dev-friendly / All functions + complex flows commented</li>
+                <li>Input Validation</li>
               </ul>
               </div>
           </div>
@@ -320,30 +328,23 @@ function SecureS3FSProject(){
             <div className={styles.concepts}>
               <h2>Concepts & Technologies</h2>
               <ul>
+                <strong>Technologies</strong>
+
                 <li>Language(s): C++</li>
                 <li>Base Tool: s3fs</li>
-                <li>Frontend: React</li>
-                <li>Backend: NodeJS</li>
-                <li>Hosting: Netlify (Frontend), Render (Backend)</li>
-                <li>Password Hashing: Bcrypt</li>
-                <li>Error Handling: Consistent try/catch error handling</li>
-                <li>Documentation: All functions/actions commented </li>
-                <li>External APIs:
-                  <ul style={{fontSize:'.8em'}}> 
-                  <li>Groq (for AI support)</li> 
-                  <li>Web Push (for notifications)</li>
-                  <li>Google Places (for business images)</li>
-                  <li>Overpass (for finding nearby mechanics / geocoding)</li> 
-                  </ul>
-                </li>
-                <li>Miscellaneous:
-                  <ul style={{fontSize:'.8em'}}> 
-                  <li>Input Validation</li> 
-                  <li>Large Vehicle Database</li>
-                  <li>Local Storage</li>
-                  <li>Overpass (for finding nearby mechanics / geocoding)</li> 
-                  </ul>
-                </li>
+                <li>AWS S3</li>
+                <li>Encryption / Decryption: <br />
+                  OpenSSL using aes-256-cbc</li>
+                <li>Compression / Decompression: <br /> zstd</li>
+                <li>Linux OS</li>
+                <li>AWS S3</li>
+                <br />
+                <strong>Concepts</strong>
+                <li>File level Compression</li>
+                <li>Chunk level Encryption </li>
+                <li>Multithreading</li>
+                <li>Memory Management</li>
+                <li>Legacy systems</li>
               </ul>
               </div>
           </div>
@@ -365,7 +366,9 @@ function FileAdventurerProject(){
               <h2>Description</h2>
               "File Adventurer" is my take on a cleaner, more intuitive version of Windows' "File Explorer". I built it to reduce clutter and add features I felt were missing in the built in file system, based on my frequent use of it.
               <br/><br/>
-              Designed a REST API (20+ endpoints) for file operations including optimized recursive search and a priority queue based "Recent Folders" feature. Tailored application to the user experience by implementing expected behaviors such as allowing navigation while dragging and using lazy loading to show more entries as the user scrolls. Created custom assets and animations to add a unique personality. <br/><br />
+              Includes an optimized recursive search and a priority queue based "Recent Folders" feature. 
+              <br /><br /> 
+              Implemented many conveniences such as allowing navigation while dragging and offering different "view modes". <br /> I created some custom assets and animations to add a unique personality. <br/><br />
               Features include:<br />
               <ul>
                 <li>Folder Navigation / Open Files</li>
@@ -383,14 +386,20 @@ function FileAdventurerProject(){
             <div className={styles.concepts}>
               <h2>Concepts & Technologies</h2>
               <ul>
+                <strong>Technologies</strong>
+                <li>Language(s): JavaScript, Python</li>
                 <li>Database: SQLite</li>
                 <li>Frontend: React</li>
                 <li>Backend: FastAPI</li>
-                <li>Deployment: Tauri (to package as desktop app)</li>
-                <li>Error Handling: Consistent internal debugging logs + fallback mechanisms across all requests and responses</li>
-                <li>Documentation: Provided consistent, dev-friendly descriptions of all functions and complex behaviors</li>
-                <li>Infinite scroll: implemented with lazy loading for performance</li>
-                <li>Recent Folders: Quick Access implemented with priority queue</li>
+                <li>Deployment: Tauri <br />(to package as desktop app)</li>
+                <br />
+                <strong>Concepts</strong>
+                <li>Consistent error handling  </li>
+                <li>Dev-friendly documentation for any complex behaviors</li>
+                <li>Priority queue based quick access </li>
+                <li>Infinite scroll</li>
+                <li>Lazy loading</li>
+                <li>UI / UX Design</li>
               </ul>
             </div>
           </div>
@@ -419,20 +428,22 @@ function PhysicsToolProject(){
             <div className={styles.concepts}>
               <h2>Concepts & Technologies</h2>
               <ul>
-                <li>Built in Python with Pygame Library</li>
-                <li>OpenAI API</li>
+                <strong>Technologies</strong>
+                <li>Language(s): Python</li>
+                <li>2D Graphics Library : Pygame</li>
+                <li>AI chatbot: OpenAI API</li>
+                <br />
+                <strong>Concepts</strong>
                 <li>Motion Physics</li>
                 <li>State Management</li>
                 <li>Collision Logic</li>
                 <li>Camera System</li>
                 <li>Performance Optimizations</li>
-                <li>Vital Classes: 
-                  <ul style={{fontSize:'.8em'}}>
-                    <li>ProblemSolver Class: <br />Accepts any combination of randomized inputs to solve problems</li>
-                    <li>StoryManager Class: <br />Allows for the easy creation of levels with timing events</li>
-                    <li>Trails, Balloons, Textboxes, & more</li>
-                  </ul> 
-                </li>
+                <li>Created reusable level based design framework</li>
+                <li>Problem generation system</li>
+                <li>Custom trails, textboxes, & more</li>
+                <li>UI / UX Design</li>
+
               </ul>
               </div>
           </div>
@@ -454,21 +465,29 @@ function PlatformerProject(){
               <h2>Description</h2>
               A Hollow Knight inspired game made in Pygame with custom animations! The player can slash, shoot, and swing faced against enemies with unique logic!
               <br/><br/>
-              Gained skills navigating a large project and working with more complex solutions.<br/><br />
+              I gained a lot of skills navigating this somewhat large project and working with more complex solutions.<br/>
+              Although unfinished, a lot was learned from all the effort dumped into custom enemy behaviors, the terrain system, camera perspectives, and much more. 
+              <br /> <br />
               <a href="https://github.com/saleh-programs/Platformer_Game.git" target='_blank'>Github Repo</a>
             </div>
             <div className={styles.concepts}>
               <h2>Concepts & Technologies</h2>
               <ul>
-                <li>Built in Python with Pygame Library</li>
+                <strong>Technologies</strong>
+                <li>Language(s): Python</li>
+                <li>2D Graphics Library : Pygame</li>
+                <li>Map Editing: Tiled</li>
+                <br />
+                <strong>Concepts</strong>
                 <li>Motion Physics</li>
                 <li>State Management</li>
                 <li>Health/Damage System</li>
                 <li>Camera System</li>
+                <li>Custom Multi-layered Parallax Background</li>
                 <li>Melee, Shooting, and Grappling Hook Mechanics</li>
                 <li>Enemy Behavior Logic</li> 
                 <li>Performance Optimizations</li>
-                <li>Tiled (for map editing)</li>
+
               </ul>
             </div>
           </div>
@@ -488,19 +507,36 @@ function StockMarketProject(){
             <div className={styles.description}>
               <h2>Description</h2>
               Used 2 machine learning models (ANN and Decision Tree) to analyze trends in individual CPI sectors (gasoline, food, energy, etc.) and predict if overall inflation will rise. The F1 scores (performance scores) for both models are provided.<br/><br/>
+              
               ANN model: 92% <br/>
               Decision Tree Model: 80%<br/><br />
+              
+              Worked with a team of 6, taking a lead coordinating meetings and assigning sections for the final report. Completed all decision tree / ANN modeling, performance measuring, and data processing.  <br />
+              (All code within the repository is written by myself)<br />
+              <br /><br />
+              Note: The model does somewhat struggle due to limited data and some existing bias. However, it still reveals inflation trends with reasonable accuracy.
+              <br /><br />
               <a href="https://github.com/saleh-programs/Inflation_Predictor.git" target='_blank'>Github Repo</a>
             </div>
             <div className={styles.concepts}>
               <h2>Concepts & Technologies</h2>
               <ul>
-                <li>Artificial Neural Networks</li>
-                <li>Decision Trees</li>
-                <li>Data preprocessing</li>
-                <li>Data visualization</li>
-                <li>Libraries: Keras / TensorFlow / SKlearn/Pandas / Matplotlib</li>
-                <li>Created in Python</li>
+                <strong>Technologies</strong>
+                <li>Language(s): Python</li>
+                <li>Decision Trees: scikit-learn</li>
+                <li>Artificial Neural Networks: TensorFlow / Keras</li>
+                <li>Data Manipulation: Pandas</li>
+                <li>Data Visualization: Matplotlib</li>
+                <br />
+                <strong>Concepts</strong>
+                <li>Machine Learning Algorithms
+                  <ul>
+                    <li>Artificial Neural Networks</li>
+                    <li>Decision Trees</li>
+                  </ul>
+                </li>
+                <li>Preprocessing data stored in CSV files </li>
+                <li>Measuring ML model performance</li>
               </ul>
             </div>
           </div>
