@@ -85,6 +85,10 @@
   gap: 5px;
 }
 
+.lagelati_img img{
+  width: 100%;
+}
+
  @media (max-width:1100px) {
   .inside{
     padding-inline: 20px;
