@@ -17,14 +17,64 @@ function Home(){
           <img src={portrait}/>
         </div>
 
-        <div className={styles["info"]}>
-          <ul>
-            <div style={{textAlign:'center',lineHeight:"20px"}}>Computer Science student at Wayne State University</div><br/>
-            <li>Age: 21 </li>
-            <li>University Email:  hl4178@wayne.edu</li>
-            <li>Personal Email: salehm0529@gmail.com</li>
-            <li>Location: Dearborn, MI</li>
-          </ul>
+        <div className={styles.info}>
+            <section 
+            style={{
+              gridColumn: "1/6",
+              gridRow: "1/4"
+            }}>
+              <h3>Education</h3>
+              <span>Wayne State University</span>
+            </section>
+            <section
+            style={{
+              gridColumn: "6/12",
+              gridRow: "1/4"
+            }}>
+              <h3>Major</h3>
+              <span>Computer Science</span>
+            </section>
+            <section
+            style={{
+              gridColumn: "12/16",
+              gridRow: "1/4"
+            }}>
+              <h3>Age</h3>
+              <span>21</span>
+            </section>
+            <section
+            style={{
+              gridColumn: "2/9",
+              gridRow: "4/6"
+            }}>
+              <h3>Graduation Date</h3>
+              <span>May of 2026</span>
+            </section>
+            <section
+            style={{
+              gridColumn: "9/15",
+              gridRow: "4/6"
+            }}>
+              <h3>City</h3>
+              <span>Dearborn, MI</span>
+            </section>
+            <section
+            style={{
+              gridColumn: "2/15",
+              gridRow: "6/8"
+            }}>
+              <h3>University Email</h3>
+              <span>hl4178@wayne.edu</span>
+            </section>
+            <section
+            style={{
+              gridColumn: "2/15",
+              gridRow: "8/10"
+            }}>
+              <h3>Personal Email</h3>
+              <span>salehm0529@gmail.com</span>
+            </section>
+
         </div>
       </div>
       <div className={styles.separator}>
@@ -34,9 +84,9 @@ function Home(){
           About Me
         </div>
         <div className={styles.description}>
-          Hello! My name is Murad Saleh. This is a site I built to show my projects, experience, education, and a few other things that employers may be looking for.
+          Hello! My name is Murad Saleh. This is a site I built to show my experience, education, projects, skills, and a few other things that employers may be looking for.
           <br/><br/>
-          I'm looking for opportunities to grow my skills in the software industry while still exploring which areas fit me best. I'm eager for a chance to get started!
+          I'm looking for opportunities to grow my skills in the field of backend development. <br /><br /> Thank you for visiting! I would appreciate any feedback using the form at the bottom of the page. It will be sent anonymously. 
         </div>
         <div className={styles.links}>
           <a className={styles["img-container"]} href="https://github.com/saleh-programs" target='_blank'>

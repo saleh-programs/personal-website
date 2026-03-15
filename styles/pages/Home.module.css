@@ -38,20 +38,29 @@
 }
 .info{
   flex: 1;
-  padding: 20px;
-  border: 1px solid;
-  border-radius: 30px;
-  background-color: rgb(41, 35, 35);
   color: white;
-  font-size: .7rem;
-  font-family:'Franklin Gothic Medium', 'Franklin Gothic Medium Mobile';
+  font-size: .6rem;
+  font-family: "Exo 2";
   list-style-type: none;
-  line-height: 40px;
-}
-.info ul{
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+   & section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    border: 1px solid;
+    border-radius: 15px;
+    background-color: rgb(41, 35, 35);
+    & h3{
+      margin: 1px;
+    }
+   }
+
+   display: grid;
+   grid-template-columns: repeat(15, 25px);
+   grid-auto-rows: 25px;
+
 }
 
 .separator{
