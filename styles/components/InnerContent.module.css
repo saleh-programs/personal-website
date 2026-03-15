@@ -85,8 +85,42 @@
   gap: 5px;
 }
 
-.lagelati_img img{
-  width: 100%;
+.campDescription{
+  flex: 2;
+}
+.campImages{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  & img:nth-of-type(1){
+    width: 500px;
+    border-radius: 15px;
+
+  }
+  & img:nth-of-type(2){
+    width: 500px;
+    border-radius: 15px;
+
+  }
+}
+
+
+.lagelatiDescription{
+  flex: 2;
+}
+.lagelatiImages{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  & img:nth-of-type(1){
+    width: 700px;
+    border-radius: 15px;
+
+  }
 }
 
  @media (max-width:1100px) {

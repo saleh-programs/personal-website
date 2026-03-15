@@ -35,7 +35,7 @@ function Experience(){
       elem.style.backgroundColor = ""
     }
 
-    if (e.target.value.length < 2){
+    if (e.target.value.length < 1){
       setSearchedSkills([]);
       return
     }
@@ -88,8 +88,8 @@ function Experience(){
 
       <hr className={styles['hz-separator']}>
       </hr>
-      <Bar name="WSU Engineering Camp" subname={"Lead Coding Instructor"} contentID='laGelati' date="09/2021-10/2022"/>
-      <Bar name="La Gelati Ice Cream" subname={"Assistant Manager"} contentID='laGelati' />
+      <Bar name="WSU Engineering Camp" subname={"Lead Coding Instructor"} contentID='leadInstructor' date="06/2025-09/2025"/>
+      <Bar name="La Gelati Ice Cream" subname={"Assistant Manager"} contentID='laGelati' date="09/2021-10/2022"/>
     </div>
     <div style={{width: "100%"}} >
       <div className={styles.title}>

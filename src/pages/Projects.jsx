@@ -23,10 +23,10 @@ function Projects(){
         </div>
         <hr className={styles['hz-separator']}>
         </hr>
-        <Bar name='Project Place' subname={"Website Application"} contentID= 'projectPlace' link={["Try the website!","https://carmaintenanceproject.netlify.app/"]}/>
+        <Bar name='Project Place' subname={"Website Application"} contentID= 'projectPlace' link={["Try the website!","https://projectplace.space/"]}/>
         <Bar name='Secure S3FS' subname={"CLI tool"} contentID= 'secureS3FS' />
-        <Bar name='File Adventurer' subname={"Desktop Application (Windows)"} contentID= 'fileAdventure' link={["Try the Windows desktop app!","https://github.com/saleh-programs/FileAdventurer/raw/master/FileAdventurerSetup.exe"]}/>
-        <Bar name='Physics Practice Tool' subname={"Desktop Application"} contentID= 'physicsTool' link={["Download / Play the game!","./downloads/PhysicsPracticeGame.zip"]}/>
+        <Bar name='File Adventurer' subname={"Desktop Application (Windows)"} contentID= 'fileAdventure' link={["Download the Windows desktop app!","https://github.com/saleh-programs/FileAdventurer/raw/master/FileAdventurerSetup.exe"]}/>
+        <Bar name='Physics Practice Tool' subname={"Desktop Application"} contentID= 'physicsTool' link={["Download the game!","./downloads/PhysicsPracticeGame.zip"]}/>
       </div>
 
       <div >
@@ -45,7 +45,7 @@ function Projects(){
 
         <hr className={styles['hz-separator']}>
         </hr>
-        <Bar name='Car Maintenance App' subname={"Website"} contentID= 'carMaintenance' link={["Try the website!","https://carmaintenanceproject.netlify.app/"]}/>
+        <Bar name='Car Maintenance App' subname={"Website Application"} contentID= 'carMaintenance' link={["Try the website!","https://carmaintenanceproject.netlify.app/"]}/>
         <Bar name='Inflation Predictor with ML' subname={"Source Code Available Only"} contentID= 'stockMarket'/>
       </div>
     </>

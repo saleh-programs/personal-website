@@ -23,6 +23,8 @@ import decisionTree from '../assets/images/DecisionTree.jpg'
 import ANN from '../assets/images/ANN.jpg'
 import TreeAndANN from '../assets/images/TreeAndANN.jpg'
 import lagelati from '../assets/images/lagelati.jpg'
+import campImage1  from "../assets/images/leadInstructor1.png"
+import campImage2  from "../assets/images/leadInstructor2.png"
 import hat from '../assets/images/hat.jpg'
 import fordTranscript from "../assets/documents/fordsonTranscript.pdf"
 import wayneTranscript from "../assets/documents/wayneTranscript.pdf"
@@ -60,30 +62,29 @@ function WayneEducation(){
           <div>
             Major: Computer Science<br/>
             GPA: 4.0 / 4.0 <br/><br />
-            <a href={wayneTranscript} target='_blank'>Official Transcript</a><br />
           </div>
           <img src={wsu} alt="Not found" />
         </div>
         <div className="rowcontainer">
           <div>
             Relevant Courses: <br />
-            &bull; Python / Java / C++ / C Programming <span style={{fontSize:'.8em'}}>(4 courses)</span><br/>
-            &bull; Computer Science 1 & 2<br />
-            &bull; Basic Engineering 1 & 3<br />
-            &bull; Computer Architecture & Organization<br />
-            &bull; Algorithm Design & Analysis<br />
-            &bull; Fundamental Structures in CS<br />
-            &bull; Software Engineering<br />
-          </div>
-          <div className="columncontainer" >
-            <img src={C} alt="not found" />
-            <img src={Java} alt="not found" />
-            <img src={Python} alt="not found" />
+            <ul>
+              <li> Python / Java / C++ / C Programming <span style={{fontSize:'.8em'}}>(4 courses)</span></li>
+              <li>Computer Science 1 & 2</li>
+              <li>Basic Engineering 1 & 3</li>
+              <li>Computer Architecture & Organization</li>
+              <li>Algorithm Design & Analysis</li>
+              <li>Fundamental Structures in CS</li>
+              <li>Software Engineering</li>
+            </ul>
+            <a href={wayneTranscript} target='_blank'>Official Transcript</a><br />
+
           </div>
         </div>
+
       </div>
   );
-}
+} 
 function AchievementsEducation(){
   return(
     <div className={styles.inside}> 
@@ -153,7 +154,7 @@ function ProjectPlaceProject(){
                         <li>Draw / Erase / Fill / Clear</li>
                         <li>Select / Move</li>
                         <li>Undo / Redo</li>
-                        <li>Import Images</li>
+                        <li>Import images</li>
                         <li>Download canvas / selected region</li>
                         <li>...other tools</li>
                       </ul>
@@ -163,45 +164,45 @@ function ProjectPlaceProject(){
               </ul>
               <h3>Other Features</h3>
               <ul>
-                <li>Signup + Login</li>
+                <li>Signup + login</li>
                 <li>Create + join rooms</li>
                 <li>Create + join protected rooms</li>
                 <li>Change site appearance</li>
-                <li>Select, upload, and change avatar</li>
+                <li>Select, upload, and change avatars</li>
                 <li>View active members</li>
               </ul>
-              <a href="https://github.com/saleh-programs/ProjectPlace" target='_blank'>Github Repo</a>
+              <a href="https://github.com/saleh-programs/project-place" target='_blank'>Github Repo</a>
             </div>
             <div className={styles.concepts}>
               <h2>Concepts & Technologies</h2>
               <ul>
                 <strong>Technologies</strong>
-                <li>Language(s): JavaScript, Python, HTML, CSS <br />(C++ for some whiteboard actions)</li>
+                <li>Language(s): JavaScript, Python <br />(C++ for some whiteboard actions)</li>
                 <li>Database: MySQL</li>
                 <li>Frontend: Next.js</li>
                 <li>Backend: 
                   <ul>
                     <li>REST API: Flask</li>
-                    <li>Media SFU + Signaling Server: Node.js </li>
-                    <li>Turn Server: Coturn</li>
+                    <li>Media SFU + signaling server: Node.js </li>
+                    <li>Turn server: Coturn</li>
                   </ul>
                 </li>
                 <li>Hosting: AWS EC2</li>
-                <li>Image Storage: AWS S3 </li>
-                <li>Signup + Login + Access Tokens: Auth0</li>
-                <li>Group Calls: mediasoup</li>
+                <li>Image storage: AWS S3 </li>
+                <li>Signup + login + tokens: Auth0</li>
+                <li>Group Calls: MediaSoup</li>
                 <li>Signaling: WebSockets</li>
                 <br />
                 <strong>Concepts</strong>
                 <li>Chat</li>
                 <ul>
-                  <li>Infinite Scroll</li>
+                  <li>Infinite scroll</li>
                   <li>Virtualization</li>
-                  <li>Loading File Logic/Animations</li>
+                  <li>Loading file logic / animations</li>
                 </ul>
                 <li>Whiteboard</li>
                 <ul>
-                  <li>Canvas + 2D Context API Fluency</li>
+                  <li>Canvas + 2D Context API fluency</li>
                   <li>Operations queue</li>
                   <li>WASM optimizations</li>
                   <li>Optimized canvas storage (snapshot + recent instructions)</li>
@@ -213,7 +214,7 @@ function ProjectPlaceProject(){
                   <li>Managing video / audio tracks</li>
                 </ul>
                 <li>UI / UX design</li>
-                <li>Signup + Login</li>
+                <li>Signup + login</li>
                 <li>Token enforced permissions</li>
                 <li>Direct uploads with temporary S3 URLs</li>
                 
@@ -240,18 +241,18 @@ function CarMaintenanceProject(){
               <br/><br/>
               A full-stack car maintenance app with the following features:
               <ul>
-                <li>Create Account / Log In</li>
-                <li>Find Local Services</li>
-                <li>Add / View Service History</li>
-                <li>View Service Deadlines</li>
-                <li>AI Customer Support</li>
-                <li>View Browser Notifications</li>
+                <li>Create account / Log in</li>
+                <li>Find local services</li>
+                <li>Add / View service history</li>
+                <li>View service deadlines</li>
+                <li>AI customer support</li>
+                <li>View browser notifications</li>
               </ul>
                Integrates APIs for maps, images, geocoding, and AI.<br/><br />
                Worked with a team of 3 people as the primary developer and team lead, implementing nearly all core features end to end (except the initial "Find local services" page, the home page, and some frontend work).
                <br /><br />
                
-              <a href="https://github.com/saleh-programs/Car_Maintenance_Site" target='_blank'>Github Repo</a>
+              <a href="https://github.com/saleh-programs/car-maintenance-site" target='_blank'>Github Repo</a>
             </div>
             <div className={styles.concepts}>
               <h2>Concepts & Technologies</h2>
@@ -260,7 +261,7 @@ function CarMaintenanceProject(){
                 <li>Language(s): JavaScript, Python</li>
                 <li>Database: SQLite</li>
                 <li>Frontend: React</li>
-                <li>Backend: Node.js</li>
+                <li>Backend: Express</li>
                 <li>Hosting: 
                   <ul>
                     <li>Frontend: Netlify</li>
@@ -278,7 +279,8 @@ function CarMaintenanceProject(){
                 <li>Password hashing</li>
                 <li>Consistent error handling</li>
                 <li>Dev-friendly / All functions + complex flows commented</li>
-                <li>Input Validation</li>
+                <li>Heavy input validation</li>
+                <li>UI / UX Design</li>
               </ul>
               </div>
           </div>
@@ -323,7 +325,7 @@ function SecureS3FSProject(){
               file system. 
               <br /><br />
                
-              <a href="https://github.com/saleh-programs/Car_Maintenance_Site" target='_blank'>Github Repo</a>
+              <a href="https://github.com/saleh-programs/secure-s3fs-fuse.git" target='_blank'>Github Repo</a>
             </div>
             <div className={styles.concepts}>
               <h2>Concepts & Technologies</h2>
@@ -331,19 +333,18 @@ function SecureS3FSProject(){
                 <strong>Technologies</strong>
 
                 <li>Language(s): C++</li>
-                <li>Base Tool: s3fs</li>
+                <li>s3fs</li>
                 <li>AWS S3</li>
                 <li>Encryption / Decryption: <br />
                   OpenSSL using aes-256-cbc</li>
                 <li>Compression / Decompression: <br /> zstd</li>
                 <li>Linux OS</li>
-                <li>AWS S3</li>
                 <br />
                 <strong>Concepts</strong>
-                <li>File level Compression</li>
-                <li>Chunk level Encryption </li>
+                <li>File level compression</li>
+                <li>Chunk level encryption </li>
                 <li>Multithreading</li>
-                <li>Memory Management</li>
+                <li>Memory management</li>
                 <li>Legacy systems</li>
               </ul>
               </div>
@@ -364,25 +365,26 @@ function FileAdventurerProject(){
           <div className={"rowcontainer"}>
             <div className={styles.description}>
               <h2>Description</h2>
-              "File Adventurer" is my take on a cleaner, more intuitive version of Windows' "File Explorer". I built it to reduce clutter and add features I felt were missing in the built in file system, based on my frequent use of it.
+              "File Adventurer" is my take on a cleaner, more intuitive version of Windows File Explorer. I built it to reduce clutter and add features I felt were missing in the built in file system, based on my frequent use of it.
               <br/><br/>
               Includes an optimized recursive search and a priority queue based "Recent Folders" feature. 
               <br /><br /> 
               Implemented many conveniences such as allowing navigation while dragging and offering different "view modes". <br /> I created some custom assets and animations to add a unique personality. <br/><br />
               Features include:<br />
               <ul>
-                <li>Folder Navigation / Open Files</li>
-                <li>Create, Delete, drag & drop </li>
-                <li>Pin, Hide, or Rename Entries</li>
-                <li>Sort by Name, Creation Date, or Modified Date</li>
-                <li>Track Recent Folders</li>
-                <li>Search Entries</li>
+                <li>Folder navigation & file access</li>
+                <li>Create, delete, drag & drop </li>
+                <li>Pin, hide, & rename entries</li>
+                <li>Sort by name, creation date, or modified date</li>
+                <li>Track recent folders / Quick access</li>
+                <li>Search for folders / files</li>
                 <li>Tree Mode: View all entries in a traditional nested environment</li>
                 <li>Stack Mode: View the hierarchical structure of a specific path</li>
               </ul>
               <span style={{color:'red'}}><span style={{fontSize:'1.5em'}}>NOTE:</span> Your download of the app's installer may be flagged by antivirus tools such as Microsoft Defender. I have no ill intent, these warnings only appear because they are less likely to trust apps that haven't purchased a signed certificate. </span><br />
-              <a href="https://github.com/saleh-programs/FileAdventurer.git" target='_blank'>Github Repo</a>
+              <a href="https://github.com/saleh-programs/file-adventurer" target='_blank'>Github Repo</a>
             </div>
+            
             <div className={styles.concepts}>
               <h2>Concepts & Technologies</h2>
               <ul>
@@ -423,23 +425,22 @@ function PhysicsToolProject(){
               A game designed to help physics students improve at solving kinematics based physics problems! Join Willow on a journey gliding through the air and sprinting on foot, all while solving word problems related to his situation. Maybe you'll even get to chat with him if you do well enough!
               <br/><br/>
               The game contains 10 levels of progressing difficulty and 3 questions each. Level 10 connects to the OpenAI API to allow you to chat with Willow.<br/><br />
-              <a href="https://github.com/saleh-programs/Physics_Practice_Tool" target='_blank'>Github Repo</a>
+              <a href="https://github.com/saleh-programs/physics-practice-tool" target='_blank'>Github Repo</a>
             </div>
             <div className={styles.concepts}>
               <h2>Concepts & Technologies</h2>
               <ul>
                 <strong>Technologies</strong>
                 <li>Language(s): Python</li>
-                <li>2D Graphics Library : Pygame</li>
+                <li>2D graphics library : Pygame</li>
                 <li>AI chatbot: OpenAI API</li>
                 <br />
                 <strong>Concepts</strong>
-                <li>Motion Physics</li>
-                <li>State Management</li>
-                <li>Collision Logic</li>
-                <li>Camera System</li>
-                <li>Performance Optimizations</li>
-                <li>Created reusable level based design framework</li>
+                <li>Motion physics</li>
+                <li>State management</li>
+                <li>Collision logic</li>
+                <li>Camera system</li>
+                <li>Created reusable level-based framework</li>
                 <li>Problem generation system</li>
                 <li>Custom trails, textboxes, & more</li>
                 <li>UI / UX Design</li>
@@ -465,29 +466,27 @@ function PlatformerProject(){
               <h2>Description</h2>
               A Hollow Knight inspired game made in Pygame with custom animations! The player can slash, shoot, and swing faced against enemies with unique logic!
               <br/><br/>
-              I gained a lot of skills navigating this somewhat large project and working with more complex solutions.<br/>
+              Gained a lot of skills navigating this somewhat large project and working with more complex solutions.<br/>
               Although unfinished, a lot was learned from all the effort dumped into custom enemy behaviors, the terrain system, camera perspectives, and much more. 
               <br /> <br />
-              <a href="https://github.com/saleh-programs/Platformer_Game.git" target='_blank'>Github Repo</a>
+              <a href="https://github.com/saleh-programs/platformer-game" target='_blank'>Github Repo</a>
             </div>
             <div className={styles.concepts}>
               <h2>Concepts & Technologies</h2>
               <ul>
                 <strong>Technologies</strong>
                 <li>Language(s): Python</li>
-                <li>2D Graphics Library : Pygame</li>
-                <li>Map Editing: Tiled</li>
+                <li>2D graphics library : Pygame</li>
+                <li>Map editor: Tiled</li>
                 <br />
                 <strong>Concepts</strong>
-                <li>Motion Physics</li>
-                <li>State Management</li>
-                <li>Health/Damage System</li>
-                <li>Camera System</li>
-                <li>Custom Multi-layered Parallax Background</li>
-                <li>Melee, Shooting, and Grappling Hook Mechanics</li>
-                <li>Enemy Behavior Logic</li> 
-                <li>Performance Optimizations</li>
-
+                <li>Motion physics</li>
+                <li>State management</li>
+                <li>Health / Damage system</li>
+                <li>Camera system</li>
+                <li>Custom multi-layered parallax background</li>
+                <li>Melee, shooting, and grappling hook mechanics</li>
+                <li>Enemy behavior logic</li> 
               </ul>
             </div>
           </div>
@@ -511,31 +510,32 @@ function StockMarketProject(){
               ANN model: 92% <br/>
               Decision Tree Model: 80%<br/><br />
               
-              Worked with a team of 6, taking a lead coordinating meetings and assigning sections for the final report. Completed all decision tree / ANN modeling, performance measuring, and data processing.  <br />
-              (All code within the repository is written by myself)<br />
+              Worked with a team of 6, taking a lead coordinating meetings and assigning sections for the final report. Completed all decision tree / ANN modeling, performance measuring, and data preprocessing / processing.  <br />
+              All code within the repository is written by myself.<br />
               <br /><br />
               Note: The model does somewhat struggle due to limited data and some existing bias. However, it still reveals inflation trends with reasonable accuracy.
               <br /><br />
-              <a href="https://github.com/saleh-programs/Inflation_Predictor.git" target='_blank'>Github Repo</a>
+              <a href="https://github.com/saleh-programs/inflation-predictor" target='_blank'>Github Repo</a>
             </div>
             <div className={styles.concepts}>
               <h2>Concepts & Technologies</h2>
               <ul>
                 <strong>Technologies</strong>
                 <li>Language(s): Python</li>
-                <li>Decision Trees: scikit-learn</li>
-                <li>Artificial Neural Networks: TensorFlow / Keras</li>
-                <li>Data Manipulation: Pandas</li>
-                <li>Data Visualization: Matplotlib</li>
+                <li>Decision trees: scikit-learn</li>
+                <li>Artificial neural networks: TensorFlow / Keras</li>
+                <li>Data manipulation: Pandas</li>
+                <li>Data visualization: Matplotlib</li>
                 <br />
                 <strong>Concepts</strong>
-                <li>Machine Learning Algorithms
+                <li>Machine learning algorithms
                   <ul>
-                    <li>Artificial Neural Networks</li>
-                    <li>Decision Trees</li>
+                    <li>Artificial neural networks</li>
+                    <li>Decision trees</li>
                   </ul>
                 </li>
                 <li>Preprocessing data stored in CSV files </li>
+                <li>Processing output into graphs / visuals</li>
                 <li>Measuring ML model performance</li>
               </ul>
             </div>
@@ -547,8 +547,8 @@ function LaGelatiExperience(){
       return(
         <div className={styles.inside}>
           <div className={"rowcontainer"}>
-            <div>
-              Working in an ice cream store didn't involve software, but rather meeting new people on a daily basis. It consisted of: 
+            <div className={styles.lagelatiDescription}>
+              Working in an ice cream store didn't involve software, but rather meeting new people and developing leadership skills. It consisted of: 
               <ul>
                 <li>Resolving customer conflicts</li>
                 <li>Coordinating with a team</li>
@@ -559,8 +559,37 @@ function LaGelatiExperience(){
               </ul>
 
             </div>
-            <div className={styles.lagelati_img}>
+            <div className={styles.lagelatiImages}>
               <img src={lagelati} alt="" />
+            </div>
+          </div>
+        </div>
+      );
+}
+
+function LeadInstructorExperience(){
+      return(
+        <div className={styles.inside}>
+          <div className={"rowcontainer"}>
+            <div className={styles.campDescription}>
+              Served as the lead coding instructor at Wayne State University's Summer Engineering Camp, hosted by the C2 Pipeline.
+              <br />
+              My main responsibility was to teach the fundamentals of programming to students anywhere from kindergarten to the 12th grade.
+              <br /><br />
+              Other responsibilities consisted of:
+              <ul>
+                <li>Creating lesson plans surrounding basic programming concepts.</li>
+                <li>Building demo applications to serve as references for students.</li>
+                <li>Providing hands on support to students.</li>
+                <li>Addressing unique challenges and promoting skill development.</li>
+                <li>Coordinating with staff and faculty to improve the student experience.</li>
+              </ul>
+
+
+            </div>
+            <div className={styles.campImages}>
+              <img src={campImage1} alt="" />
+              <img src={campImage2} alt="" />
             </div>
           </div>
         </div>
@@ -576,7 +605,9 @@ const contentDict = {
   "physicsTool": <PhysicsToolProject/>,
   "platformer": <PlatformerProject/>,
   "stockMarket": <StockMarketProject/>,
+  "secureS3FS": <SecureS3FSProject/>,
   "laGelati": <LaGelatiExperience/>,
-  "secureS3FS": <SecureS3FSProject/>
+  "leadInstructor": <LeadInstructorExperience/>
+
 }
 export default contentDict;

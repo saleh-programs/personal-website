@@ -15,7 +15,7 @@ function Education(){
         <hr className={styles['hz-separator']}>
         </hr>
         <div className={styles.info}>
-          A brief breakdown of education and academic achievements that I am proud to have received.<br/><br/>
+          A brief breakdown of my education and academic achievements that I am proud to have received.<br/><br/>
           Select an option to learn more!
         </div>
       </div>
