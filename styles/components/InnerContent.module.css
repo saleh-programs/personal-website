@@ -16,13 +16,18 @@
   font-size: .9rem;
   align-self:flex-start;
 }
- .description{
-  flex:1.1;
-  padding-right: 5px;
- }
- .concepts{
-  flex: 1;
- }
+.description{
+flex:1.1;
+padding-right: 5px;
+}
+.concepts{
+flex: 1;
+}
+
+.wsu_img img, .tractor_img img, .rosa_img img, .yemeni_img img{
+  width: 100%;
+}
+
  
 .demo_imgs_car{  
   display: flex;
@@ -95,12 +100,12 @@
   justify-content: center;
   align-items: center;
   & img:nth-of-type(1){
-    width: 500px;
+    max-width: 500px;
     border-radius: 15px;
 
   }
   & img:nth-of-type(2){
-    width: 500px;
+    max-width: 500px;
     border-radius: 15px;
 
   }
@@ -117,7 +122,7 @@
   justify-content: center;
   align-items: center;
   & img:nth-of-type(1){
-    width: 700px;
+    max-width: 500px;
     border-radius: 15px;
 
   }
@@ -127,26 +132,44 @@
   .inside{
     padding-inline: 20px;
   }
-  .inside img{
-    width:50%;
-  }
   .inside h2{
     font-size: .7rem;
+  }
+  .inside ul{
+    padding-left: 25px;
   }
   .description, .concepts{
     font-size: .5rem;
   }
-  .lagelati_img img{
-    width: 80%;
+  .tractor_img img, .wsu_img img{
+    max-width: 100px;
   }
-  .demo_imgs_car, .demo_imgs_physics, .demo_imgs_platformer, .demo_imgs_models{
+  .campImages{
+    & img:nth-of-type(1){
+      max-width: 200px;
+    }
+    & img:nth-of-type(2){
+      max-width: 200px;
+    }
+  }
+  .lagelatiImages{
+    & img:nth-of-type(1){
+      max-width: 200px;
+      border-radius: 15px;
+
+    }
+  }
+
+  .demo_imgs_s3fs, .demo_imgs_car, .demo_imgs_physics, .demo_imgs_platformer, .demo_imgs_models{
     flex-direction: column;
     gap: 10px;
   }
-  .demo_imgs_car img, .demo_imgs_physics img, .demo_imgs_platformer img, .demo_imgs_models img{
+  .demo_imgs_s3fs img, .demo_imgs_s3fs iframe, .demo_imgs_car img, .demo_imgs_physics img, .demo_imgs_platformer img, .demo_imgs_models img{
     width: 100%;
   }
 }
+
+
  @media (max-width:500px) {
   .inside{
     padding-inline: 10px;
@@ -162,4 +185,4 @@
     padding-inline: 20px;
   }
   
- } 
+ }  

@@ -4,19 +4,17 @@
   justify-content: space-between;
   position: sticky;
   top: 0;
-  /* right: 0;
-  left: 0; */
+  left: 0;
 
   padding: 20px 65px;
   margin: 0;
-  display: flex;
   background-color: black;
   color: white;
   font-family: 'Daruma';
   z-index: 100;
   font-size: .75rem;
-
 }
+
 .link{
   color: white;
   text-decoration: none;

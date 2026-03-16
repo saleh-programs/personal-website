@@ -37,6 +37,8 @@
   object-position: center -25px;
 }
 .info{
+  display: flex;
+  justify-content: center;
   flex: 1;
   color: white;
   font-size: .6rem;
@@ -136,10 +138,11 @@ a{
   }
   .card-left{
     width: 100%;
+    
   }
   .portrait{
     border-radius: 50px;
-
+    margin-top: 10px;
   }
   .portrait img{
     width: 300px;
@@ -154,4 +157,4 @@ a{
   .description{
     font-size: 1rem;
   }
-}
+} 

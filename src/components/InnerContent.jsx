@@ -48,7 +48,7 @@ function FordsonEducation(){
           GPA: 3.9 / 4.0<br/><br />
           <a href={fordTranscript} target='_blank'>Official Transcript</a>
         </div>
-        <div>
+        <div className={styles.tractor_img}>
           <img src={tractor} alt="not found" />
         </div>
       </div>
@@ -63,7 +63,10 @@ function WayneEducation(){
             Major: Computer Science<br/>
             GPA: 4.0 / 4.0 <br/><br />
           </div>
-          <img src={wsu} alt="Not found" />
+          <div className={styles.wsu_img}>
+            <img src={wsu} alt="Not found" />
+          </div>
+          
         </div>
         <div className="rowcontainer">
           <div>
@@ -96,7 +99,10 @@ function AchievementsEducation(){
             </div>
           </div>
           June 2022
-          <img src={Rosa} alt="" />
+          <div className={styles.rosa_img}>
+            <img src={Rosa} alt="" />
+          </div>
+          
         </div>
         <div className={"rowcontainer"}>
           <div>
@@ -106,7 +112,10 @@ function AchievementsEducation(){
             </div>
           </div>
           August 2022
-          <img src={YAA} alt="" />
+          <div className={styles.yemeni_img}>
+            <img src={YAA} alt="" />
+          </div>
+          
         </div>
     </div>
   );
@@ -293,9 +302,7 @@ function SecureS3FSProject(){
           <div className={styles.demo_imgs_s3fs}> 
             <img src={s3fsflowGIF} alt="" />
             <img src={s3fsflowPNG} alt="" />
-
             <iframe src="https://www.youtube.com/embed/_VpKkgdseCU?autoplay=1&mute=1&loop=1&playlist=_VpKkgdseCU" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen/>
-
           </div>
           <div className={"rowcontainer"}>
             <div className={styles.description}>

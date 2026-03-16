@@ -1,17 +1,18 @@
 .footer{
   background-color: black;
   color: white;
-  height: 140px;
   padding-inline: 10%;
+  flex: 0 0 140px;
+
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  overflow: hidden;
 } 
 .footerinfo{
   width: 50%;
   font-size: .65rem;
+  
 }
 
 .feedback{

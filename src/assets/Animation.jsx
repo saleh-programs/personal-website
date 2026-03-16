@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react"
 import {preload} from "./preloadedImages.js"
 
-function Animation({path, speed=1, onClick=null, type="loop", loopStart=null, children}){
+function Animation({path, speed=1, onClick=null, type="loop", loopStart=null, style}){
     const frame = useRef(0)
     const frameList = useRef([])
     const canvasRef = useRef(null)
@@ -91,7 +91,7 @@ function Animation({path, speed=1, onClick=null, type="loop", loopStart=null, ch
     if (!dimensions){
         return <></>
     }
-    return(<canvas ref={canvasRef} width={dimensions[0]} height={dimensions[1]} onClick={replay}/>)
+    return(<canvas style={style} ref={canvasRef} width={dimensions[0]} height={dimensions[1]} onClick={replay}/>)
 }
 
 export default Animation

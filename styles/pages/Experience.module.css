@@ -82,8 +82,8 @@
 
     & input{
       padding: 10px;
-      width: 350px;
-      font-size: 1.2rem;
+      max-width: 350px;
+      font-size: inherit;
       font-family: "Exo 2";
       border-radius: 10px;
 
@@ -122,14 +122,29 @@
   flex-direction: column;
  }
 
+@media (max-width:1900px) {
+
+  .skillsGrid{
+    width: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+}
  
- /* @media (max-width:1100px) {
+ @media (max-width:1100px) {
   .page_divider{
     flex-direction: column;
   }
-  .skills{
+
+
+  .skillsGrid{
     font-size: .6rem;
   }
+  .skillsNavBar *{
+    font-size: .6rem !important;
+  }
+
   .intro{
     width: 80%;
     margin: auto;
@@ -159,4 +174,4 @@
   .skills{
     font-size: .5rem;
   }
- } */
+ }

@@ -84,18 +84,14 @@
 }
 
 
- @media (max-width:1100px) {
+@media (max-width:1100px) {
   .bar{
-    font-size: .5rem;
-    padding-top: 15px;
-    padding-bottom: 6px;
-    margin-left: 50px;
-    width: 85%;
+    font-size: .7rem;
   }
-}
+} 
+
  @media (max-width:500px) {
   .bar{
-    font-size: .4rem;
-    padding-top: 20px;
+    font-size: .5rem;
   }
  } 
