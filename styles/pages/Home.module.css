@@ -103,11 +103,27 @@
   align-items: flex-start;
 }
 .img-container {
+  background-color: rgba(255, 255, 255, 0.857);
+  border-radius: 20px;
+  padding: 10px;
+  overflow: hidden;
+
   display: flex;
   flex-direction: column;
   align-items:center;
   font-size: .7rem;
   text-decoration: none;
+  transition: transform .05s;
+
+  &:hover{
+    transform: scale(1.05);
+    filter: invert();
+    cursor: pointer;
+  }
+  &:active{
+    transform: scale(.95);
+  }
+
 }
 
 a{

@@ -20,7 +20,7 @@ function Education(){
         </div>
       </div>
       <Bar name="Fordson High School" contentID='fordson' date="09/2018 - 04/2022"/>
-      <Bar name="Wayne State University" contentID='wayne' date="09/2022 - 04/2026"/>
+      <Bar name="Wayne State University" contentID='wayne' date="09/2022 - 05/2026"/>
       <Bar name="Academic Achievements" contentID='achievements' date=""/>
     </> 
   );

@@ -3,11 +3,11 @@ import styles from '../../styles/pages/Experience.module.css'
 import Bar from '../components/Bar.jsx'
 
 const languageSkills = ["C++", "C", "JavaScript", "Python", "SQL", "HTML", "CSS",
-  "Java", "Bash"
+  "Java", "Swift", "Bash"
 ];
 const databaseSkills = ["MySQL", "PostgreSQL", "SQLite"];
 const librariesSkills = ["Express", "FastAPI", "Flask", "React", "Next.js", 
-  "MediaSoup", "Keras", "TensorFlow", "Matplotlib", "scikit-learn", "Pygame"
+  "MediaSoup", "Keras", "TensorFlow", "Matplotlib", "Scikit-Learn", "Pygame"
 ];
 const cloudSkills = ["AWS S3", "AWS EC2", "AWS RDS", "AWS Cognito", "AWS Amplify", 
   "AWS Lambda", "DigitalOcean Droplets", "Render", "Netlify", "Vercel", "Cloudflare",
@@ -88,7 +88,7 @@ function Experience(){
 
       <hr className={styles['hz-separator']}>
       </hr>
-      <Bar name="WSU Engineering Camp" subname={"Lead Coding Instructor"} contentID='leadInstructor' date="06/2025-09/2025"/>
+      <Bar name="C2 Pipeline Engineering Camp" subname={"Lead Coding Instructor"} contentID='leadInstructor' date="06/2025-09/2025"/>
       <Bar name="La Gelati Ice Cream" subname={"Assistant Manager"} contentID='laGelati' date="09/2021-10/2022"/>
     </div>
     <div style={{width: "100%"}} >

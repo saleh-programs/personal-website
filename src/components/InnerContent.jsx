@@ -45,7 +45,7 @@ function FordsonEducation(){
     <div className={styles.inside}>
       <div className='rowcontainer'>
         <div>
-          GPA: 3.9 / 4.0<br/><br />
+          GPA: 3.92 / 4.0<br/><br />
           <a href={fordTranscript} target='_blank'>Official Transcript</a>
         </div>
         <div className={styles.tractor_img}>
@@ -79,6 +79,7 @@ function WayneEducation(){
               <li>Algorithm Design & Analysis</li>
               <li>Fundamental Structures in CS</li>
               <li>Software Engineering</li>
+              <li>Operating Systems</li>
             </ul>
             <a href={wayneTranscript} target='_blank'>Official Transcript</a><br />
 
@@ -258,7 +259,7 @@ function CarMaintenanceProject(){
                 <li>View browser notifications</li>
               </ul>
                Integrates APIs for maps, images, geocoding, and AI.<br/><br />
-               Worked with a team of 3 people as the primary developer and team lead, implementing nearly all core features end to end (except the initial "Find local services" page, the home page, and some frontend work).
+               Worked with a team of 5 people as the primary developer and team lead, implementing nearly all core features end to end (except the initial "Find local services" page, the home page, and some frontend work).
                <br /><br />
                
               <a href="https://github.com/saleh-programs/car-maintenance-site" target='_blank'>Github Repo</a>
@@ -328,7 +329,7 @@ function SecureS3FSProject(){
               <h3><strong>What is S3?</strong></h3>
               S3 is an Amazon service short for "Simple Storage Service". It allows you to store files on the cloud.
               <h3><strong>What is S3FS?</strong></h3>
-              S3FS is a command line tool that works with S3, allowing users to interact with the files stored on S3 as if they were on their local
+              S3FS (specifically s3fs-fuse) is a Linux command line tool that works with S3, allowing users to interact with the files stored on S3 as if they were on their local
               file system. 
               <br /><br />
                
@@ -374,7 +375,7 @@ function FileAdventurerProject(){
               <h2>Description</h2>
               "File Adventurer" is my take on a cleaner, more intuitive version of Windows File Explorer. I built it to reduce clutter and add features I felt were missing in the built in file system, based on my frequent use of it.
               <br/><br/>
-              Includes an optimized recursive search and a priority queue based "Recent Folders" feature. 
+              Includes an optimized recursive search and a priority queue based "Recent Folders" feature. File Explorer would often take very long for basic searches. Scanning a drive to locate a file would take over 9 minutes, whereas File Adventurer completed it in 8 seconds (68x faster).
               <br /><br /> 
               Implemented many conveniences such as allowing navigation while dragging and offering different "view modes". <br /> I created some custom assets and animations to add a unique personality. <br/><br />
               Features include:<br />
@@ -517,7 +518,7 @@ function StockMarketProject(){
               ANN model: 92% <br/>
               Decision Tree Model: 80%<br/><br />
               
-              Worked with a team of 6, taking a lead coordinating meetings and assigning sections for the final report. Completed all decision tree / ANN modeling, performance measuring, and data preprocessing / processing.  <br />
+              Worked with a team of 8, taking a lead coordinating meetings and assigning sections for the final report. Completed all decision tree / ANN modeling, performance measuring, and data preprocessing / processing.  <br />
               All code within the repository is written by myself.<br />
               <br /><br />
               Note: The model does somewhat struggle due to limited data and some existing bias. However, it still reveals inflation trends with reasonable accuracy.
@@ -529,7 +530,7 @@ function StockMarketProject(){
               <ul>
                 <strong>Technologies</strong>
                 <li>Language(s): Python</li>
-                <li>Decision trees: scikit-learn</li>
+                <li>Decision trees: Scikit-Learn</li>
                 <li>Artificial neural networks: TensorFlow / Keras</li>
                 <li>Data manipulation: Pandas</li>
                 <li>Data visualization: Matplotlib</li>
@@ -561,8 +562,8 @@ function LaGelatiExperience(){
                 <li>Coordinating with a team</li>
                 <li>A fast paced environment</li>
                 <li>Quick and critical thinking</li>
-                <li>Quick and efficient solutions</li>
                 <li>Efficient communication</li>
+                <li>Mentoring and encouraging others</li>
               </ul>
 
             </div>
@@ -581,12 +582,12 @@ function LeadInstructorExperience(){
             <div className={styles.campDescription}>
               Served as the lead coding instructor at Wayne State University's Summer Engineering Camp, hosted by the C2 Pipeline.
               <br />
-              My main responsibility was to teach the fundamentals of programming to students anywhere from kindergarten to the 12th grade.
+              My main responsibility was to teach the fundamentals of programming to students anywhere from grades 3-12.
               <br /><br />
               Other responsibilities consisted of:
               <ul>
                 <li>Creating lesson plans surrounding basic programming concepts.</li>
-                <li>Building demo applications to serve as references for students.</li>
+                <li>Building demo applications in Swift to serve as references for students.</li>
                 <li>Providing hands on support to students.</li>
                 <li>Addressing unique challenges and promoting skill development.</li>
                 <li>Coordinating with staff and faculty to improve the student experience.</li>

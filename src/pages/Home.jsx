@@ -1,5 +1,5 @@
 import styles from '../../styles/pages/Home.module.css'
-import portrait from '../assets/images/murad8.jpeg'
+import portrait from '../assets/images/muradCleaned.png'
 import github_icon from '../assets/images/Github_icon.png'
 import LinkedIn_icon from '../assets/images/LinkedIn_icon.png'
 import Handshake_icon from '../assets/images/Handshake_icon.png'
@@ -91,17 +91,17 @@ function Home(){
           <div className={styles.links}>
             <a className={styles["img-container"]} href="https://github.com/saleh-programs" target='_blank'>
               <img src={github_icon} alt='Github link not found'/>
-              Github:
+              Github
 
             </a>
-            <a className={styles["img-container"]} href="https://www.linkedin.com/in/murad-saleh-674722254/" target='_blank'>
+            <a className={styles["img-container"]} href="https://www.linkedin.com/in/muradsaleh/" target='_blank'>
               <img src={LinkedIn_icon} alt='LinkedIn icon not found'/>
-              LinkedIn:
+              LinkedIn
 
             </a>
             <a className={styles["img-container"]} href="https://app.joinhandshake.com/profiles/7a79aj" target='_blank'> 
               <img src={Handshake_icon} alt="Handshake icon not found" />
-              Handshake:
+              Handshake
 
             </a>
 

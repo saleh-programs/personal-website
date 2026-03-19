@@ -25,8 +25,8 @@ function Projects(){
         </hr>
         <Bar name='Project Place' subname={"Website Application"} contentID= 'projectPlace' link={["Try the website!","https://projectplace.space/"]}/>
         <Bar name='Secure S3FS' subname={"CLI tool"} contentID= 'secureS3FS' />
-        <Bar name='File Adventurer' subname={"Desktop Application (Windows)"} contentID= 'fileAdventure' link={["Download the Windows desktop app!","https://github.com/saleh-programs/FileAdventurer/raw/master/FileAdventurerSetup.exe"]}/>
-        <Bar name='Physics Practice Tool' subname={"Desktop Application"} contentID= 'physicsTool' link={["Download the game!","./downloads/PhysicsPracticeGame.zip"]}/>
+        <Bar name='File Adventurer' subname={"Desktop Application (Windows)"} contentID= 'fileAdventure' link={["Download the Windows desktop app!","https://github.com/saleh-programs/file-adventurer/raw/master/FileAdventurerSetup.exe"]}/>
+        <Bar name='Physics Practice Tool' subname={"Desktop Application"} contentID= 'physicsTool' link={["Download the game!","https://github.com/saleh-programs/physics-practice-tool/archive/refs/heads/master.zip"]}/>
       </div>
 
       <div >
