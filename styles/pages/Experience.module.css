@@ -15,11 +15,10 @@
   font-size: 45px;
   font-family: "Daruma";
   font-weight: bold;
-  
  }
  .hz-separator{
-
   border: 1px solid rgb(68, 67, 67);
+  margin-block: 12px;
  }
  .info{
   padding-inline: 40px;

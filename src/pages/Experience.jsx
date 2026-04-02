@@ -88,8 +88,8 @@ function Experience(){
 
       <hr className={styles['hz-separator']}>
       </hr>
-      <Bar name="C2 Pipeline Engineering Camp" subname={"Lead Coding Instructor"} contentID='leadInstructor' date="06/2025-09/2025"/>
-      <Bar name="La Gelati Ice Cream" subname={"Assistant Manager"} contentID='laGelati' date="09/2021-10/2022"/>
+      <Bar name="Lead Coding Instructor" subname={"C2 Pipeline Engineering Camp"} contentID='leadInstructor' date="06/2025-09/2025"/>
+      <Bar name="Assistant Manager" subname={"La Gelati Ice Cream"} contentID='laGelati' date="09/2021-10/2022"/>
     </div>
     <div style={{width: "100%"}} >
       <div className={styles.title}>

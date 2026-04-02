@@ -3,7 +3,7 @@ import styles from '../../styles/components/Bar.module.css'
 
 import contentDict from './InnerContent';
 
-function Bar({name, subname, contentID, date, link}){
+function Bar({name, subname, subname2, contentID, date, link}){
   const [isExpanded,setIsExpanded] = useState(false);
   const [contentMaxHeight, setContentMaxHeight] = useState("0");
   const elem = useRef(null);
@@ -44,8 +44,13 @@ function Bar({name, subname, contentID, date, link}){
             </div>
             {link 
             ? 
-              <div>
+              <div style={{display:"flex", flexDirection: "column", textAlign: "right"}}>
                 <a href={link[1]} target='_blank'>{link[0]}</a>
+                {subname2 && <span style={{
+                  fontSize: ".7em",
+                  opacity: ".6",
+                  textAlign: "right"
+                }}>{subname2}</span>}
               </div>
             :
               <div>

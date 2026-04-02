@@ -8,6 +8,7 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
+  text-align: center;
 } 
 .footerinfo{
   width: 50%;
@@ -37,7 +38,7 @@
 
 @media (max-width:1100px){
   .footerinfo{
-    font-size: .4rem;
+    font-size: .5rem;
   }
 }
 @media (max-width:500px){
@@ -49,6 +50,6 @@
     width: 100px;
   }
   .footerinfo{
-    font-size: .3rem;
+    font-size: .4rem;
   }
 }
