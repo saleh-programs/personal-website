@@ -27,6 +27,8 @@ function Projects(){
         <Bar name='Secure S3FS' subname={"CLI tool"} contentID= 'secureS3FS' />
         <Bar name='File Adventurer' subname={"Desktop Application (Windows)"} contentID= 'fileAdventure' link={["Download the Windows desktop app!","https://github.com/saleh-programs/file-adventurer/raw/master/FileAdventurerSetup.exe"]}/>
         <Bar name='Physics Practice Tool' subname={"Desktop Application"} subname2={"AI Willow (level 10) is not regularly maintained"} contentID= 'physicsTool' link={["Download the game!","https://github.com/saleh-programs/physics-practice-tool/archive/refs/heads/master.zip"]}/>
+        <Bar name='API Glue' subname={"Website Application (Local Developer Tool)"} link={""} subname2={"Submission for WayneHacks4 hackathon"} contentID= 'apiGlue'/>
+
       </div>
 
       <div >

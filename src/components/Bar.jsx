@@ -55,6 +55,11 @@ function Bar({name, subname, subname2, contentID, date, link}){
             :
               <div>
                   {date}
+                  {subname2 && <span style={{
+                    fontSize: ".7em",
+                    opacity: ".6",
+                    textAlign: "right"
+                  }}>{subname2}</span>}
               </div> 
             }
           </div>

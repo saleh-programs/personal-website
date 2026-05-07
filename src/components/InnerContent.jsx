@@ -32,6 +32,10 @@ import fileadv1 from "../assets/images/fileadv1.gif"
 import fileadv2 from "../assets/images/fileadv2.gif" 
 import fileadv3 from "../assets/images/fileadv3.gif" 
 import fileadv4 from "../assets/images/fileadv4.gif" 
+import apiGlue1 from "../assets/images/apiglue_dash.png"
+import apiGlue2 from "../assets/images/apiglue_deps.png"
+import apiGlue3 from "../assets/images/apiglue_tests.png"
+
 import projectplace1 from "../assets/images/projectplace_solo.gif"
 import projectplace2 from "../assets/images/projectplace_chat.gif"
 import projectplace3 from "../assets/images/projectplace_whiteboard.gif"
@@ -417,6 +421,66 @@ function FileAdventurerProject(){
       </div>
     );
 }
+function APIGlueProject(){
+      return(
+      <div className={styles.inside}> 
+        <div className="columncontainer">
+          <div className={styles.demo_imgs_platformer}>
+            <img src={apiGlue1} alt="" />
+            <img src={apiGlue2} alt="" />
+            <img src={apiGlue3} alt="" />
+            <iframe src="https://www.youtube.com/embed/_VpKkgdseCU?autoplay=1&mute=1&loop=1&playlist=_VpKkgdseCU" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen/>
+          </div>
+          <div className={"rowcontainer"}>
+            <div className={styles.description}>
+              <h2>Description</h2>
+              I've built and hosted quite a few projects. It's a shame that I have to constantly check if all their external dependencies (APIs) are still working. 
+              WayneHacks4 has presented me with the opportunity to create a solution to a problem I've had for a very long time! <br /> <br />
+              <br />
+              APIGlue allows you to add your "projects" and view if all their dependencies are up and running.<br />
+              You can add dependencies by heading into "View Dependencies", adding a title for a dependency, and then modifying a sample function to make a request to the API. 
+              You can customize what is considered "passing", as well as the response value! 
+              <br /><br />Additionally, you can link files with test cases and check if your project not only passes for its external dependencies, but internal dependencies as well! 
+              This means that APIGlue doubles as a <strong>testing framework</strong> that shows you if your local tests passed or failed.
+
+              <br /><br />
+              <h3><strong>Why this tool is useful:</strong></h3>
+              External APIs always break, especially if you're someone who uses free tiers. Here are common examples of APIs breaking that I've personally experienced
+              and had no idea until quite a bit of time had passed:
+              <ul>
+                <li>Groq API: A model had been deprecated</li>
+                <li>OpenAI API: Free trial had expired</li>
+                <li>Google Places API: Needed to verify email again</li>
+                <li>Namecheap Domain Provider: Needed to verify email again ("projectplace.space" site was down until resolved)</li>
+              </ul>
+              Other services I use such as AWS, Auth0, or CloudFlare also have the potential to break at any point. APIGlue helps by keeping us from having to worry about things we can't control.
+              
+              <br /><br /> <a href="https://github.com/saleh-programs/hackathon-api-glue" target='_blank'>Github Repo</a>
+            </div>
+            
+            <div className={styles.concepts}>
+              <h2>Concepts & Technologies</h2>
+              <ul>
+                <strong>Technologies</strong>
+                <li>Language(s): JavaScript</li>
+                <li>Frontend: React</li>
+                <li>Backend: Express</li>
+                <li>Code Editing: CodeMirror</li>
+                <br />
+                <strong>Concepts</strong>
+                <li>Heavy file handling</li>
+                <li>Embedded code editing</li>
+                <li>Validating file structure</li>
+                <li>Automating checks</li>
+                <li>Regex for finding / interacting with dependency functions</li>
+                <li>Consistent error handling</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+}
 function PhysicsToolProject(){
     return(
       <div className={styles.inside}> 
@@ -574,7 +638,6 @@ function LaGelatiExperience(){
         </div>
       );
 }
-
 function LeadInstructorExperience(){
       return(
         <div className={styles.inside}>
@@ -610,12 +673,13 @@ const contentDict = {
   "projectPlace": <ProjectPlaceProject/>,
   "carMaintenance": <CarMaintenanceProject/>,
   "fileAdventure": <FileAdventurerProject/>,
+  "apiGlue": <APIGlueProject/>,
   "physicsTool": <PhysicsToolProject/>,
   "platformer": <PlatformerProject/>,
   "stockMarket": <StockMarketProject/>,
   "secureS3FS": <SecureS3FSProject/>,
   "laGelati": <LaGelatiExperience/>,
-  "leadInstructor": <LeadInstructorExperience/>
+  "leadInstructor": <LeadInstructorExperience/>,
 
 }
 export default contentDict;
