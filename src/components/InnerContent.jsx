@@ -7,6 +7,12 @@ import Java from '../assets/images/Java.png'
 import Python from '../assets/images/Python.png'
 import YAA from '../assets/images/YAA.jpeg'
 import Rosa from '../assets/images/rosa.jpeg'
+
+import omre1 from "../assets/images/omre-1.png"
+import omre2 from "../assets/images/omre-2.gif"
+import omre3 from "../assets/images/omre-3.gif"
+import omre4 from "../assets/images/omre-4.gif"
+
 import car1 from '../assets/images/carMain1.gif'
 import car2 from '../assets/images/carMain2.gif'
 import car3 from '../assets/images/carMain3.gif'
@@ -301,6 +307,69 @@ function CarMaintenanceProject(){
       </div>
     );
 }
+function OMREFragrancesProject(){
+    return(
+      <div className={styles.inside}> 
+          <div className={styles.demo_imgs_car}> 
+            <img src={omre1} alt="" />
+            <img src={omre2} alt="" />
+            <img src={omre3} alt="" />
+            <img src={omre4} alt="" />
+
+          </div>
+          <div className={"rowcontainer"}>
+            <div className={styles.description}>
+              <h2 >Description</h2>
+              Get reminders to service your vehicle and keep track of what needs maintenance!
+              <br/><br/>
+              A full-stack car maintenance app with the following features:
+              <ul>
+                <li>Create account / Log in</li>
+                <li>Find local services</li>
+                <li>Add / View service history</li>
+                <li>View service deadlines</li>
+                <li>AI customer support</li>
+                <li>View browser notifications</li>
+              </ul>
+               Integrates APIs for maps, images, geocoding, and AI.<br/><br />
+               Worked with a team of 5 people as the primary developer and team lead, implementing nearly all core features end to end (except the initial "Find local services" page, the home page, and some frontend work).
+               <br /><br />
+               
+              <a href="https://github.com/saleh-programs/car-maintenance-site" target='_blank'>Github Repo</a>
+            </div>
+            <div className={styles.concepts}>
+              <h2>Concepts & Technologies</h2>
+              <ul>
+                <strong>Technologies</strong>
+                <li>Language(s): JavaScript, Python</li>
+                <li>Database: SQLite</li>
+                <li>Frontend: React</li>
+                <li>Backend: Express</li>
+                <li>Hosting: 
+                  <ul>
+                    <li>Frontend: Netlify</li>
+                    <li>Backend: Render</li>
+                  </ul>
+                </li>
+                <li>AI chatbot: Groq API</li>
+                <li>Guided data generation with OpenAI API</li>
+                <li>Google Places API for business images</li>
+                <li>Overpass API for nearby mechanics / geocoding</li>
+                <br />
+                <strong>Concepts</strong>
+                <li>Automating data generation with AI  <br />(using reference vehicle data)</li>
+
+                <li>Password hashing</li>
+                <li>Consistent error handling</li>
+                <li>Dev-friendly / All functions + complex flows commented</li>
+                <li>Heavy input validation</li>
+                <li>UI / UX Design</li>
+              </ul>
+              </div>
+          </div>
+      </div>
+    );
+}
 function SecureS3FSProject(){
     return(
       <div className={styles.inside}> 
@@ -434,14 +503,14 @@ function APIGlueProject(){
           <div className={"rowcontainer"}>
             <div className={styles.description}>
               <h2>Description</h2>
-              I've built and hosted quite a few projects. It's a shame that I have to constantly check if all their external dependencies (APIs) are still working. 
-              WayneHacks4 has presented me with the opportunity to create a solution to a problem I've had for a very long time! <br /> <br />
+              It's pretty bothersome to have constantly check if all my projects' external dependencies (such as APIs) are still working. 
+              WayneHacks4 has presented me with the opportunity to create a solution to a problem I've had for a very long time! <br /> 
               <br />
               APIGlue allows you to add your "projects" and view if all their dependencies are up and running.<br />
-              You can add dependencies by heading into "View Dependencies", adding a title for a dependency, and then modifying a sample function to make a request to the API. 
-              You can customize what is considered "passing", as well as the response value! 
-              <br /><br />Additionally, you can link files with test cases and check if your project not only passes for its external dependencies, but internal dependencies as well! 
-              This means that APIGlue doubles as a <strong>testing framework</strong> that shows you if your local tests passed or failed.
+              You can add dependencies by heading into "View Dependencies", adding a title for a dependency, and then modifying a sample function to make a request to the API using built in code environments. 
+              Additionally, you can customize what is considered "passing", as well as the response value! 
+              <br /><br />APIGlue doubles as a <strong>testing framework</strong> that shows you if all of your local tests have passed or failed. 
+              You can link a file (that meets a few formatting criteria) to run all these tests automatically or when prompted.
 
               <br /><br />
               <h3><strong>Why this tool is useful:</strong></h3>
@@ -671,6 +740,7 @@ const contentDict = {
   "wayne": <WayneEducation/>,
   "achievements": <AchievementsEducation/>,
   "projectPlace": <ProjectPlaceProject/>,
+  "omreFragrances": <OMREFragrancesProject/>,
   "carMaintenance": <CarMaintenanceProject/>,
   "fileAdventure": <FileAdventurerProject/>,
   "apiGlue": <APIGlueProject/>,

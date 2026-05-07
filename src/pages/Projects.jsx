@@ -47,6 +47,7 @@ function Projects(){
 
         <hr className={styles['hz-separator']}>
         </hr>
+        <Bar name='OMRE Fragrances' subname={"Website Application"} contentID= 'omreFragrances' />
         <Bar name='Car Maintenance App' subname={"Website Application"} subname2={"Not regularly maintained"} contentID= 'carMaintenance' link={["Try the website!","https://carmaintenanceproject.netlify.app/"]}/>
         <Bar name='Inflation Predictor with ML' subname={"Source Code Available Only"} contentID= 'stockMarket'/>
       </div>
