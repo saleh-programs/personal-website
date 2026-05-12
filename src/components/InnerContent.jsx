@@ -525,11 +525,11 @@ function APIGlueProject(){
       return(
       <div className={styles.inside}> 
         <div className="columncontainer">
-          <div className={styles.demo_imgs_platformer}>
+          <div className={styles.demo_imgs_apiglue}>
             <img src={apiGlue1} alt="" />
             <img src={apiGlue2} alt="" />
             <img src={apiGlue3} alt="" />
-            <iframe src="https://www.youtube.com/embed/_VpKkgdseCU?autoplay=1&mute=1&loop=1&playlist=_VpKkgdseCU" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen/>
+            <iframe src="https://www.youtube.com/embed/7Vz3ubHO5-4?autoplay=1&mute=1&loop=1&playlist=7Vz3ubHO5-4" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen/>
           </div>
           <div className={"rowcontainer"}>
             <div className={styles.description}>

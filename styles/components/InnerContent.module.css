@@ -72,7 +72,6 @@ flex: 1;
   border-radius: 30px;
   gap: 5px;
 }
-
 .demo_imgs_s3fs{
   display: flex;
   justify-content: space-between;
@@ -85,6 +84,22 @@ flex: 1;
 }
 .demo_imgs_s3fs iframe{
   width: 32%;
+  aspect-ratio: 16 / 9;
+  border-radius: 30px;
+  gap: 5px;
+}
+.demo_imgs_apiglue{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.demo_imgs_apiglue img{
+  width: 25%;
+  border-radius: 30px;
+  gap: 5px;
+}
+.demo_imgs_apiglue iframe{
+  width: 25%;
   aspect-ratio: 16 / 9;
   border-radius: 30px;
   gap: 5px;
@@ -160,11 +175,11 @@ flex: 1;
     }
   }
 
-  .demo_imgs_s3fs, .demo_imgs_car, .demo_imgs_physics, .demo_imgs_platformer, .demo_imgs_models{
+  .demo_imgs_s3fs, .demo_imgs_car, .demo_imgs_physics, .demo_imgs_platformer, .demo_imgs_models, .demo_imgs_apiglue{
     flex-direction: column;
     gap: 10px;
   }
-  .demo_imgs_s3fs img, .demo_imgs_s3fs iframe, .demo_imgs_car img, .demo_imgs_physics img, .demo_imgs_platformer img, .demo_imgs_models img{
+  .demo_imgs_s3fs img, .demo_imgs_s3fs iframe, .demo_imgs_car img, .demo_imgs_physics img, .demo_imgs_platformer img, .demo_imgs_models img, .demo_imgs_apiglue img, .demo_imgs_apiglue iframe{
     width: 100%;
   }
 }
