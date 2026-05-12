@@ -307,6 +307,7 @@ function CarMaintenanceProject(){
       </div>
     );
 }
+
 function OMREFragrancesProject(){
     return(
       <div className={styles.inside}> 
@@ -315,55 +316,85 @@ function OMREFragrancesProject(){
             <img src={omre2} alt="" />
             <img src={omre3} alt="" />
             <img src={omre4} alt="" />
-
           </div>
           <div className={"rowcontainer"}>
             <div className={styles.description}>
               <h2 >Description</h2>
-              Get reminders to service your vehicle and keep track of what needs maintenance!
-              <br/><br/>
-              A full-stack car maintenance app with the following features:
+              OMRE Fragrances is a company that sells colognes, perfumes, and similar products. This is a senior capstone project that worked with the owner of the company to develop a 
+              website platform from scratch.
+              <br /><br />
+              Worked with an excellent team of 4 and served as the backend lead, overseeing any interations with the database, the main API, the wiring of various AWS services, and anything related to the app's schema and architecture.
+              Also made significant contributions in the frontend. 
+              <br /><br />
+
+              The following features are included:
               <ul>
                 <li>Create account / Log in</li>
-                <li>Find local services</li>
-                <li>Add / View service history</li>
-                <li>View service deadlines</li>
-                <li>AI customer support</li>
-                <li>View browser notifications</li>
+                <li>Admin Panel</li>
+                <li>Orders / Cart</li>
+                <li>Product Reviews</li>
+                <li>Store Credit</li>
+                <li>Search / filter functionalities</li>
+                <li>Create Custom Blends</li> 
+                <li>Profile Management</li>
               </ul>
-               Integrates APIs for maps, images, geocoding, and AI.<br/><br />
-               Worked with a team of 5 people as the primary developer and team lead, implementing nearly all core features end to end (except the initial "Find local services" page, the home page, and some frontend work).
-               <br /><br />
-               
-              <a href="https://github.com/saleh-programs/car-maintenance-site" target='_blank'>Github Repo</a>
+
+              <h3 style={{marginBottom: "0"}}><strong>Main Contributions:</strong> </h3>
+              <span style={{fontSize: ".8em"}}>(Where attention was focused, also made many modifications all throughout application) </span>
+              <ul>
+                <strong>Backend-Related</strong>
+                <li>Most API endpoints and corresponding requests</li>
+                <li>Most database classes and methods</li>
+                <li>All middleware and token management</li>
+                <li>All schema management</li>
+                <li>Test flows for all API endpoints</li>
+                <li>Managed all "interfaces" (requests, api handlers, api controllers, database classes / methods, tests)</li>
+                <br />
+                <strong>Frontend-Related</strong>
+                <li>Product Detail Page</li>
+                <li>Any page with reviews or store credit</li>
+                <li>All image handling</li>
+                <li>All search / filter functionalities</li>
+                <li>Redesigns / enhancements in the admin panel (all tabs)</li>
+                <li>"Save for later" on the Cart page</li>
+              </ul>
+
+              Other contributions may include bug fixes, styling adjustments, optimizations (moreso readability and consistency than performance), security enhancements (enforcing token usage),  and logic that was written in the backend for another to develop in the front end.
+              <br /><br />
+              <a href="https://github.com/omre-r/omre-platform/tree/main" target='_blank'>Github Repo</a>
             </div>
             <div className={styles.concepts}>
               <h2>Concepts & Technologies</h2>
               <ul>
                 <strong>Technologies</strong>
-                <li>Language(s): JavaScript, Python</li>
-                <li>Database: SQLite</li>
+                <li>Language(s): JavaScript</li>
+                <li>Database: PostgreSQL</li>
                 <li>Frontend: React</li>
                 <li>Backend: Express</li>
-                <li>Hosting: 
-                  <ul>
-                    <li>Frontend: Netlify</li>
-                    <li>Backend: Render</li>
-                  </ul>
-                </li>
-                <li>AI chatbot: Groq API</li>
-                <li>Guided data generation with OpenAI API</li>
-                <li>Google Places API for business images</li>
-                <li>Overpass API for nearby mechanics / geocoding</li>
+                <li>Images: AWS S3</li>
+                <li>Emails: AWS SES</li>
+                <li>Image CDN: AWS CloudFront</li>
+                <li>Database Hosting: AWS RDS</li>
+                <li>Access Management: AWS IAM</li>
+                <li>Signup + login + tokens: AWS Cognito</li>
+
                 <br />
                 <strong>Concepts</strong>
-                <li>Automating data generation with AI  <br />(using reference vehicle data)</li>
-
-                <li>Password hashing</li>
+                <li>Admin panel (user, product, & order management)</li>
+                <li>Product reviews</li>
+                <li>Store credit</li>
+                <li>Advanced search / filter</li>
+                <li>Signup / Login</li>
+                <li>User profile</li>
+                <li>Mixology (custom blend creation)</li>
+                <li>Cart / Saved items</li>
+                <li>Order creation</li>
+                <li>Managing / Debugging related interfaces</li>
+                <li>Managing image lifecycle rules on S3</li>
+                <li>Transaction wrappers for safe database rollbacks on failure</li>
                 <li>Consistent error handling</li>
-                <li>Dev-friendly / All functions + complex flows commented</li>
                 <li>Heavy input validation</li>
-                <li>UI / UX Design</li>
+                <li>UI / UX design</li>
               </ul>
               </div>
           </div>
@@ -503,9 +534,8 @@ function APIGlueProject(){
           <div className={"rowcontainer"}>
             <div className={styles.description}>
               <h2>Description</h2>
-              It's pretty bothersome to have constantly check if all my projects' external dependencies (such as APIs) are still working. 
+              It's pretty bothersome to have to constantly check if all of your projects' external dependencies (such as APIs) are still working. 
               WayneHacks4 has presented me with the opportunity to create a solution to a problem I've had for a very long time! <br /> 
-              <br />
               APIGlue allows you to add your "projects" and view if all their dependencies are up and running.<br />
               You can add dependencies by heading into "View Dependencies", adding a title for a dependency, and then modifying a sample function to make a request to the API using built in code environments. 
               Additionally, you can customize what is considered "passing", as well as the response value! 

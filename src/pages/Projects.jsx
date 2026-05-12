@@ -13,7 +13,8 @@ function Projects(){
         <hr className={styles['hz-separator']}>
         </hr>
         <div className={styles.info}>
-          This page provides a general breakdown of various projects I've worked on. A description and list of involved concepts is provided.<br/><br/>
+          This page provides a general breakdown of various projects I've worked on. A description and list of involved concepts is provided for each project, as well as a link to its dedicated GitHub repository.
+          <br/><br />
           Select an option to learn more!
         </div>
       </div>
