@@ -62,7 +62,7 @@ function Experience({ref}){
     });
   }
   return(
-    <div ref={ref} id="experience" style={{
+    <div className="section" ref={ref} id="experience" style={{
       display: "flex",
       flexDirection: "column",
       justifyContent: "center",

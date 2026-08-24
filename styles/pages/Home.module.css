@@ -10,7 +10,7 @@
   width: 94%;
   border: 5px dotted rgb(51, 15, 71);
   border-radius: 20px;
-  background: linear-gradient(to right, rgb(192, 169, 188), rgb(134, 119, 132));
+  background-color: rgb(192, 169, 188, .8);
   box-shadow: 0 0 20px rgb(0, 0, 0);
   margin: auto;
   padding: 50px 50px;

@@ -5,7 +5,7 @@ import Bar from '../components/Bar.jsx'
 
 function Projects({ref}){
   return(
-    <div ref={ref} id="projects">
+    <div className="section" ref={ref} id="projects">
       <div className={styles.intro}>
         <div className={styles.title}>
           Projects

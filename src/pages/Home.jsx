@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react'
 
 function Home({ref}){
   return(
-    <div ref={ref} id="home">     
+    <div className="section" ref={ref} id="home">     
       <div className={styles.title}>
         Welcome, I'm Murad Saleh!
       </div>

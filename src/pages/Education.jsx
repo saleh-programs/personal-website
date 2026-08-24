@@ -7,7 +7,7 @@ import Bar from '../../src/components/Bar.jsx'
 function Education({ref}){
 
   return(
-    <div ref={ref} id="education">
+    <div className='section' ref={ref} id="education">
       <div className={styles.intro}> 
         <div className={styles.title}>
           Education 
