@@ -5,9 +5,9 @@ import LinkedIn_icon from '../assets/images/LinkedIn_icon.png'
 import Handshake_icon from '../assets/images/Handshake_icon.png'
 import { useEffect, useState } from 'react'
 
-function Home(){
+function Home({ref}){
   return(
-    <div>     
+    <div ref={ref} id="home">     
       <div className={styles.title}>
         Welcome, I'm Murad Saleh!
       </div>

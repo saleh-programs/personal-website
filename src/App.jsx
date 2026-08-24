@@ -8,10 +8,16 @@ import Education from './pages/Education.jsx';
 import Projects from './pages/Projects.jsx';
 import Experience from './pages/Experience.jsx';
 import Animation from './assets/Animation.jsx';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 function App() {
   const [animationEnded, setAnimationEnded] = useState(false);
+  const homeRef = useRef(null);
+  const educationRef = useRef(null);
+  const projectsRef = useRef(null);
+  const experienceRef = useRef(null);
+
+  const scrollableRef = useRef(null);
 
   useEffect(() => {
     const id = setTimeout(() => {
@@ -24,7 +30,6 @@ function App() {
   }, [])
 
 
-
   function endAnimation(){
     const shakeElem = document.querySelector(".shakeAnimation");
     const draggedElem = document.querySelector(".dragIn");
@@ -34,6 +39,7 @@ function App() {
       draggedElem.style.transform = "none";
     }
   }
+
   return (
     <div className='shakeAnimation'>
       <img src="/bench.png" alt="willow" />
@@ -45,15 +51,19 @@ function App() {
 
       <div className={`animationContainer dragIn`}>
         <Animation path="/willowIntro?16" type="loop" loopStart={11} speed={6}/> 
-        <div className='page-container'>
-          <Navbar/>
+        <div ref={scrollableRef} className='page-container'>
+          <Navbar refs={[homeRef, educationRef, projectsRef, experienceRef, scrollableRef]}/>
           <div className='routes'>
-              <Routes>
+            <Home ref={homeRef}/>
+            <Education ref={educationRef}/>
+            <Projects ref={projectsRef}/>
+            <Experience ref={experienceRef}/>
+              {/* <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/education" element={<Education />} />
                 <Route path="/projects" element={<Projects />} />
                 <Route path="/experience" element={<Experience />} />
-              </Routes> 
+              </Routes>  */}
           </div>
           <Footer/>
         </div>

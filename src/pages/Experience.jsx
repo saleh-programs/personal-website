@@ -23,7 +23,7 @@ const conceptSkills = ["Auth flows", "Role-based systems", "Supervised AI data g
 ];
 
 
-function Experience(){
+function Experience({ref}){
   const [searchedSkills, setSearchedSkills] = useState([])
   const [skillSearch, setSkillSearch] = useState("")
 
@@ -62,7 +62,7 @@ function Experience(){
     });
   }
   return(
-    <div style={{
+    <div ref={ref} id="experience" style={{
       display: "flex",
       flexDirection: "column",
       justifyContent: "center",

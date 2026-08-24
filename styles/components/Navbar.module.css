@@ -16,6 +16,7 @@
 }
 
 .link{
+  all: unset;
   color: white;
   text-decoration: none;
   display: inline-block;

@@ -3,9 +3,9 @@ import styles from '../../styles/pages/Projects.module.css'
 
 import Bar from '../components/Bar.jsx'
 
-function Projects(){
+function Projects({ref}){
   return(
-    <>
+    <div ref={ref} id="projects">
       <div className={styles.intro}>
         <div className={styles.title}>
           Projects
@@ -52,7 +52,7 @@ function Projects(){
         <Bar name='Car Maintenance App' subname={"Website Application"} subname2={"Not regularly maintained"} contentID= 'carMaintenance' link={["Try the website!","https://carmaintenanceproject.netlify.app/"]}/>
         <Bar name='Inflation Predictor with ML' subname={"Source Code Available Only"} contentID= 'stockMarket'/>
       </div>
-    </>
+    </div>
   )};  
 
 export default Projects; 
