@@ -121,6 +121,39 @@
   flex-direction: column;
  }
 
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes disappear {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+.skillEnter li{
+  animation: appear .3s ease forwards;
+  opacity: 0;
+}
+
+.skillLeave li{
+  animation: disappear .3s ease forwards;
+  opacity: 1;
+}
+
 @media (max-width:1900px) {
 
   .skillsGrid{

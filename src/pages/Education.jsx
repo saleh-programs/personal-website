@@ -77,7 +77,7 @@ function Education({ref}){
         </div>
       </section>
 
-      <section style={{position: "relative", margin: "5px", borderRadius: "10px", backgroundColor: "rgba(0,0,0,1)"}}>
+      <section style={{position: "relative", margin: "5px", borderRadius: "10px"}}>
         <section style={{position: "relative", width: "1400px", borderRadius: "10px", backgroundColor: "rgba(0,0,0,1)", margin: "auto"}}>
           <img src={CorkBoard} style={{width: "100%", height: "100%", objectFit: "cover", display: "block", justifySelf: "center"}} alt="" />
           <h2 style={{position: 'absolute', top: "0", left: "50%", transform: "translateX(-50%)", fontSize: "2rem", padding: "10px", textAlign: "center", backgroundColor: "rgba(39, 65, 15, 0.22)"}}>Academic Achievements</h2>

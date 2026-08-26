@@ -46,7 +46,6 @@ useEffect(() => {
   };
 }, []);
 
-useEffect(()=>{console.log(activeId)}, [activeId])
 
   function handleClick(ref){
     if (!ref.current || ! scrollableRef.current) return;

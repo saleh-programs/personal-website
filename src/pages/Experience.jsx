@@ -23,9 +23,45 @@ const conceptSkills = ["Auth flows", "Role-based systems", "Supervised AI data g
 ];
 
 
-function Experience({ref}){
+function Experience({ref, scrollableRef}){
   const [searchedSkills, setSearchedSkills] = useState([])
   const [skillSearch, setSkillSearch] = useState("")
+
+  const languageSkillsRef = useRef(null);
+  const databaseSkillsRef = useRef(null);
+  const librariesSkillsRef = useRef(null);
+  const cloudSkillsRef = useRef(null);
+  const toolSkillsRef = useRef(null);
+  const conceptSkillsRef = useRef(null);
+
+
+  useEffect(() => {
+    const elem = scrollableRef.current;
+    if (!elem) return;
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting){
+          entry.target.classList.add("skillEnter");
+          entry.target.classList.remove("skillLeave");
+        }else{
+          entry.target.classList.remove("skillEnter");
+          entry.target.classList.add("skillLeave");
+        }
+      });
+    }, {root: elem});
+
+    observer.observe(languageSkillsRef.current);
+    observer.observe(databaseSkillsRef.current);
+    observer.observe(librariesSkillsRef.current);
+    observer.observe(cloudSkillsRef.current);
+    observer.observe(toolSkillsRef.current);
+    observer.observe(conceptSkillsRef.current);
+
+    return () => {
+      observer.disconnect()
+    }
+  }, [])
 
   function locateSkills(e){
     setSkillSearch(e.target.value);
@@ -55,12 +91,13 @@ function Experience({ref}){
   function scrollToSkill(e){
     const selectedSkill = Array.from(document.querySelectorAll(`[data-skill="${e.target.textContent}"]`))?.[0];
     if (!selectedSkill) return;
-    console.log("hi")
     selectedSkill.scrollIntoView({
       behavior: "smooth",
       block: "center"
     });
   }
+
+
   return(
     <div className="section" ref={ref} id="experience" style={{
       display: "flex",
@@ -85,9 +122,20 @@ function Experience({ref}){
       <div className={styles.title}>
         Experience
       </div>
+      
 
       <hr className={styles['hz-separator']}>
       </hr>
+
+
+      <div style={{width: "100%", border: "1px solid red", height: "350px",width: "100px", display: "flex", overflow: "auto"}}>
+        {Array.from({length: 100}).map((i, ind) => {
+          return (<section>{ind}</section>)
+        })}
+
+      </div>
+
+
       <Bar name="Lead Coding Instructor" subname={"C2 Pipeline Engineering Camp"} contentID='leadInstructor' date="06/2025-09/2025"/>
       <Bar name="Assistant Manager" subname={"La Gelati Ice Cream"} contentID='laGelati' date="09/2021-10/2022"/>
     </div>
@@ -121,86 +169,58 @@ function Experience({ref}){
         </section>
       }
     </nav>
-    <div className={styles.skillsGrid} >
-      <div className={styles.skillsGridItem}
-      style={{
-        gridColumn: "1 / 3",
-        gridRow: "1 / 10"
-      }}>
-        <h3>Languages</h3>
-        <hr className={styles['hz-separator']}/>
-        <ul>
-          {languageSkills.map(skill => (
-            <li key={skill} data-skill={skill}>{skill}</li>
-          ))}
-        </ul>
-      </div>
-      <div className={styles.skillsGridItem}
-      style={{
-        gridColumn: "1/3",
-        gridRow: "10/15"
-      }}>
-        <h3>Databases</h3>
-        <hr className={styles['hz-separator']}/>
-        <ul>
-          {databaseSkills.map(skill => (
-            <li key={skill} data-skill={skill}>{skill}</li>
-          ))}
-        </ul>
-      </div>
-      <div className={styles.skillsGridItem}
-      style={{
-        gridColumn: "3/6",
-        gridRow: "1 / 11"
-      }}>
-        <h3>Frameworks & Libraries</h3>
-        <hr className={styles['hz-separator']}/>
-        <ul>
-          {librariesSkills.map(skill => (
-            <li key={skill} data-skill={skill}>{skill}</li>
-          ))}
-        </ul>
-      </div>
-      <div className={styles.skillsGridItem}
-      style={{
-        gridColumn: "span 8",
-        gridRow: "span 11"
-      }}>
-        <h3>Major Cloud Services</h3>
-        <hr className={styles['hz-separator']}/>
-        <ul>
-          {cloudSkills.map(skill => (
-            <li key={skill} data-skill={skill}>{skill}</li>
-          ))}
-        </ul>
-      </div>
-      <div className={styles.skillsGridItem}
-      style={{
-        gridColumn: "3 / 6",
-        gridRow: "11/21",
-      }}>
-        <h3>Tools</h3>
-        <hr className={styles['hz-separator']}/>
-        <ul>
-          {toolSkills.map(skill => (
-            <li key={skill} data-skill={skill}>{skill}</li>
-          ))}
-        </ul>
-      </div>
-      <div className={styles.skillsGridItem}
-      style={{
-        gridColumn: "6/16",
-        gridRow: "1/11"
-      }}>
-        <h3>Concepts</h3>
-        <hr className={styles['hz-separator']}/>
-        <ul>
-          {conceptSkills.map(skill => (
-            <li key={skill} data-skill={skill}>{skill}</li>
-          ))}
-        </ul>
-      </div>
 
+    <div className={styles.allSkills} style={{display: "flex" , flexDirection: 'column', width: "100%"}}>
+
+      <section ref={languageSkillsRef} style={{width: "100%", border: "1px solid"}}>
+        <h3>Languages</h3>
+        <ul style={{display: "flex", listStyle: "none", gap: "5px", flexWrap: "wrap"}}>
+          {languageSkills.map((skill, i) => (
+            <li className={styles.skill} style={{backgroundColor: "rgba(96, 196, 57, 0.23)", padding: "15px", animationDelay: `${i * .02}s`}} key={skill} data-skill={skill}>{skill}</li>
+          ))}
+        </ul>
+      </section>
+      <section ref={databaseSkillsRef} style={{width: "100%", border: "1px solid"}}>
+        <h3>Databases</h3>
+        <ul style={{display: "flex", listStyle: "none", gap: "5px", flexWrap: "wrap"}}>
+          {databaseSkills.map((skill,i) => (
+            <li style={{backgroundColor: "rgba(96, 196, 57, 0.23)", padding: "15px", animationDelay: `${i * .04}s`}} key={skill} data-skill={skill}>{skill}</li>
+          ))}
+        </ul>
+      </section>
+      <section ref={librariesSkillsRef} style={{width: "100%", border: "1px solid"}}>
+        <h3>Frameworks & Libraries</h3>
+        <ul style={{display: "flex", listStyle: "none", gap: "5px", flexWrap: "wrap"}}>
+          {librariesSkills.map((skill,i) => (
+            <li style={{backgroundColor: "rgba(96, 196, 57, 0.23)", padding: "15px",  animationDelay: `${i * .04}s`}} key={skill} data-skill={skill}>{skill}</li>
+          ))}
+        </ul>
+      </section>
+      <section ref={cloudSkillsRef} style={{width: "100%", border: "1px solid"}}>
+        <h3>Major Cloud Services</h3>
+        <ul style={{display: "flex", listStyle: "none", gap: "5px", flexWrap: "wrap"}}>
+          {cloudSkills.map((skill,i) => (
+            <li style={{backgroundColor: "rgba(96, 196, 57, 0.23)", padding: "15px", animationDelay: `${i * .04}s`}} key={skill} data-skill={skill}>{skill}</li>
+          ))}
+        </ul>
+      </section>
+      <section ref={toolSkillsRef} style={{width: "100%", border: "1px solid"}}>
+        <h3>Tools</h3>
+        <ul style={{display: "flex", listStyle: "none", gap: "5px", flexWrap: "wrap"}}>
+          {toolSkills.map((skill,i) => (
+            <li style={{backgroundColor: "rgba(96, 196, 57, 0.23)", padding: "15px", animationDelay: `${i * .04}s`}} key={skill} data-skill={skill}>{skill}</li>
+          ))}
+        </ul>
+      </section>
+      <section ref={conceptSkillsRef} style={{width: "100%", border: "1px solid"}}>
+        <h3>Concepts</h3>
+        <ul style={{display: "flex", listStyle: "none", gap: "5px", flexWrap: "wrap"}}>
+          {conceptSkills.map((skill,i) => (
+            <li style={{backgroundColor: "rgba(96, 196, 57, 0.23)", padding: "15px", animationDelay: `${i * .04}s`}} key={skill} data-skill={skill}>{skill}</li>
+          ))}
+        </ul>
+      </section>
+      
     </div>
 
   </div>

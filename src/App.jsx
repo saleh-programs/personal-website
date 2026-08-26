@@ -151,7 +151,7 @@ useEffect(() => {
             <Home ref={homeRef}/>
             <Education ref={educationRef}/>
             <Projects ref={projectsRef}/>
-            <Experience ref={experienceRef}/>
+            <Experience ref={experienceRef} scrollableRef={scrollableRef}/>
               {/* <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/education" element={<Education />} />
