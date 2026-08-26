@@ -7,6 +7,7 @@ import Home from './pages/Home.jsx'
 import Education from './pages/Education.jsx';
 import Projects from './pages/Projects.jsx';
 import Experience from './pages/Experience.jsx';
+import Skills from './pages/Skills.jsx';
 import Animation from './assets/Animation.jsx';
 import { useEffect, useRef, useState } from 'react';
 
@@ -16,6 +17,7 @@ function App() {
   const educationRef = useRef(null);
   const projectsRef = useRef(null);
   const experienceRef = useRef(null);
+  const skillsRef = useRef(null)
 
   const scrollableRef = useRef(null);
 
@@ -151,7 +153,8 @@ useEffect(() => {
             <Home ref={homeRef}/>
             <Education ref={educationRef}/>
             <Projects ref={projectsRef}/>
-            <Experience ref={experienceRef} scrollableRef={scrollableRef}/>
+            <Experience ref={experienceRef}/>
+            <Skills ref={skillsRef} scrollableRef={scrollableRef}/>
               {/* <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/education" element={<Education />} />

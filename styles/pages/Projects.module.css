@@ -1,17 +1,50 @@
 
 .projectspage{
-  border: 5px solid red;
+  position: relative;
   margin: 15px;
   padding: 30px;
   border-radius: 20px;
-  background-color: rgb(1, 36, 50);
+  background-color: rgba(1, 36, 50,.85);
 
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
+@keyframes shimmer-rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.intro::before {
+  content: "";
+  position: absolute;
+  inset: -300%;
+
+background: conic-gradient(
+  transparent 0deg,
+  rgba(255, 255, 255, 0.05) 15deg,
+  rgba(255, 255, 255, .3) 35deg,
+  rgba(255, 255, 255, 0.05) 55deg,
+  transparent 70deg,
+
+  transparent 180deg,
+  rgba(255, 255, 255, 0.05) 195deg,
+  rgba(255, 255, 255, 0.3) 215deg,
+  rgba(255, 255, 255, 0.05) 235deg,
+  transparent 250deg
+);
+
+  animation: shimmer-rotate 3s linear infinite;
+  pointer-events: none;
+}
+
  .intro{
+  position: relative;
+  overflow: hidden;
+
+  border-radius: 60px;
   margin-inline: 20%;
   margin-bottom: 30px;
   padding: 10px 20px 10px 20px;
@@ -21,7 +54,7 @@
  }
  .title{
   text-align: center;
-  font-size: 45px;
+  font-size: 75px;
   font-family: "Daruma";
   font-weight: bold;
   color: white;
