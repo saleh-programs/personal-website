@@ -5,7 +5,7 @@ import Bar from '../components/Bar.jsx'
 
 function Projects({ref}){
   return(
-    <div className="section" ref={ref} id="projects">
+    <div className={`${styles.projectspage} section`} ref={ref} id="projects">
       <div className={styles.intro}>
         <div className={styles.title}>
           Projects
@@ -16,7 +16,7 @@ function Projects({ref}){
           This page provides a general breakdown of various projects I've worked on. A description and list of involved concepts is provided for each project, as well as a link to its dedicated GitHub repository.
           <br/><br />
           Select an option to learn more!
-        </div>
+        </div> 
       </div>
       <div>
         <div className={styles.title}>
@@ -34,7 +34,7 @@ function Projects({ref}){
 
       <div >
         <div className={styles.title}>
-          Smaller Projects
+          Smaller Personal Projects <br />(those worth mentioning)
         </div>
 
         <hr className={styles['hz-separator']}>

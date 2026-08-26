@@ -19,7 +19,7 @@ import redtack from "../assets/images/redtack.png"
 function Education({ref}){
 
   return(
-    <div className='section' ref={ref} id="education">
+    <div className={`${styles.educationpage} section`} ref={ref} id="education">
       <div className={styles.intro}> 
         <div className={styles.title}>
           Education 
@@ -30,7 +30,7 @@ function Education({ref}){
           A brief breakdown of my education and academic achievements that I am proud to have received.<br/>
         </div>
       </div>
-      <section style={{position: "relative", height: "500px", margin: "5px", borderRadius: "10px", overflow: "hidden", backgroundColor: "rgba(0,0,0,1)"}}>
+      <section style={{position: "relative", height: "500px", margin: "5px 80px", borderRadius: "90px 10px", border: "1px solid rgba(255,255,255,.5)", overflow: "hidden", backgroundColor: "rgba(0,0,0,1)"}}>
         <img src={Fordson} style={{width: "100%", height: "100%", objectFit: "cover", display: "block", justifySelf: "center", opacity: .5}} alt="" />
         <div style={{position: 'absolute', top: "0", left: "0", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", width: "100%", height: "100%"}}>
           <div style={{backgroundColor: "rgba(0, 0, 0, 0.7)", alignSelf: "center", width: "30%", padding: "20px", borderRadius: "50px", alignItems: "center", margin: "10px"}}>
@@ -46,7 +46,7 @@ function Education({ref}){
           </div>
         </div>
       </section>
-      <section style={{position: "relative", height: "800px", margin: "5px", borderRadius: "10px", overflow: "hidden", backgroundColor: "rgba(0,0,0,1)"}}>
+      <section style={{position: "relative", height: "800px", margin: "5px 80px", borderRadius: "90px 10px", border: "1px solid rgba(255,255,255,.5)", overflow: "hidden", backgroundColor: "rgba(0,0,0,1)"}}>
         <img src={WayneState} style={{width: "100%", height: "100%", objectFit: "cover", display: "block", justifySelf: "center", opacity: .5}} alt="" />
         <div style={{position: 'absolute', top: "0", left: "0", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", width: "100%", height: "100%"}}>
           <div style={{backgroundColor: "rgba(0, 0, 0, 0.7)", alignSelf: "center", width: "40%", padding: "20px", borderRadius: "50px", alignItems: "center", margin: "10px"}}>
@@ -76,7 +76,6 @@ function Education({ref}){
           </div>
         </div>
       </section>
-
       <section style={{position: "relative", margin: "5px", borderRadius: "10px"}}>
         <section style={{position: "relative", width: "1400px", borderRadius: "10px", backgroundColor: "rgba(0,0,0,1)", margin: "auto"}}>
           <img src={CorkBoard} style={{width: "100%", height: "100%", objectFit: "cover", display: "block", justifySelf: "center"}} alt="" />

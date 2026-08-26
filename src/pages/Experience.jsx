@@ -1,6 +1,9 @@
 import {useState,useRef,useEffect} from 'react'
 import styles from '../../styles/pages/Experience.module.css'
 import Bar from '../components/Bar.jsx'
+import lagelati from '../assets/images/lagelati.jpg'
+import campImage1  from "../assets/images/leadInstructor1.png"
+import campImage2  from "../assets/images/leadInstructor2.png"
 
 const languageSkills = ["C++", "C", "JavaScript", "Python", "SQL", "HTML", "CSS",
   "Java", "Swift", "Bash"
@@ -99,7 +102,7 @@ function Experience({ref, scrollableRef}){
 
 
   return(
-    <div className="section" ref={ref} id="experience" style={{
+    <div className={`${styles.experiencepage} section`} ref={ref} id="experience" style={{
       display: "flex",
       flexDirection: "column",
       justifyContent: "center",
@@ -107,35 +110,67 @@ function Experience({ref, scrollableRef}){
     }}>
     <div className={styles.intro}>
       <div className={styles.title}>
-        Experience and Skills
+        Experience 
       </div>
       <div className={styles['hz-separator']}>
       </div> 
       <div className={styles.info}>
         Find information on employment history and job experience, excluding any project-related work. 
         <br/>
-        Also, see skills showcasing my capabilities.<br/><br/>
-        Select an option to learn more!
       </div>
     </div>
+
+    <div className={styles.horizScrollable}>
+      <section className={`${styles.job} ${styles.startJobAnimation}`}>
+        <div className={styles.jobLeft}>
+          <img src={campImage1} />
+          <section className={styles.jobInfo}>
+            <h3>Lead Coding Instructor</h3>
+            <h4> @ C2 Pipeline Engineering Camp</h4>
+            <section>06/2025 - 09/2025</section>
+          </section>
+        </div>
+        <div className={styles.jobRight}>
+          <header>
+            <h3>Lead Coding Instructor</h3>
+            <h4> @ C2 Pipeline Engineering Camp</h4>
+            <section>06/2025 - 09/2025</section>  
+          </header>
+          <p>
+            Served as the lead coding instructor at Wayne State University's Summer Engineering Camp, hosted by the C2 Pipeline.
+            <br />
+            My main responsibility was to teach the fundamentals of programming to students anywhere from grades 3-12.
+            <br /><br />
+            Other responsibilities consisted of:
+          </p>
+          <ul>
+            <li>Creating lesson plans surrounding basic programming concepts.</li>
+            <li>Building demo applications in Swift to serve as references for students.</li>
+            <li>Providing hands on support to students.</li>
+            <li>Addressing unique challenges and promoting skill development.</li>
+            <li>Coordinating with staff and faculty to improve the student experience.</li>
+          </ul>
+        </div>
+      </section>
+      {/* <section className={styles.job}>
+        <img src={campImage2} />
+        <section className={styles.jobInfo}>
+          <h3>Camp Coordinator</h3>
+          <h4> @ C2 Pipeline Engineering Camp</h4>
+          <section>06/2025 - 09/2025</section>
+        </section>
+      </section>
+      <section className={styles.job}>
+        <img src={lagelati} />
+        <section className={styles.jobInfo}>
+          <h3>Assistant Manager</h3>
+          <h4> @ La Gelati</h4>
+          <section>06/2025 - 09/2025</section>
+        </section>
+      </section> */}
+    </div>
+
     <div >
-      <div className={styles.title}>
-        Experience
-      </div>
-      
-
-      <hr className={styles['hz-separator']}>
-      </hr>
-
-
-      <div style={{width: "100%", border: "1px solid red", height: "350px",width: "100px", display: "flex", overflow: "auto"}}>
-        {Array.from({length: 100}).map((i, ind) => {
-          return (<section>{ind}</section>)
-        })}
-
-      </div>
-
-
       <Bar name="Lead Coding Instructor" subname={"C2 Pipeline Engineering Camp"} contentID='leadInstructor' date="06/2025-09/2025"/>
       <Bar name="Assistant Manager" subname={"La Gelati Ice Cream"} contentID='laGelati' date="09/2021-10/2022"/>
     </div>

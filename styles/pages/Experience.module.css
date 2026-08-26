@@ -1,20 +1,30 @@
- .intro{
-  border: 2px solid;
-  box-shadow: 0 0 10px rgb(0, 0, 0);
+.experiencepage{
+  border: 5px solid red;
+  margin: 15px;
+  padding: 30px;
+  border-radius: 20px;
+  background-color: rgb(36, 0, 0,.9);
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.intro{
   margin-inline: 20%;
-  border-radius: 30px;
   margin-bottom: 30px;
   padding: 10px 20px 10px 20px;
   font-family: 'Exo 2';
   font-weight: bold;
-  background-color: rgb(218, 206, 206);
-
+  color: white;
  }
+
  .title{
   text-align: center;
   font-size: 45px;
   font-family: "Daruma";
   font-weight: bold;
+  color: white;
  }
  .hz-separator{
   border: 1px solid rgb(68, 67, 67);
@@ -24,6 +34,140 @@
   padding-inline: 40px;
   text-align: center;
   font-size: 35px;
+ }
+
+ .horizScrollable{
+  color: white;
+  width: 100%;
+  height: 600px;
+  display: flex;
+  overflow-x: auto;
+  padding: 10px;
+  gap: 10px;
+
+  scrollbar-width: thin;
+  scrollbar-color: #888 transparent;
+  ::-webkit-scrollbar {
+    height: 3px;
+  } 
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+ }
+
+
+ @keyframes slideInJobInfo {
+  0%{
+    opacity: 0;
+    transform: translateX(0);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(755px);
+  }
+ }
+
+ .job.startJobAnimation{
+  .jobInfo{
+    opacity: 0;
+  }
+  .jobLeft img{
+    opacity: 1;
+  }
+  .jobRight{
+    animation: slideInJobInfo .5s ease forwards;
+  }
+ }
+
+ .job{
+  display: flex;  
+  border-radius: 30px;
+  padding: 25px;
+  background-color: rgb(24, 1, 1);
+  position: relative;
+
+
+  .jobLeft{
+    border-radius: 30px;
+    flex-shrink: 0;
+    margin: 10px;
+    overflow: hidden;
+    min-width: 500px;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.411);
+    height: 100%;
+
+    img{
+      transition: opacity .5s ease;
+      transition-delay: .2s;
+
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      opacity: .2;
+    }
+    .jobInfo{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transition: opacity .5s ease;
+      transition-delay: .2s;
+
+      h3{
+        font-size: 1.8em;
+        text-align: center;
+      }
+      h4{
+        font-size: 1.3em;
+        text-align: center;
+      }
+      p {
+        margin-inline: 30px;
+      }
+      section{
+        text-align: center;
+      }
+    }
+  }
+  .jobRight{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 800px;
+    height: 100%;
+    border-radius: 0 30px 30px 0;
+    padding: 25px;
+    background-color: rgb(24, 1, 1);
+    transform: translateX(0px);
+    opacity: 0;
+    overflow-y: auto;
+    header{
+      text-align: center;
+      h3, h4{
+        margin: 5px;
+        font-size: 1.3em;
+      }
+      margin-bottom: 10px;
+    }
+    p, ul{
+      font-size: 1.5em;
+      padding: 30px;
+    }
+    ul{
+      margin-left: 12px;
+    }
+  }
+
  }
 
  .skillsGrid{
