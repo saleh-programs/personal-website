@@ -8,6 +8,7 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+
 }
 
 .intro{
@@ -20,9 +21,9 @@
  }
  .title{
   text-align: center;
-  font-size: 75px;
   font-family: "Daruma";
   font-weight: bold;
+  font-size: 1.4rem;
  }
  .hz-separator{
   border: 1px solid rgb(68, 67, 67);
@@ -30,8 +31,208 @@
  .info{
   padding-inline: 40px;
   text-align: center;
-  font-size: 35px;
+  font-size: 1rem;
  } 
+
+
+ .educationItem{
+  position: relative;
+  min-height: 500px;
+  margin: 5px 80px;
+  border-radius: 90px 10px;
+  border: 1px solid rgba(255,255,255,.5);
+  background-color: rgba(0,0,0,1);
+  box-shadow: 40px 40px 10px black;
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px;
+
+  .imgContainer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      justify-self: center;
+      opacity: .5;
+    }
+  }
+
+  
+  .educationItemContent{
+    z-index: 1;
+    margin: auto;
+    align-items: center;
+    .centeredInfo{
+      background-color: rgba(0,0,0,.7);
+      align-self: center;
+      padding: 20px;
+      border-radius: 50px;
+      align-items: center;
+      margin: 10px;
+
+      display: flex;
+      flex-direction: column;
+      h2{
+        color: white;
+        padding: 5px;
+        margin: 10px auto;
+        font-size: 1.1em;
+      }
+      h3{
+        color: white;
+        padding: 5px;
+        margin: 10px auto;
+        font-size: .9rem;
+        margin-bottom: 0;
+      }
+      ul{
+        list-style: none;
+        color: white;
+        font-size: .9rem;
+        padding: 0;
+      }
+      li{
+        font-weight: bold;
+        color: white;
+        font-size: .75rem;
+      }
+      a{
+        color: white;
+      }
+      .dateAttended{
+        font-weight: bold;
+        padding: 10px;
+        color: white;
+        font-size: .7rem;
+      }
+
+    }
+  }
+
+  
+ }
+
+
+.academicAchievements{
+  margin-block: 40px;
+
+  > h2{
+    text-align: center;
+    color: white;
+    font-size: 1.4rem;
+  }
+  .corkboard {
+    background-color: rgba(0, 0, 0, 0.422);
+    border-radius: 10px;
+    margin: auto;
+    max-width: 1500px;
+
+    position: relative;
+    padding: 50px;
+    display: flex;
+    justify-content: space-around;
+    .certificateItem{
+      width: 400px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .frame{
+        position: relative;
+        > img{
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        section{
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 100%;
+          transform: translate(-50%, -50%) scale(.8);
+          img{
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+
+      .note{
+        position: relative;
+        width: 400px;
+        margin: -10px;
+        img{
+          width: 100%;
+          height: 100%;
+        }
+
+        .noteText{
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%,-50%);
+          width: 70%;
+
+          h3{
+            font-size: 1.5rem;
+            text-align: center;
+          }
+          section{
+            text-align: center;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+    .stickyNote{
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      width: 200px;
+      z-index: 4;
+      transform: translate(-50%,100%) rotate(14deg);
+
+      img{
+        width: 100%;
+        height: 100%;
+      }
+      .stickyNoteContent{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        font-weight: bold;
+        font-family: "Daruma";
+      }
+    }
+  }
+}
+
+
+.tack{
+  position: absolute;
+  width: 40px;
+  z-index: 5;
+  img{
+    width: 100%;
+    height: 100%;
+  }
+}
 
 @media (max-width:1100px) {
   .intro{

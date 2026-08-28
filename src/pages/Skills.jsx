@@ -29,6 +29,33 @@ function Skills({ref, scrollableRef}){
     const toolSkillsRef = useRef(null);
     const conceptSkillsRef = useRef(null);
 
+    const allSkills = [
+        {name: "Languages",
+        ref: languageSkillsRef,
+        skills: languageSkills,
+        color: "rgb(189, 236, 177)"},
+        {name: "Databases",
+        ref: databaseSkillsRef,
+        skills: databaseSkills,
+        color: "rgb(253, 200, 200)"},
+        {name: "Frameworks & Libraries",
+        ref: librariesSkillsRef,
+        skills: librariesSkills,
+        color: "rgb(205, 248, 255)"},
+        {name: "Major Cloud Services",
+        ref: cloudSkillsRef,
+        skills: cloudSkills,
+        color: "rgb(255, 230, 253)"},
+        {name: "Tools",
+        ref: toolSkillsRef,
+        skills: toolSkills,
+        color: "rgb(248, 247, 192)"},
+        {name: "Concepts",
+        ref: conceptSkillsRef,
+        skills: conceptSkills,
+        color: "rgb(250, 250, 250)"},        
+    ]
+
 
     useEffect(() => {
         const elem = scrollableRef.current;
@@ -63,12 +90,13 @@ function Skills({ref, scrollableRef}){
 
         const allSkills = Array.from(document.querySelectorAll("[data-skill]"));
         for (const elem of allSkills){
-        elem.style.backgroundColor = ""
+            elem.style.filter = "";
+            elem.style.border = "";
         }
 
         if (e.target.value.length < 1){
-        setSearchedSkills([]);
-        return
+            setSearchedSkills([]);
+            return;
         }
 
         
@@ -79,7 +107,8 @@ function Skills({ref, scrollableRef}){
 
         // Highlight found skills
         for (const elem of matchingSkills){
-        elem.style.backgroundColor = "yellow";
+            elem.style.filter = "invert()";
+            elem.style.border = "5px solid purple";
         }
     }
 
@@ -89,6 +118,10 @@ function Skills({ref, scrollableRef}){
         selectedSkill.scrollIntoView({
         behavior: "smooth",
         block: "center"
+        });
+        selectedSkill.classList.add("skillAnimation");
+        selectedSkill.addEventListener("animationend", () => {
+            selectedSkill.classList.remove("skillAnimation");
         });
     }
     return(
@@ -104,80 +137,40 @@ function Skills({ref, scrollableRef}){
                 </div> 
             </div>
             <nav className={styles.skillsNavBar}>
-            <section>
-                <span>Find skills </span>
-                <input 
-                type="text" 
-                placeholder='Ex) Node.js'
-                value={skillSearch}
-                onChange={locateSkills}
-                />
-            </section>
-            {searchedSkills.length !== 0 && 
                 <section>
-                <ul>
-                    {searchedSkills.map(skill => (
-                    <li 
-                    key={skill}
-                    onClick={scrollToSkill}>
-                        {skill}</li>
-                    ))}
-                </ul>
+                    <span>Find / Highlight Skills </span>
+                    <input 
+                    type="text" 
+                    placeholder='Ex) Node.js'
+                    value={skillSearch}
+                    onChange={locateSkills}
+                    />
                 </section>
-            }
+                {searchedSkills.length !== 0 && 
+                    <section>
+                    <ul>
+                        {searchedSkills.map(skill => (
+                        <li 
+                        key={skill}
+                        onClick={scrollToSkill}>
+                            {skill}</li>
+                        ))}
+                    </ul>
+                    </section>
+                }
             </nav>
 
-            <div className={styles.allSkills} style={{display: "flex" , flexDirection: 'column', width: "100%"}}>
-
-            <section ref={languageSkillsRef} style={{width: "100%", border: "1px solid"}}>
-                <h3>Languages</h3>
-                <ul style={{display: "flex", listStyle: "none", gap: "5px", flexWrap: "wrap"}}>
-                {languageSkills.map((skill, i) => (
-                    <li className={styles.skill} style={{backgroundColor: "rgba(96, 196, 57, 0.23)", padding: "15px", animationDelay: `${i * .02}s`}} key={skill} data-skill={skill}>{skill}</li>
-                ))}
-                </ul>
-            </section>
-            <section ref={databaseSkillsRef} style={{width: "100%", border: "1px solid"}}>
-                <h3>Databases</h3>
-                <ul style={{display: "flex", listStyle: "none", gap: "5px", flexWrap: "wrap"}}>
-                {databaseSkills.map((skill,i) => (
-                    <li style={{backgroundColor: "rgba(96, 196, 57, 0.23)", padding: "15px", animationDelay: `${i * .04}s`}} key={skill} data-skill={skill}>{skill}</li>
-                ))}
-                </ul>
-            </section>
-            <section ref={librariesSkillsRef} style={{width: "100%", border: "1px solid"}}>
-                <h3>Frameworks & Libraries</h3>
-                <ul style={{display: "flex", listStyle: "none", gap: "5px", flexWrap: "wrap"}}>
-                {librariesSkills.map((skill,i) => (
-                    <li style={{backgroundColor: "rgba(96, 196, 57, 0.23)", padding: "15px",  animationDelay: `${i * .04}s`}} key={skill} data-skill={skill}>{skill}</li>
-                ))}
-                </ul>
-            </section>
-            <section ref={cloudSkillsRef} style={{width: "100%", border: "1px solid"}}>
-                <h3>Major Cloud Services</h3>
-                <ul style={{display: "flex", listStyle: "none", gap: "5px", flexWrap: "wrap"}}>
-                {cloudSkills.map((skill,i) => (
-                    <li style={{backgroundColor: "rgba(96, 196, 57, 0.23)", padding: "15px", animationDelay: `${i * .04}s`}} key={skill} data-skill={skill}>{skill}</li>
-                ))}
-                </ul>
-            </section>
-            <section ref={toolSkillsRef} style={{width: "100%", border: "1px solid"}}>
-                <h3>Tools</h3>
-                <ul style={{display: "flex", listStyle: "none", gap: "5px", flexWrap: "wrap"}}>
-                {toolSkills.map((skill,i) => (
-                    <li style={{backgroundColor: "rgba(96, 196, 57, 0.23)", padding: "15px", animationDelay: `${i * .04}s`}} key={skill} data-skill={skill}>{skill}</li>
-                ))}
-                </ul>
-            </section>
-            <section ref={conceptSkillsRef} style={{width: "100%", border: "1px solid"}}>
-                <h3>Concepts</h3>
-                <ul style={{display: "flex", listStyle: "none", gap: "5px", flexWrap: "wrap"}}>
-                {conceptSkills.map((skill,i) => (
-                    <li style={{backgroundColor: "rgba(96, 196, 57, 0.23)", padding: "15px", animationDelay: `${i * .04}s`}} key={skill} data-skill={skill}>{skill}</li>
-                ))}
-                </ul>
-            </section>
-            
+            <div className={styles.allSkills}>
+                {allSkills.map(skillInfo => (
+                    <section ref={skillInfo.ref}>
+                        <h3>{skillInfo.name}</h3>
+                        <ul>
+                        {skillInfo.skills.map((skill, i) => (
+                            <li style={{animationDelay: `${i * .02}s`, backgroundColor: skillInfo.color}} key={skill} data-skill={skill}>{skill}</li>
+                        ))}
+                        </ul>
+                    </section>
+                ))}            
             </div>
         </div>
     )

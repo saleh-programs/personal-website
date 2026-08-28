@@ -227,6 +227,9 @@ body{
 }
 
 .routes{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
   flex: 1;
   position: relative;
   z-index: 2;
@@ -251,7 +254,6 @@ body{
 h1, h2, h2{
   font-family: "Daruma";
 }
-
 
 
 @keyframes appear {
@@ -280,9 +282,30 @@ h1, h2, h2{
 .skillEnter li{
   animation: appear .3s ease forwards;
   opacity: 0;
+  &.skillAnimation{
+    animation: emphasizeSkill 1s 2;
+    opacity: 1;
+  }
 }
 
 .skillLeave li{
   animation: disappear .3s ease forwards;
   opacity: 1;
+  &.skillAnimation{
+    animation: emphasizeSkill 1s 2;
+    opacity: 1;
+
+  }
+}
+
+@keyframes emphasizeSkill {
+  0%{
+    opacity: 1;
+  }
+  50%{
+    opacity: .2;
+  }
+  100%{
+    opacity: 1;
+  }
 }

@@ -8,8 +8,9 @@ function Experience({ref}){
 
   function scrollToJob(e){
     const elem = e.currentTarget;
+    const scrollable = elem.parentElement;
     setTimeout(() => {
-      elem.scrollIntoView({behavior: "smooth", inline: "end", block: "nearest"})
+      scrollable.scrollTo({behavior: "smooth", left: elem.offsetLeft + elem.offsetWidth - scrollable.clientWidth})
     },100)
   }
 

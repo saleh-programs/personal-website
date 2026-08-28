@@ -24,15 +24,15 @@
 
 background: conic-gradient(
   transparent 0deg,
-  rgba(255, 255, 255, 0.05) 15deg,
-  rgba(255, 255, 255, .3) 35deg,
-  rgba(255, 255, 255, 0.05) 55deg,
+  rgba(255, 255, 255, 0.02) 15deg,
+  rgba(255, 255, 255, .05) 35deg,
+  rgba(255, 255, 255, 0.02) 55deg,
   transparent 70deg,
 
   transparent 180deg,
-  rgba(255, 255, 255, 0.05) 195deg,
-  rgba(255, 255, 255, 0.3) 215deg,
-  rgba(255, 255, 255, 0.05) 235deg,
+  rgba(255, 255, 255, 0.02) 195deg,
+  rgba(255, 255, 255, 0.05) 215deg,
+  rgba(255, 255, 255, 0.02) 235deg,
   transparent 250deg
 );
 
@@ -54,7 +54,7 @@ background: conic-gradient(
  }
  .title{
   text-align: center;
-  font-size: 75px;
+  font-size: 1.4rem;
   font-family: "Daruma";
   font-weight: bold;
   color: white;
@@ -65,7 +65,7 @@ background: conic-gradient(
  .info{
   padding-inline: 40px;
   text-align: center;
-  font-size: 35px;
+  font-size: 1rem;
  }
 
  @media (max-width:1100px) {

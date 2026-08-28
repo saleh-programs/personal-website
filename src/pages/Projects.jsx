@@ -19,7 +19,7 @@ function Projects({ref}){
         </div> 
       </div>
       <div>
-        <div className={styles.title}>
+        <div className={styles.title}> 
           Personal Projects
         </div>
         <hr className={styles['hz-separator']}>
