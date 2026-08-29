@@ -220,7 +220,7 @@
         font-family: "Daruma";
       }
     }
-  }
+  } 
 }
 
 
@@ -234,32 +234,74 @@
   }
 }
 
+
 @media (max-width:1100px) {
   .intro{
-    width: 80%;
     margin: auto;
-    margin-bottom: 40px;
-    font-size: 1rem;
   }
-  .title{
-    font-size: 1.2rem;
-  }
-  .info{
-    font-size: .8rem;
+  .educationItem{
+    margin: 5px 20px;
+
+    .educationItemContent{
+      .centeredInfo{
+        h2{
+          font-size: .9em;
+          text-align: center;
+        }
+        h3{
+          font-size: .8rem;
+          text-align: center;
+        }
+        ul{
+          font-size: .7rem;
+        }
+        li{
+
+          font-size: .65rem;
+        }
+        a{
+          color: white;
+        }
+        .dateAttended{
+          font-size: .6rem;
+        }
+
+      }
+    }
   }
 
 }
  
  @media (max-width:500px) {
-  .intro{
-    width: 80%;
-    margin: auto;
-    margin-bottom: 40px;
-  }
-  .title{
-    font-size: 1rem;
+  .educationpage{
+    padding-inline: 20px;
   }
   .info{
-    font-size: .5rem;
+    font-size: .8rem;
+    padding-inline: 0;
+  }
+
+  .educationItem{
+    box-shadow: 10px 10px 20px black;
+    margin: 5px 0;
+    padding: 0;
+    .educationItemContent{
+      width: 100%;
+      height: 100%;
+      .centeredInfo{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        justify-content: center;
+        background-color: transparent;
+      }
+      
+    }
+
+    .imgContainer{
+      img{
+        opacity: .35;
+      }
+    }
   }
  }

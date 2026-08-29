@@ -59,17 +59,6 @@
  }
 
 
- @keyframes slideInJobInfo {
-  0%{
-    opacity: 0;
-    transform: translateX(0);
-  }
-  100%{
-    opacity: 1;
-    transform: translateX(540px);
-  }
- }
-
  .job:hover{
   .jobInfo{
     opacity: 0;
@@ -105,7 +94,7 @@
     min-width: 500px;
 
     img{
-      transition: opacity .5s ease;
+      transition: opacity .5s ease; 
 
       width: 100%;
       height: 100%;
@@ -190,6 +179,17 @@
 
 
 
+ @keyframes slideInJobInfo {
+  0%{
+    opacity: 0;
+    transform: translateX(0);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(540px);
+  }
+ }
+
 @keyframes appear {
   from {
     opacity: 0;
@@ -214,56 +214,94 @@
   }
 }
 
-@media (max-width:1900px) {
-
-  .skillsGrid{
-    width: auto;
-    display: flex;
-    flex-direction: column;
-  }
-
-}
  
  @media (max-width:1100px) {
-  .page_divider{
-    flex-direction: column;
-  }
-
-
-  .skillsGrid{
-    font-size: .6rem;
-  }
-  .skillsNavBar *{
-    font-size: .6rem !important;
-  }
-
   .intro{
-    width: 80%;
     margin: auto;
-    margin-bottom: 40px;
-    font-size: 1rem;
-  } 
-  .title{
-    font-size: 1.2rem;
+  }
+  .job{
+    .jobInfo{
+      font-size: .7rem;
+    }
+  }
+ }
+ 
+ @media (max-width:500px) {
+
+  @keyframes slideInJobInfo {
+    0%{
+      opacity: 0;
+      transform: translateY(0);
+    }
+    100%{
+      opacity: 1;
+      transform: translateY(220px);
+    }
   }
   .info{
     font-size: .8rem;
+    padding-inline: 0;
   }
-}
- 
- @media (max-width:500px) {
-  .intro{
-    width: 80%;
-    margin: auto;
-    margin-bottom: 40px;
+  .horizScrollable{
+    flex-direction: column;
+    &::-webkit-scrollbar {
+      width: 5px;
+    } 
   }
-  .title{
-    font-size: 1rem;
+
+  .job{
+    flex-direction: column;
+    padding: 10px;
+
+    .jobLeft{
+      min-width: auto;
+      height: 200px;
+      padding: 0;
+      margin: 0;
+
+      .jobInfo{
+        h3{
+          font-size: .9rem;
+        }
+
+        h4{
+          font-size: .6rem;
+        }
+        section{
+          font-size: .6rem;
+        }
+      }
+    }
+
+    .expander{
+      width: 0;
+      height: 0;
+      transition: height .1s;
+    }
+
+    .jobRight{
+      padding: 10px 30px;
+      width: 100%;
+      height: 300px;
+      overflow-y: auto;
+      header{
+        h3, h4{
+          font-size: .8rem;
+        }
+        margin-bottom: 10px;
+      }
+      p, ul, section{
+        font-size: .7em;
+        margin: 0;
+        padding: 0;
+      }
+    }
   }
-  .info{
-    font-size: .5rem;
-  }
-  .skills{
-    font-size: .5rem;
-  }
+
+    .job:hover{
+      .expander{
+        width: 0;
+        height: 315px;
+      }
+    }
  }
