@@ -32,7 +32,7 @@
   color: rgb(219, 176, 248);
   transform: scale(1.5);
   &:hover{
-    transform: scale(1.5);
+    transform: scale(1.5); 
   }
 } 
 

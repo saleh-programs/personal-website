@@ -105,7 +105,7 @@ function Education({ref}){
                 </section>
               </section>
             </div>
-          <div className={styles.certificateItem}>
+          <div className={styles.certificateItem} style={{paddingBottom: "80px"}}>
               <section className={styles.frame}>
                 <img src={frame2}  alt="" />
                 <section>
@@ -114,7 +114,7 @@ function Education({ref}){
               </section>
               <section className={styles.note}>
                 <img src={note} style={{transform: "scale(1.3) translateY(30px)"}} alt="" />
-                <section className={styles.tack} style={{bottom: "-40px", left: "35px"}}>
+                <section className={styles.tack} style={{bottom: "-40px", left: "15px"}}>
                   <img src={redtack} alt="" />
                 </section>
                 <section className={styles.tack} style={{top: "30px", right: "15px"}}>
@@ -134,7 +134,7 @@ function Education({ref}){
             
             <section className={styles.stickyNote}>
               <img src={note} alt="" />
-              <section className={styles.tack} style={{ top: "-10px", left: "75px"}}>
+              <section className={styles.tack} style={{ top: "0", left: "75px"}}>
                 <img src={redtack} alt="" />
               </section>
               <section className={styles.stickyNoteContent}>

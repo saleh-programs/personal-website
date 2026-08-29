@@ -141,7 +141,7 @@ function ProjectPlaceProject(){
             <img src={projectplace4} alt="" />
 
           </div>
-          <div className={"rowcontainer"}>
+          <div className={styles.descConcContainer}>
             <div className={styles.description}>
               <h2 >Description</h2>
               Project Place is a communication platform for teams inspired by what I believe is missing from similar applications.
@@ -254,7 +254,7 @@ function CarMaintenanceProject(){
             <img src={car4} alt="" />
 
           </div>
-          <div className={"rowcontainer"}>
+          <div className={styles.descConcContainer}>
             <div className={styles.description}>
               <h2 >Description</h2>
               Get reminders to service your vehicle and keep track of what needs maintenance!
@@ -317,7 +317,7 @@ function OMREFragrancesProject(){
             <img src={omre3} alt="" />
             <img src={omre4} alt="" />
           </div>
-          <div className={"rowcontainer"}>
+          <div className={styles.descConcContainer}>
             <div className={styles.description}>
               <h2 >Description</h2>
               OMRE Fragrances is a company that sells colognes, perfumes, and similar products. This is a senior capstone project that worked with the owner of the company to develop a 
@@ -409,7 +409,7 @@ function SecureS3FSProject(){
             <img src={s3fsflowPNG} alt="" />
             <iframe src="https://www.youtube.com/embed/_VpKkgdseCU?autoplay=1&mute=1&loop=1&playlist=_VpKkgdseCU" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen/>
           </div>
-          <div className={"rowcontainer"}>
+          <div className={styles.descConcContainer}>
             <div className={styles.description}>
               <h2 >Description</h2>
               An extension of the S3FS tool that allows users to upload their files to the cloud as: 
@@ -474,7 +474,7 @@ function FileAdventurerProject(){
             <img src={fileadv3} alt="" />
             <img src={fileadv4} alt="" />
           </div>
-          <div className={"rowcontainer"}>
+          <div className={styles.descConcContainer}>
             <div className={styles.description}>
               <h2>Description</h2>
               "File Adventurer" is my take on a cleaner, more intuitive version of Windows File Explorer. I built it to reduce clutter and add features I felt were missing in the built in file system, based on my frequent use of it.
@@ -531,7 +531,7 @@ function APIGlueProject(){
             <img src={apiGlue3} alt="" />
             <iframe src="https://www.youtube.com/embed/7Vz3ubHO5-4?autoplay=1&mute=1&loop=1&playlist=7Vz3ubHO5-4" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen/>
           </div>
-          <div className={"rowcontainer"}>
+          <div className={styles.descConcContainer}>
             <div className={styles.description}>
               <h2>Description</h2>
               It's pretty bothersome to have to constantly check if all of your projects' external dependencies (such as APIs) are still working. 
@@ -590,7 +590,7 @@ function PhysicsToolProject(){
             <img src={physics4} alt="" />
 
           </div>
-          <div className={"rowcontainer"}>
+          <div className={styles.descConcContainer}>
             <div className={styles.description}>
               <h2 >Description</h2>
               A game designed to help physics students improve at solving kinematics based physics problems! Join Willow on a journey gliding through the air and sprinting on foot, all while solving word problems related to his situation. Maybe you'll even get to chat with him if you do well enough!
@@ -632,7 +632,7 @@ function PlatformerProject(){
             <img src={pygame3} alt="" />
             <img src={pygame4} alt="" />
           </div>
-          <div className={"rowcontainer"}>
+          <div className={styles.descConcContainer}>
             <div className={styles.description}>
               <h2>Description</h2>
               A Hollow Knight inspired game made in Pygame with custom animations! The player can slash, shoot, and swing faced against enemies with unique logic!
@@ -673,7 +673,7 @@ function StockMarketProject(){
             <img src={ANN} alt="" />
             <img src={TreeAndANN} alt="" />
           </div>
-          <div className={"rowcontainer"}>
+          <div className={styles.descConcContainer}>
             <div className={styles.description}>
               <h2>Description</h2>
               Used 2 machine learning models (ANN and Decision Tree) to analyze trends in individual CPI sectors (gasoline, food, energy, etc.) and predict if overall inflation will rise. The F1 scores (performance scores) for both models are provided.<br/><br/>

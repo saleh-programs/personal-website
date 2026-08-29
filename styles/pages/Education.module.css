@@ -142,7 +142,7 @@
     display: flex;
     justify-content: space-around;
     .certificateItem{
-      width: 400px;
+      max-width: 400px;
       padding: 20px;
       display: flex;
       flex-direction: column;
@@ -270,6 +270,23 @@
     }
   }
 
+  .academicAchievements{
+    h2{
+      font-size: 1.1rem;
+    }
+    .corkboard{
+      flex-direction: column;
+      align-items: center;
+      padding: 0 0 100px 0;
+      
+      .certificateItem{
+        max-width: 600px;
+      }
+      .stickyNote{
+        bottom: 90px;
+      }
+    }
+  }
 }
  
  @media (max-width:500px) {
@@ -303,5 +320,37 @@
         opacity: .35;
       }
     }
+  }
+
+  .academicAchievements{
+    .corkboard{      
+
+      .certificateItem{
+        max-width: 250px;
+        padding-inline: 0;
+        .note{
+          width: 270px;
+          .noteText{
+            font-size: .6rem;
+
+            h3{
+              font-size: 1rem;
+            }
+          }
+         
+        }
+      }
+      .stickyNote{
+        bottom: 90px;
+        width: 150px;
+        font-size: .7rem;
+        .tack{
+          left: 60px !important;
+        }
+      }
+    }
+  }
+  .tack{
+    width: 25px;
   }
  }

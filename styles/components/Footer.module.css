@@ -35,7 +35,7 @@
   font-size: 25px;
   font-weight: bold;
 }
-
+ 
 @media (max-width:1100px){
   .footerinfo{
     font-size: .5rem;

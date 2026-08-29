@@ -1,11 +1,12 @@
+
 .bar{
   flex: 1;
   position: relative;
   border: 1px solid;
-  border-radius: 45px;
+  border-radius: 15px;
   background: linear-gradient(to right, white, rgb(173, 172, 172));
   box-shadow: 5px 5px 10px rgba(141, 42, 42, 0.5);
-  margin: 7px 40px 7px 7px;
+  margin: 7px 7px 7px 7px;
   padding: 0px 15px;
   font-size: 1.5rem;
   font-family: 'Exo 2';
@@ -23,6 +24,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  gap: 10px;
 
   padding: 10px;
 
@@ -31,9 +33,17 @@
   }
 }
 
+.barLeft{
+  flex: 1;
+}
+.barRight{
+  flex: 1;
+  text-align: right;
+}
+
 .dropdown-ref{
   position: relative;
-  display: flex;
+  display: flex; 
   transition: transform .2s;
 
   &:hover{
@@ -45,29 +55,27 @@
   justify-content: center;
   align-items: center;
 
-  font-size: 50px;
-  font-family: 'Exo 2';
-  font-weight: bolder;
-
-  margin: 7px 0;
-
-  width: 50px;
-  height: 50px;
+  width:60px;
+  height: 60px;
   transform-origin: center;
   transition: transform .1s;
+  overflow: hidden;
+  opacity: .5;
+  img{
+    width: 100%;
+    height: 100%;
+  }
 
   &:hover{
+    opacity: 1;
     transform: scale(.95);
     color: white;
     cursor: pointer;
   }
-
-  & span{
-    padding-bottom: 5px;
-  }
 }
+
 .rotateDropdown{
-  transform: rotate(90deg);
+  transform: scale(1) rotate(90deg);
   &:hover{
     transform: scale(.95) rotate(90deg);
   }
@@ -94,8 +102,48 @@
   }
 } 
 
- @media (max-width:500px) {
+ @media (max-width:500px){
   .bar{
-    font-size: .5rem;
+    position: relative;
+  }
+  .dropdown{
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    z-index: 1;
+    opacity: .6;
+    translate: -50% -50%;
+    border-radius: 15px;
+
+  }
+.rotateDropdown {
+  transform: rotate(90deg);
+
+  &:hover {
+    transform: rotate(90deg) scale(.95) ;
+  }
+}
+
+  .barHeader{
+    flex-direction: column;
+    height: 150px;
+
+    .barLeft{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .barRight{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      /* border: 1px solid yellow; */
+      background-color: rgba(230, 68, 49, 0.07);
+      border-radius: 5px;
+      padding: 10px;
+    }
   }
  } 

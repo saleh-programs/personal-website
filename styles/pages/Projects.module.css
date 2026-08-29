@@ -2,7 +2,7 @@
 .projectspage{
   position: relative;
   margin: 15px;
-  padding: 30px;
+  padding: 15px;
   border-radius: 20px;
   background-color: rgba(1, 36, 50,.85);
 
@@ -25,7 +25,7 @@
 background: conic-gradient(
   transparent 0deg,
   rgba(255, 255, 255, 0.02) 15deg,
-  rgba(255, 255, 255, .05) 35deg,
+  rgba(255, 255, 255, .05) 35deg, 
   rgba(255, 255, 255, 0.02) 55deg,
   transparent 70deg,
 
@@ -52,6 +52,9 @@ background: conic-gradient(
   font-weight: bold;
   color: white;
  }
+
+
+ 
  .title{
   text-align: center;
   font-size: 1.4rem;
@@ -70,29 +73,22 @@ background: conic-gradient(
 
  @media (max-width:1100px) {
   .intro{
-    width: 80%;
     margin: auto;
-    margin-bottom: 40px;
-    font-size: 1rem;
+    .title{
+      font-size: 1.4rem;
+    }
   }
   .title{
-    font-size: 1.2rem;
-  }
-  .info{
-    font-size: .8rem;
+    font-size: 1.1rem;
   }
 }
+
+
  
  @media (max-width:500px) {
-  .intro{
-    width: 80%;
-    margin: auto;
-    margin-bottom: 40px;
-  }
-  .title{
-    font-size: 1rem;
-  }
   .info{
-    font-size: .5rem;
+    font-size: .8rem;
+    padding-inline: 0;
   }
+  
  }
