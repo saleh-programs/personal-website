@@ -2,6 +2,16 @@
   font-family: "Barlow";
   text-align: center;
   font-size: 1.6rem;
+  color: white;
+  background-color: rgb(41, 35, 35);
+  border: 1px solid white;
+  padding-inline: 10px;
+  border-radius: 20px;
+
+
+  width: fit-content;
+  margin: auto;
+
 }
 .card{
   display: flex;
@@ -10,7 +20,7 @@
   width: 94%;
   border: 5px dotted rgb(51, 15, 71);
   border-radius: 20px;
-  background-color: rgb(192, 169, 188, .8);
+  background-color: rgba(174, 152, 189, 0.676);
   box-shadow: 0 0 20px rgb(0, 0, 0);
   margin: auto;
   padding: 50px 50px;

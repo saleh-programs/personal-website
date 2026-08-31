@@ -40,7 +40,7 @@ function Home({ref}){
                 gridRow: "1/4"
               }}>
                 <h3>Age</h3>
-                <span>21</span>
+                <span>22</span>
               </section>
               <section
               style={{

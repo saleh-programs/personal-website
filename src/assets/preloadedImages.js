@@ -1,5 +1,6 @@
 
 const animations = {
+    "/willowIntro?3": [],
     "/willowIntro?16": []
 }
 
@@ -31,17 +32,19 @@ function preload(path){
     if (animations[path].length > 0){
         return [animations[path], Promise.resolve()]
     }
+
     const [folder, numFiles] = path.split("?")
     const allImages = []
 
     for (let i = 0; i < Number(numFiles); i++){
         const frame = new Image()
-        frame.src = `${folder}/${i}.png`
         animations[path].push(frame)
 
         allImages.push(new Promise(resolve=>{
             frame.onload = resolve
         }))
+        frame.src = `${folder}/${i}.png`
+
     }
     const loadingImages = Promise.all(allImages).then(()=>{
         console.log("All images loaded! at ", Date.now())

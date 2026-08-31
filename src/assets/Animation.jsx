@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from "react"
 import {preload} from "./preloadedImages.js"
 
-function Animation({path, speed=1, onClick=null, type="loop", loopStart=null, style}){
+
+function Animation({path, speed=1, onClick=null, type="loop", loopStart=null, stop=null, startSpeeding=null, style}){
     const frame = useRef(0)
     const frameList = useRef([])
     const canvasRef = useRef(null)
@@ -9,6 +10,7 @@ function Animation({path, speed=1, onClick=null, type="loop", loopStart=null, st
 
     const rafRef = useRef(null)
 
+    const adjustedSpeedRef = useRef(speed);
     const [dimensions, setDimensions] = useState(null)
 
     useEffect(()=>{
@@ -16,6 +18,9 @@ function Animation({path, speed=1, onClick=null, type="loop", loopStart=null, st
         loadingFrames.then(()=>{
             setDimensions([frames[0].width, frames[0].height])
             frameList.current = frames
+            if (stop){
+                frameList.current.splice(stop)
+            }
         })
     },[path])
 
@@ -29,10 +34,13 @@ function Animation({path, speed=1, onClick=null, type="loop", loopStart=null, st
 
         let last = Date.now()
         const updateCanvas = () => {
+            if (startSpeeding && Math.floor(frame.current) >= startSpeeding.frame){
+                adjustedSpeedRef.current = startSpeeding.speed;
+            }
             cxtRef.current.clearRect(0,0,dimensions[0],dimensions[1])
             cxtRef.current.drawImage(frameList.current[Math.floor(frame.current)], 0, 0)
             const currTime = Date.now()
-            frame.current += ((currTime - last) / 1000) * speed
+            frame.current += ((currTime - last) / 1000) * adjustedSpeedRef.current
             last = currTime
 
             if (frame.current >= frameList.current.length){
@@ -69,10 +77,14 @@ function Animation({path, speed=1, onClick=null, type="loop", loopStart=null, st
         
         let last = Date.now()
         const updateCanvas = () => {
+            if (startSpeeding && Math.floor(frame.current) >= startSpeeding.frame){
+                adjustedSpeedRef.current = startSpeeding.speed;
+            }
+
             cxtRef.current.clearRect(0,0,dimensions[0],dimensions[1])
             cxtRef.current.drawImage(frameList.current[Math.floor(frame.current)], 0, 0)
             const currTime = Date.now()
-            frame.current += ((currTime - last) / 1000) * speed
+            frame.current += ((currTime - last) / 1000) * adjustedSpeedRef.current
             last = currTime
 
             if (frame.current >= frameList.current.length){

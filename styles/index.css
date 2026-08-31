@@ -29,7 +29,7 @@ body{
 }
 
 .skipAnimation{
-  position: fixed;
+  position: fixed; 
   top: 5px;
   left: 5px;
   font-size: 1.2rem;
@@ -43,32 +43,41 @@ body{
     opacity: .7;
   }
 }
-.shakeAnimation{
-  animation: shake .2s 20 ease-in-out;
-  animation-delay: 2s;
-  height: 100vh;
-  width: 100vw;
-}
 
-.animationContainer{
-  width: 100%;
-}
 
-.dragIn{
-  position: relative;
-  transform: translateX(100%); 
-  animation: slideIn 4s ease-in-out forwards;
-  animation-delay: 2s;
-}
-
-.dragIn > canvas{
+.debris{
   position: absolute;
-
-  width: 15%;
-  right: 100%;
-  bottom: 0;
+  z-index: 999;
+  pointer-events: none;
 }
-.shakeAnimation > img{
+
+.background{
+  position: relative;
+  height: 100dvh;
+  width: 100dvw;
+  overflow: hidden;
+
+  .animationContainer{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateX(100%); 
+    > canvas{
+      position: absolute;
+      width: 15%;
+      right: 100%;
+      bottom: 0;
+    }
+
+  }
+}
+
+.shake{
+  animation: aggressiveShake .2s 30 ease-in-out;
+  animation-delay: 2.1s;
+}
+
+.staticBench{
   position: fixed;
   width: 15%;
   right: 0;
@@ -78,46 +87,19 @@ body{
   opacity: 0;
   animation: staticBenchAppears 0s ease forwards;
   animation-delay: 1s;
-}
-
-@keyframes slideIn{
-  0%{
-    transform: translateX(100%); 
-  }
-  20%{
-    transform: translateX(96%);
-  }
-
-  100%{
-    transform: translateX(0%);
-  }
-}
-@keyframes shake{
-  0%{
-    transform: translate(-3px, -1px); 
-  }
-  20%{
-    transform: translate(2px, 1px);
-  }
-  40%{
-    transform: translate(-3px, -2px);
-  }
-  60%{
-    transform: translate(-2px, 1px);
-  }
-  80%{
-    transform: translate(3px, 3px);
-  }
-  100%{
-    transform: translate(0, 2px)
+  img{
+    width: 100%;
+    height: 100%;
+    display: block;
   }
 }
 
-@keyframes staticBenchAppears {
-  to{
-    opacity: 1;
-  }
+.dragIn{
+  position: relative;
+  animation: slideIn 6s ease-in-out forwards;
+  animation-delay: 2s;
 }
+
 
 
 .page-container {
@@ -126,7 +108,7 @@ body{
   flex-direction: column;
   gap: 50px;
 
-  height: 100vh;
+  height: 100dvh;
   overflow: auto;
   background-color:  rgb(243, 220, 117);
   margin: 0;
@@ -162,24 +144,24 @@ body{
   flex-direction: column;
   flex-shrink: 0;
 
-  margin-right: -51.25px;
+  margin-right: -75px;
   position: relative;
   left: -80px;
 }
 
 .hex-column.offset {
-  transform: translateY(86.625px);
+  transform: translateY(129px);
 }
 
 .hex {
   position: relative;
   z-index: 0;
-  width: 200px;
-  height: 173.25px;
-  flex: 0 0 172px;
+  width: 300px;
+  height: 259.86px;
+  flex: 0 0 260px;
 
   position: relative;
-  background: rgba(250, 250, 250, 0.8);
+  background: white;
 
   transform: scale(1.015);
 
@@ -198,7 +180,7 @@ body{
   position: absolute;
   inset: 2px;
 
-  background: rgba(58, 29, 58, 0.8);
+  background: rgb(33, 10, 47);
 
   clip-path: polygon(
     25% 0%,
@@ -219,8 +201,8 @@ body{
 
 .falling-hex {
   position: absolute;
-  width: 200px;
-  height: 173.25px;
+  width: 300px;
+  height: 259.86px;
   transform-style: preserve-3d;
   transform-origin: center center;
   will-change: transform;
@@ -255,6 +237,84 @@ h1, h2, h2{
   font-family: "Daruma";
 }
 
+.skillEnter li{
+  animation: appear .3s ease forwards;
+  opacity: 0;
+  &.skillAnimation{
+    animation: emphasizeSkill 1s 2;
+    opacity: 1;
+  }
+}
+
+.skillLeave li{
+  animation: disappear .3s ease forwards;
+  opacity: 1;
+  &.skillAnimation{
+    animation: emphasizeSkill 1s 2;
+    opacity: 1;
+
+  }
+}
+@keyframes slideIn{
+  0%{
+    transform: translateX(100%); 
+  }
+  20%{
+    transform: translateX(96%);
+  }
+
+  100%{
+    transform: translateX(0%);
+  }
+}
+@keyframes shake{
+  0%{
+    transform: translate(-3px, -1px); 
+  }
+  20%{
+    transform: translate(2px, 1px);
+  }
+  40%{
+    transform: translate(-3px, -2px);
+  }
+  60%{
+    transform: translate(-2px, 1px);
+  }
+  80%{
+    transform: translate(3px, 3px);
+  }
+  100%{
+    transform: translate(0, 2px)
+  }
+}
+
+@keyframes aggressiveShake{
+  0%{
+    transform: translate(-6px, -2px); 
+  }
+  20%{
+    transform: translate(4px, 2px);
+  }
+  40%{
+    transform: translate(-6px, -4px);
+  }
+  60%{
+    transform: translate(-4px, 2px);
+  }
+  80%{
+    transform: translate(6px, 6px);
+  }
+  100%{
+    transform: translate(0, 4px)
+  }
+}
+
+@keyframes staticBenchAppears {
+  to{
+    opacity: 1;
+  }
+}
+
 
 @keyframes appear {
   from {
@@ -279,24 +339,6 @@ h1, h2, h2{
     transform: translateY(8px);
   }
 }
-.skillEnter li{
-  animation: appear .3s ease forwards;
-  opacity: 0;
-  &.skillAnimation{
-    animation: emphasizeSkill 1s 2;
-    opacity: 1;
-  }
-}
-
-.skillLeave li{
-  animation: disappear .3s ease forwards;
-  opacity: 1;
-  &.skillAnimation{
-    animation: emphasizeSkill 1s 2;
-    opacity: 1;
-
-  }
-}
 
 @keyframes emphasizeSkill {
   0%{
@@ -307,5 +349,11 @@ h1, h2, h2{
   }
   100%{
     opacity: 1;
+  }
+}
+
+@media (max-width: 500px) {
+  .skipAnimation{
+    font-size: .8rem;
   }
 }

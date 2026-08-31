@@ -162,7 +162,7 @@ function Skills({ref, scrollableRef}){
 
             <div className={styles.allSkills}>
                 {allSkills.map(skillInfo => (
-                    <section ref={skillInfo.ref}>
+                    <section ref={skillInfo.ref} key={skillInfo.name}>
                         <h3>{skillInfo.name}</h3>
                         <ul>
                         {skillInfo.skills.map((skill, i) => (
