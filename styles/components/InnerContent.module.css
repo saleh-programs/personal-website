@@ -7,10 +7,6 @@
   gap: 12px;
 }
 
-.inside img{
-    float: right;
-}
- 
 .descConcContainer{
   display: flex;
   flex-direction: row;
@@ -35,9 +31,6 @@ flex:1.1;
 flex: 1;
 }
 
-.wsu_img img, .tractor_img img, .rosa_img img, .yemeni_img img{
-  width: 100%;
-}
 
  
 .demo_imgs_car{  
@@ -45,7 +38,7 @@ flex: 1;
   justify-content: space-between;
   align-items: center;
 }
-.demo_imgs_car img{
+.demo_imgs_car img, .demo_imgs_car video{
   width: 24%;
   border-radius: 30px;
   align-items: center;
@@ -56,7 +49,7 @@ flex: 1;
   justify-content: space-between;
   align-items: center;
 }
-.demo_imgs_physics img{ 
+.demo_imgs_physics img,.demo_imgs_physics video{ 
   width: 24%;
   border-radius: 30px;
   align-items: center;
@@ -66,7 +59,7 @@ flex: 1;
   display: flex;
   justify-content: space-between;
 }
-.demo_imgs_platformer img{
+.demo_imgs_platformer img, .demo_imgs_platformer video{
   width: 24%;
   border-radius: 30px;
   align-items: center;
@@ -78,7 +71,7 @@ flex: 1;
   justify-content: space-between;
   align-items: center;
 }
-.demo_imgs_models img{
+.demo_imgs_models img,.demo_imgs_models video{
   width: 32%;
   border-radius: 30px;
   gap: 5px;
@@ -88,7 +81,7 @@ flex: 1;
   justify-content: space-between;
   align-items: center;
 }
-.demo_imgs_s3fs img{
+.demo_imgs_s3fs img,.demo_imgs_s3fs video{
   width: 32%;
   border-radius: 30px;
   gap: 5px;
@@ -104,7 +97,7 @@ flex: 1;
   justify-content: space-between;
   align-items: center;
 }
-.demo_imgs_apiglue img{
+.demo_imgs_apiglue img, .demo_imgs_apiglue video{
   width: 25%;
   border-radius: 30px;
   gap: 5px;
@@ -116,43 +109,8 @@ flex: 1;
   gap: 5px;
 }
 
-.campDescription{
-  flex: 2;
-}
-.campImages{
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  & img:nth-of-type(1){
-    max-width: 500px;
-    border-radius: 15px;
-
-  }
-  & img:nth-of-type(2){
-    max-width: 500px;
-    border-radius: 15px;
-
-  }
-}
 
 
-.lagelatiDescription{
-  flex: 2;
-}
-.lagelatiImages{
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  & img:nth-of-type(1){
-    max-width: 500px;
-    border-radius: 15px;
-
-  }
-}
 
  @media (max-width:1100px) {
   .inside{
@@ -173,30 +131,15 @@ flex: 1;
     align-self: center;
     padding: 10px;
   }
-  .tractor_img img, .wsu_img img{
-    max-width: 100px;
-  }
-  .campImages{
-    & img:nth-of-type(1){
-      max-width: 200px;
-    }
-    & img:nth-of-type(2){
-      max-width: 200px;
-    }
-  }
-  .lagelatiImages{
-    & img:nth-of-type(1){
-      max-width: 200px;
-      border-radius: 15px;
-
-    }
-  }
 
   .demo_imgs_s3fs, .demo_imgs_car, .demo_imgs_physics, .demo_imgs_platformer, .demo_imgs_models, .demo_imgs_apiglue{
     flex-direction: column;
     gap: 10px;
   }
   .demo_imgs_s3fs img, .demo_imgs_s3fs iframe, .demo_imgs_car img, .demo_imgs_physics img, .demo_imgs_platformer img, .demo_imgs_models img, .demo_imgs_apiglue img, .demo_imgs_apiglue iframe{
+    width: 100%;
+  }
+  .demo_imgs_s3fs video, .demo_imgs_car video, .demo_imgs_physics video, .demo_imgs_platformer video, .demo_imgs_models video, .demo_imgs_apiglue video{
     width: 100%;
   }
 }

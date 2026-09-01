@@ -1,144 +1,51 @@
 
 import styles from "../../styles/components/InnerContent.module.css"
-import tractor from '../assets/images/tractor.png'
-import wsu from '../assets/images/wsu.png'
-import C from '../assets/images/C.png'
-import Java from '../assets/images/Java.png'
-import Python from '../assets/images/Python.png'
-import YAA from '../assets/images/YAA.jpeg'
-import Rosa from '../assets/images/rosa.jpeg'
 
 import omre1 from "../assets/images/omre-1.png"
-import omre2 from "../assets/images/omre-2.gif"
-import omre3 from "../assets/images/omre-3.gif"
-import omre4 from "../assets/images/omre-4.gif"
+import omre2 from "../assets/images/omre-2.mp4"
+import omre3 from "../assets/images/omre-3.mp4"
+import omre4 from "../assets/images/omre-4.mp4"
 
-import car1 from '../assets/images/carMain1.gif'
-import car2 from '../assets/images/carMain2.gif'
-import car3 from '../assets/images/carMain3.gif'
-import car4 from '../assets/images/carMain4.gif'
-import physics1 from '../assets/images/physicsGame1.gif'
-import physics2 from '../assets/images/physicsGame2.gif'
-import physics3 from '../assets/images/physicsGame3.gif'
-import physics4 from '../assets/images/physicsGame4.gif'
-import pygame1 from '../assets/images/pygame1.gif'
-import pygame2 from '../assets/images/pygame2.gif'
-import pygame3 from '../assets/images/pygame3.gif'
-import pygame4 from '../assets/images/pygame4.gif'
+import car1 from '../assets/images/carMain1.mp4'
+import car2 from '../assets/images/carMain2.mp4'
+import car3 from '../assets/images/carMain3.mp4'
+import car4 from '../assets/images/carMain4.mp4'
+import physics1 from '../assets/images/physicsGame1.mp4'
+import physics2 from '../assets/images/physicsGame2.mp4'
+import physics3 from '../assets/images/physicsGame3.mp4'
+import physics4 from '../assets/images/physicsGame4.mp4'
+import pygame1 from '../assets/images/pygame1.mp4'
+import pygame2 from '../assets/images/pygame2.mp4'
+import pygame3 from '../assets/images/pygame3.mp4'
+import pygame4 from '../assets/images/pygame4.mp4'
 import decisionTree from '../assets/images/DecisionTree.jpg'
 import ANN from '../assets/images/ANN.jpg'
 import TreeAndANN from '../assets/images/TreeAndANN.jpg'
-import lagelati from '../assets/images/lagelati.jpg'
-import campImage1  from "../assets/images/leadInstructor1.png"
-import campImage2  from "../assets/images/leadInstructor2.png"
-import hat from '../assets/images/hat.jpg'
-import fordTranscript from "../assets/documents/fordsonTranscript.pdf"
-import wayneTranscript from "../assets/documents/wayneTranscript.pdf"
-import fileadv1 from "../assets/images/fileadv1.gif" 
-import fileadv2 from "../assets/images/fileadv2.gif" 
-import fileadv3 from "../assets/images/fileadv3.gif" 
-import fileadv4 from "../assets/images/fileadv4.gif" 
+import fileadv1 from "../assets/images/fileadv1.mp4" 
+import fileadv2 from "../assets/images/fileadv2.mp4" 
+import fileadv3 from "../assets/images/fileadv3.mp4" 
+import fileadv4 from "../assets/images/fileadv4.mp4" 
 import apiGlue1 from "../assets/images/apiglue_dash.png"
 import apiGlue2 from "../assets/images/apiglue_deps.png"
 import apiGlue3 from "../assets/images/apiglue_tests.png"
 
-import projectplace1 from "../assets/images/projectplace_solo.gif"
-import projectplace2 from "../assets/images/projectplace_chat.gif"
-import projectplace3 from "../assets/images/projectplace_whiteboard.gif"
-import projectplace4 from "../assets/images/projectplace_video.gif"
-import s3fsflowGIF from "../assets/images/s3fs_flow.gif"
+import projectplace1 from "../assets/images/projectplace_solo.mp4"
+import projectplace2 from "../assets/images/projectplace_chat.mp4"
+import projectplace3 from "../assets/images/projectplace_whiteboard.mp4"
+import projectplace4 from "../assets/images/projectplace_video.mp4"
+import s3fsflowGIF from "../assets/images/s3fs_flow.mp4"
 import s3fsflowPNG from "../assets/images/s3fs_flow.png"
 
 
-function FordsonEducation(){
-  return(
-    <div className={styles.inside}>
-      <div className='rowcontainer'>
-        <div>
-          GPA: 3.92 / 4.0<br/><br />
-          <a href={fordTranscript} target='_blank'>Official Transcript</a>
-        </div>
-        <div className={styles.tractor_img}>
-          <img src={tractor} alt="not found" />
-        </div>
-      </div>
-    </div>
-  );
-}
-function WayneEducation(){
-    return(
-      <div className={styles.inside}> 
-        <div className="rowcontainer">
-          <div>
-            Major: Computer Science<br/>
-            GPA: 4.0 / 4.0 <br/><br />
-          </div>
-          <div className={styles.wsu_img}>
-            <img src={wsu} alt="Not found" />
-          </div>
-          
-        </div>
-        <div className="rowcontainer">
-          <div>
-            Relevant Courses: <br />
-            <ul>
-              <li> Python / Java / C++ / C Programming <span style={{fontSize:'.8em'}}>(4 courses)</span></li>
-              <li>Computer Science 1 & 2</li>
-              <li>Basic Engineering 1 & 3</li>
-              <li>Computer Architecture & Organization</li>
-              <li>Algorithm Design & Analysis</li>
-              <li>Fundamental Structures in CS</li>
-              <li>Software Engineering</li>
-              <li>Operating Systems</li>
-            </ul>
-            <a href={wayneTranscript} target='_blank'>Official Transcript</a><br />
 
-          </div>
-        </div>
-
-      </div>
-  );
-} 
-function AchievementsEducation(){
-  return(
-    <div className={styles.inside}> 
-        <div className={"rowcontainer"}>
-          <div>
-            &bull;Rosa Parks Scholarship<br/>
-            <div>
-              Awarded for showing academic excellence, leadership, and community involvement.<br/><br/>
-            </div>
-          </div>
-          June 2022
-          <div className={styles.rosa_img}>
-            <img src={Rosa} alt="" />
-          </div>
-          
-        </div>
-        <div className={"rowcontainer"}>
-          <div>
-            &bull;Yemeni American Association Scholarship<br/>
-            <div>
-              Awarded for showing academic excellence and being an active Yemeni American community member.<br/><br/>
-            </div>
-          </div>
-          August 2022
-          <div className={styles.yemeni_img}>
-            <img src={YAA} alt="" />
-          </div>
-          
-        </div>
-    </div>
-  );
-}
 function ProjectPlaceProject(){
     return(
       <div className={styles.inside}> 
           <div className={styles.demo_imgs_car}> 
-            <img src={projectplace1} alt="" />
-            <img src={projectplace2} alt="" />
-            <img src={projectplace3} alt="" />
-            <img src={projectplace4} alt="" />
+            <video autoPlay loop muted playsInline preload="auto" src={projectplace1} alt="" />
+            <video autoPlay loop muted playsInline preload="auto" src={projectplace2} alt="" />
+            <video autoPlay loop muted playsInline preload="auto" src={projectplace3} alt="" />
+            <video autoPlay loop muted playsInline preload="auto" src={projectplace4} alt="" />
 
           </div>
           <div className={styles.descConcContainer}>
@@ -248,10 +155,10 @@ function CarMaintenanceProject(){
     return(
       <div className={styles.inside}> 
           <div className={styles.demo_imgs_car}> 
-            <img src={car1} alt="" />
-            <img src={car2} alt="" />
-            <img src={car3} alt="" />
-            <img src={car4} alt="" />
+            <video autoPlay loop muted playsInline preload="auto" src={car1} alt="" />
+            <video autoPlay loop muted playsInline preload="auto" src={car2} alt="" />
+            <video autoPlay loop muted playsInline preload="auto" src={car3} alt="" />
+            <video autoPlay loop muted playsInline preload="auto" src={car4} alt="" />
 
           </div>
           <div className={styles.descConcContainer}>
@@ -313,9 +220,9 @@ function OMREFragrancesProject(){
       <div className={styles.inside}> 
           <div className={styles.demo_imgs_car}> 
             <img src={omre1} alt="" />
-            <img src={omre2} alt="" />
-            <img src={omre3} alt="" />
-            <img src={omre4} alt="" />
+            <video autoPlay loop muted playsInline preload="auto" src={omre2} alt="" />
+            <video autoPlay loop muted playsInline preload="auto" src={omre3} alt="" />
+            <video autoPlay loop muted playsInline preload="auto" src={omre4} alt="" />
           </div>
           <div className={styles.descConcContainer}>
             <div className={styles.description}>
@@ -405,7 +312,7 @@ function SecureS3FSProject(){
     return(
       <div className={styles.inside}> 
           <div className={styles.demo_imgs_s3fs}> 
-            <img src={s3fsflowGIF} alt="" />
+            <video autoPlay loop muted playsInline preload="auto" src={s3fsflowGIF} alt="" />
             <img src={s3fsflowPNG} alt="" />
             <iframe src="https://www.youtube.com/embed/_VpKkgdseCU?autoplay=1&mute=1&loop=1&playlist=_VpKkgdseCU" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen/>
           </div>
@@ -469,10 +376,10 @@ function FileAdventurerProject(){
       <div className={styles.inside}> 
         <div className="columncontainer">
           <div className={styles.demo_imgs_platformer}>
-            <img src={fileadv1} alt="" />
-            <img src={fileadv2} alt="" />
-            <img src={fileadv3} alt="" />
-            <img src={fileadv4} alt="" />
+            <video autoPlay loop muted playsInline preload="auto" src={fileadv1} alt="" />
+            <video autoPlay loop muted playsInline preload="auto" src={fileadv2} alt="" />
+            <video autoPlay loop muted playsInline preload="auto" src={fileadv3} alt="" />
+            <video autoPlay loop muted playsInline preload="auto" src={fileadv4} alt="" />
           </div>
           <div className={styles.descConcContainer}>
             <div className={styles.description}>
@@ -584,10 +491,10 @@ function PhysicsToolProject(){
     return(
       <div className={styles.inside}> 
           <div className={styles.demo_imgs_physics}> 
-            <img src={physics1} alt="" />
-            <img src={physics2} alt="" />
-            <img src={physics3} alt="" />
-            <img src={physics4} alt="" />
+            <video autoPlay loop muted playsInline preload="auto" src={physics1} alt="" />
+            <video autoPlay loop muted playsInline preload="auto" src={physics2} alt="" />
+            <video autoPlay loop muted playsInline preload="auto" src={physics3} alt="" />
+            <video autoPlay loop muted playsInline preload="auto" src={physics4} alt="" />
 
           </div>
           <div className={styles.descConcContainer}>
@@ -627,10 +534,10 @@ function PlatformerProject(){
       <div className={styles.inside}> 
         <div className="columncontainer">
           <div className={styles.demo_imgs_platformer}>
-            <img src={pygame1} alt="" />
-            <img src={pygame2} alt="" />
-            <img src={pygame3} alt="" />
-            <img src={pygame4} alt="" />
+            <video autoPlay loop muted playsInline preload="auto" src={pygame1} alt="" />
+            <video autoPlay loop muted playsInline preload="auto" src={pygame2} alt="" />
+            <video autoPlay loop muted playsInline preload="auto" src={pygame3} alt="" />
+            <video autoPlay loop muted playsInline preload="auto" src={pygame4} alt="" />
           </div>
           <div className={styles.descConcContainer}>
             <div className={styles.description}>
@@ -714,61 +621,8 @@ function StockMarketProject(){
       </div>
     );
 }
-function LaGelatiExperience(){
-      return(
-        <div className={styles.inside}>
-          <div className={"rowcontainer"}>
-            <div className={styles.lagelatiDescription}>
-              Working in an ice cream store didn't involve software, but rather meeting new people and developing leadership skills. It consisted of: 
-              <ul>
-                <li>Resolving customer conflicts</li>
-                <li>Coordinating with a team</li>
-                <li>A fast paced environment</li>
-                <li>Quick and critical thinking</li>
-                <li>Efficient communication</li>
-                <li>Mentoring and encouraging others</li>
-              </ul>
 
-            </div>
-            <div className={styles.lagelatiImages}>
-              <img src={lagelati} alt="" />
-            </div>
-          </div>
-        </div>
-      );
-}
-function LeadInstructorExperience(){
-      return(
-        <div className={styles.inside}>
-          <div className={"rowcontainer"}>
-            <div className={styles.campDescription}>
-              Served as the lead coding instructor at Wayne State University's Summer Engineering Camp, hosted by the C2 Pipeline.
-              <br />
-              My main responsibility was to teach the fundamentals of programming to students anywhere from grades 3-12.
-              <br /><br />
-              Other responsibilities consisted of:
-              <ul>
-                <li>Creating lesson plans surrounding basic programming concepts.</li>
-                <li>Building demo applications in Swift to serve as references for students.</li>
-                <li>Providing hands on support to students.</li>
-                <li>Addressing unique challenges and promoting skill development.</li>
-                <li>Coordinating with staff and faculty to improve the student experience.</li>
-              </ul>
-
-
-            </div>
-            <div className={styles.campImages}>
-              <img src={campImage1} alt="" />
-              <img src={campImage2} alt="" />
-            </div>
-          </div>
-        </div>
-      );
-}
 const contentDict = {
-  "fordson": <FordsonEducation/>,
-  "wayne": <WayneEducation/>,
-  "achievements": <AchievementsEducation/>,
   "projectPlace": <ProjectPlaceProject/>,
   "omreFragrances": <OMREFragrancesProject/>,
   "carMaintenance": <CarMaintenanceProject/>,
@@ -777,9 +631,7 @@ const contentDict = {
   "physicsTool": <PhysicsToolProject/>,
   "platformer": <PlatformerProject/>,
   "stockMarket": <StockMarketProject/>,
-  "secureS3FS": <SecureS3FSProject/>,
-  "laGelati": <LaGelatiExperience/>,
-  "leadInstructor": <LeadInstructorExperience/>,
+  "secureS3FS": <SecureS3FSProject/>
 
 }
 export default contentDict;

@@ -1,17 +1,14 @@
 import { useState,useEffect,useRef } from 'react';
 import styles from '../../styles/pages/Education.module.css'
 
-import Bar from '../../src/components/Bar.jsx'
 
 import Fordson from "../assets/images/fordson.png"
 import fordTranscript from "../assets/documents/fordsonTranscript.pdf"
 import wayneTranscript from "../assets/documents/wayneTranscript.pdf"
 import WayneState from "../assets/images/waynestateuniversity.png"
-import CorkBoard from "../assets/images/corkboard.png"
 import YAA from '../assets/images/YAA.jpeg'
 import Rosa from '../assets/images/rosa.jpeg'
 
-import frame1 from "../assets/images/frame1.png"
 import frame2 from "../assets/images/frame2.png"
 import note from "../assets/images/note.png"
 import redtack from "../assets/images/redtack.png"
