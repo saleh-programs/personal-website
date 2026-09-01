@@ -1,18 +1,22 @@
 @font-face {
   font-family: 'Daruma';
   src: url('/fonts/DarumadropOne-Regular.ttf') format('truetype');
+  font-display: block;
 }
 @font-face {
   font-family: 'Exo 2';
   src: url('/fonts/Exo2-VariableFont_wght.ttf') format('truetype');
+  font-display: block;
 }
 @font-face {
   font-family: 'Barlow';
   src: url('/fonts/Sigmar-Regular.ttf') format('truetype');
+  font-display: block;
 }
 @font-face{
   font-family: "Franklin Gothic Medium Mobile";
   src: url("/fonts/Franklin Gothic Medium Regular.ttf") format("truetype");
+  font-display: block;
 }
 
 *{
@@ -23,7 +27,7 @@ html, #root, body{
   margin: 0;
   padding: 0;
   font-size: 25px;
-  -webkit-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%
 }
 body{
   overflow: hidden;
