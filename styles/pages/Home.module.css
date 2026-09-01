@@ -66,12 +66,14 @@
     background-color: rgb(41, 35, 35);
     & h3{
       margin: 1px;
+      color: rgb(203, 244, 203);
     }
+    
    }
 
    display: grid;
    grid-template-columns: repeat(15, 25px);
-   grid-auto-rows: 25px;
+   grid-auto-rows: 30px;
 
 }
 
