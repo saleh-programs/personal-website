@@ -6,7 +6,6 @@
   border-radius: 15px;
   background: linear-gradient(to right, white, rgb(173, 172, 172));
   box-shadow: 5px 5px 10px rgba(141, 42, 42, 0.5);
-  margin: 7px 7px 7px 7px;
   padding: 0px 15px;
   font-size: 1.5rem;
   font-family: 'Exo 2';
@@ -45,6 +44,7 @@
   position: relative;
   display: flex; 
   transition: transform .2s;
+  margin-bottom: 5px;
 
   &:hover{
     transform: scale(.99);

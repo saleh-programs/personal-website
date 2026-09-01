@@ -14,6 +14,15 @@ function Experience({ref}){
     },100)
   }
 
+  function toggleJob(e){
+    const elem = e.currentTarget;
+    if (elem.classList.contains(styles.showJob)){
+      elem.classList.remove(`${styles.showJob}`);
+    }else{
+      elem.classList.add(`${styles.showJob}`);
+    }
+  }
+
   return(
     <div className={`${styles.experiencepage} section`} ref={ref} id="experience" style={{
       display: "flex",
@@ -34,10 +43,9 @@ function Experience({ref}){
     </div>
 
     <div className={styles.horizScrollable}>
-      <section className={`${styles.job}`}
-      onMouseEnter={scrollToJob}>
+      <section className={`${styles.job}`} onMouseEnter={scrollToJob} onClick={toggleJob}>
         <div className={styles.jobLeft}>
-          <img src={campImage1} />
+          <img src={campImage1} width="4032" height="3024"/>
           <section className={styles.jobInfo}>
             <h3>Lead Coding Instructor</h3>
             <h4> @ C2 Pipeline Engineering Camp</h4>
@@ -68,9 +76,9 @@ function Experience({ref}){
           </ul>
         </div>
       </section>
-      <section className={`${styles.job}`} onMouseEnter={scrollToJob}>
+      <section className={`${styles.job}`} onMouseEnter={scrollToJob} onClick={toggleJob}>
         <div className={styles.jobLeft}>
-          <img src={campImage2} />
+          <img src={campImage2} width="3024" height="4032"/>
           <section className={styles.jobInfo}>
             <h3>Camp Coordinator</h3>
             <h4> @ C2 Pipeline Engineering Camp</h4>
@@ -101,10 +109,9 @@ function Experience({ref}){
           </ul>
         </div>
       </section>
-      <section className={`${styles.job}`}
-            onMouseEnter={scrollToJob}>
+      <section className={`${styles.job}`} onMouseEnter={scrollToJob} onClick={toggleJob}>
         <div className={styles.jobLeft}>
-          <img src={lagelati} />
+          <img src={lagelati} width="800" height="671"/>
           <section className={styles.jobInfo}>
             <h3>Assistant Manager</h3>
             <h4> @ La Gelati</h4>
@@ -112,7 +119,7 @@ function Experience({ref}){
           </section>
         </div>
         <section className={styles.expander}>
-        </section>
+        </section> 
         <div className={styles.jobRight}>
           <header>
             <h3>Assistant Manager</h3>

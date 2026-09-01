@@ -125,7 +125,7 @@ function Skills({ref, scrollableRef}){
         });
     }
     return(
-        <div ref={ref} className={`${styles.skillspage} section`}>
+        <div ref={ref} className={`${styles.skillspage} section`} id="skills" >
             <div className={styles.intro}>
                 <div className={styles.title}>
                 Skills

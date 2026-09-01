@@ -286,7 +286,7 @@ function App() {
               </div>
             ))}
           </div>
-          <Navbar refs={[homeRef, educationRef, projectsRef, experienceRef, scrollableRef]}/>
+          <Navbar refs={[homeRef, educationRef, projectsRef, experienceRef, skillsRef, scrollableRef]}/>
           <div className='routes'>
             <Home ref={homeRef}/>
             <Education ref={educationRef}/>
