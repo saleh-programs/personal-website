@@ -15,6 +15,8 @@ function Projects({ref}){
         <div className={styles.info}>
           This page provides a general breakdown of various projects I've worked on. A description and list of involved concepts is provided for each project, as well as a link to its dedicated GitHub repository.
           <br/><br />
+            Select "API Glue" to view how I manage all of my projects!
+          <br /><br />
           Select an option to learn more!
         </div> 
       </div>
@@ -27,8 +29,10 @@ function Projects({ref}){
         <Bar name='Project Place' subname={"Website Application"} subname2={"Available 10am - 12am (midnight) to save costs"}  contentID= 'projectPlace' link={["Try the website!","https://projectplace.space/"]}/>
         <Bar name='Secure S3FS' subname={"CLI tool"} contentID= 'secureS3FS' />
         <Bar name='File Adventurer' subname={"Desktop Application (Windows)"} contentID= 'fileAdventure' link={["Download the Windows desktop app!","https://github.com/saleh-programs/file-adventurer/raw/master/FileAdventurerSetup.exe"]}/>
-        <Bar name='Physics Practice Tool' subname={"Desktop Application"} subname2={"AI Willow (level 10) is not regularly maintained"} contentID= 'physicsTool' link={["Download the game!","https://github.com/saleh-programs/physics-practice-tool/archive/refs/heads/master.zip"]}/>
+        <Bar name='Physics Practice Tool' subname={"Desktop Application"} contentID= 'physicsTool' link={["Download the game!","https://github.com/saleh-programs/physics-practice-tool/archive/refs/heads/master.zip"]}/>
         <Bar name='API Glue' subname={"Website Application (Local Developer Tool)"} link={""} subname2={"Submission for WayneHacks4 hackathon"} contentID= 'apiGlue'/>
+        <Bar name='Create Your Own Game' subname={"Website Application"} link={["Try the website!","https://createyourowngame.space/"]} contentID= 'createYourOwnGame'/>
+
 
       </div>
 
@@ -39,6 +43,7 @@ function Projects({ref}){
 
         <hr className={styles['hz-separator']}>
         </hr>
+        <Bar name='Personal Website' contentID= 'personalWebsite' subname={"Website Application"} subname2={"Hope you are enjoying the site!"}/>
         <Bar name='Platformer Game' contentID= 'platformer' subname={"Desktop Application"}/>
       </div>
       <div >

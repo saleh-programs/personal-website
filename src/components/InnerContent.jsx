@@ -36,6 +36,10 @@ import projectplace4 from "../assets/images/projectplace_video.mp4"
 import s3fsflowGIF from "../assets/images/s3fs_flow.mp4"
 import s3fsflowPNG from "../assets/images/s3fs_flow.png"
 
+import CYOG1 from "../assets/images/CYOG1.mp4";
+import CYOG2 from "../assets/images/CYOG2.mp4";
+import CYOG3 from "../assets/images/CYOG3.png";
+import CYOG4 from "../assets/images/CYOG4.mp4";
 
 
 function ProjectPlaceProject(){
@@ -214,7 +218,61 @@ function CarMaintenanceProject(){
       </div>
     );
 }
+function CreateYourOwnGameProject(){
+    return(
+      <div className={styles.inside}> 
+          <div className={styles.demo_imgs_car}> 
+            <video autoPlay loop muted playsInline preload="auto" src={CYOG4} alt="" />
+            <video autoPlay loop muted playsInline preload="auto" src={CYOG1} alt="" />
+            <video autoPlay loop muted playsInline preload="auto" src={CYOG2} alt="" />
+            <img src={CYOG3} alt="" />
+          </div>
+          <div className={styles.descConcContainer}>
+            <div className={styles.description}>
+              <h2 >Description</h2>
+              "Create Your Own Game" is a project built for incoming students at the C2 Pipeline Engineering Summer Academy. The original inspiration came out of a desire to highlight how computers rely on files and directories for nearly everything they do. One way to do this, I thought, would be to have users 
+              create something completely unique, yet functionally no different than anyone elses.
+              <br /><br />
+              While timed, you're meant to draw different aspects of your game. This may include the player being controlled, the background, coins, blocks, enemies, and more. Upon completing the last image,
+              the game is generated on the server and served from a link that is sent back. 
 
+              <br /><br />
+              <h3>Design Considerations</h3>
+              <ul>
+                <li>The base game code was made lightweight enough to hold and distribute thousands of games on a small cloud server (AWS EC2) with no issues at all. </li>
+                <li>Storing / Serving the games allowed students to show family and loved ones what they made. </li>
+                <li>The tight time limits exist to account for the duration of any one lesson.</li>
+                <li>The base game is a simple past project I reused, and was not improved upon greatly due to time constraints.</li>
+              </ul>
+              <br />
+              <a href="https://github.com/saleh-programs/create-a-custom-game" target='_blank'>Github Repo</a>
+            </div>
+            <div className={styles.concepts}>
+              <h2>Concepts & Technologies</h2>
+              <ul>
+                <strong>Technologies</strong>
+                <li>Language(s): JavaScript, Python</li>
+                <li>Frontend: React</li>
+                <li>Backend: 
+                  <ul>
+                    <li>REST API: Express</li>
+                  </ul>
+                </li>
+                <li>Hosting: AWS EC2</li>
+                <li>Game generation: Pygbag</li>
+                <br />
+                <strong>Concepts</strong>
+                <li>Custom whiteboard / drawing utility </li>
+                <li>Optimizations for potential high bandwidth usage</li>
+                <li>Server Management</li>
+                <li>UI / UX design</li>
+                
+              </ul>
+              </div>
+          </div>
+      </div>
+    );
+}
 function OMREFragrancesProject(){
     return(
       <div className={styles.inside}> 
@@ -443,7 +501,7 @@ function APIGlueProject(){
               <h2>Description</h2>
               It's pretty bothersome to have to constantly check if all of your projects' external dependencies (such as APIs) are still working. 
               WayneHacks4 has presented me with the opportunity to create a solution to a problem I've had for a very long time! <br /> 
-              APIGlue allows you to add your "projects" and view if all their dependencies are up and running.<br />
+              APIGlue allows you to add your "projects" and view if all of their dependencies are up and running.<br />
               You can add dependencies by heading into "View Dependencies", adding a title for a dependency, and then modifying a sample function to make a request to the API using built in code environments. 
               Additionally, you can customize what is considered "passing", as well as the response value! 
               <br /><br />APIGlue doubles as a <strong>testing framework</strong> that shows you if all of your local tests have passed or failed. 
@@ -572,6 +630,41 @@ function PlatformerProject(){
       </div>
     );
 }
+function PersonalWebsiteProject(){
+    return(
+      <div className={styles.inside}> 
+          <div className={styles.descConcContainer}>
+            <div className={styles.description}>
+              <h2 >Description</h2>
+              How are you liking the site so far? <br /><br /> I would really appreciate your feedback, no matter who is reading this! Please feel free to use the anonymous form at the bottom of the page
+              to let me know if you notice any potential improvements, bugs, or suggestions. If you would prefer less anonymity, you may email me directly at <strong>salehm0529@gmail.com</strong>.
+              <br /><br />
+
+
+
+              <a href="https://github.com/saleh-programs/personal-website" target='_blank'>Github Repo</a>
+            </div>
+            <div className={styles.concepts}>
+              <h2>Concepts & Technologies</h2>
+              <ul>
+                <strong>Technologies</strong>
+                <li>Language(s): JavaScript</li>
+                <li>Frontend: React</li>
+                <li>Hosting: Netlify</li>
+                <br />
+                <strong>Concepts</strong>
+                <li>Optimizing / prerendering assets</li>
+                <li>React Animations & Transitions</li>
+                <li>Mobile responsiveness</li>
+                <li>React best practices </li>
+                <li>Heavy UI / UX design</li>     
+                <li>Multiple full site redesigns</li>           
+              </ul>
+              </div>
+          </div>
+      </div>
+    );
+}
 function StockMarketProject(){
     return(
       <div className={styles.inside}> 
@@ -624,12 +717,14 @@ function StockMarketProject(){
 
 const contentDict = {
   "projectPlace": <ProjectPlaceProject/>,
+  "createYourOwnGame": <CreateYourOwnGameProject/>,
   "omreFragrances": <OMREFragrancesProject/>,
   "carMaintenance": <CarMaintenanceProject/>,
   "fileAdventure": <FileAdventurerProject/>,
   "apiGlue": <APIGlueProject/>,
   "physicsTool": <PhysicsToolProject/>,
   "platformer": <PlatformerProject/>,
+  "personalWebsite": <PersonalWebsiteProject/>,
   "stockMarket": <StockMarketProject/>,
   "secureS3FS": <SecureS3FSProject/>
 
