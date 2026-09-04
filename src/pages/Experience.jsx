@@ -80,7 +80,7 @@ function Experience({ref}){
         <div className={styles.jobLeft}>
           <img src={campImage2} width="3024" height="4032"/>
           <section className={styles.jobInfo}>
-            <h3>Camp Coordinator</h3>
+            <h3>Curriculum / Camp Coordinator</h3>
             <h4> @ C2 Pipeline Engineering Camp</h4>
             <section>05/2026 - 08/2026</section>
           </section>
@@ -89,23 +89,21 @@ function Experience({ref}){
         </section>
         <div className={styles.jobRight}>
           <header>
-            <h3>Camp Coordinator</h3>
+            <h3>Curriculum / Camp Coordinator</h3>
             <h4> @ C2 Pipeline Engineering Camp</h4>
             <section>05/2026 - 08/2026</section>
           </header>
           <p>
-            Served as the lead coding instructor at Wayne State University's Summer Engineering Camp, hosted by the C2 Pipeline.
-            <br />
-            My main responsibility was to teach the fundamentals of programming to students anywhere from grades 3-12.
-            <br /><br />
-            Other responsibilities consisted of:
+            Served as a member of the staff in charge of running the program, in addition to 
+            creating all curriculum for the Coding & Game Design course.
+            <br /><br />Responsibilities consisted of:
           </p>
           <ul>
-            <li>Creating lesson plans surrounding basic programming concepts.</li>
-            <li>Building demo applications in Swift to serve as references for students.</li>
-            <li>Providing hands on support to students.</li>
-            <li>Addressing unique challenges and promoting skill development.</li>
-            <li>Coordinating with staff and faculty to improve the student experience.</li>
+            <li>Creating all curriculum for Coding & Game Design.</li>
+            <li>Assisting in curriculum for other courses</li>
+            <li>Organizing / managing events and field trips.</li>
+            <li>Training others to teach and mentor.</li>
+            <li>Creating activities for students (see "Create your own game" in projects).</li>
           </ul>
         </div>
       </section>
@@ -127,7 +125,9 @@ function Experience({ref}){
             <section>09/2021 - 10/2022</section>  
           </header>
           <p>
-              Working in an ice cream store didn't involve software, but rather meeting new people and developing leadership skills. It consisted of: 
+              Working in an ice cream store didn't involve software, but rather meeting new people and developing leadership skills. 
+            <br /><br />Responsibilities consisted of:
+
           </p>
               <ul>
                 <li>Resolving customer conflicts</li>

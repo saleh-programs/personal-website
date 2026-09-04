@@ -60,19 +60,9 @@
 
 
  .job:hover{
-  /* .jobInfo{
-    opacity: 0;
-  }
-  .jobLeft img{
-    opacity: 1;
-  }
-  .expander{
-    width: 575px;
-    height: 100%;
-  }
-  .jobRight{
-    animation: slideInJobInfo .2s ease forwards;
-  } */
+  transform: scale(.97);
+  transition: transform .1s;
+  cursor: pointer;
  }
 
  .job.showJob{
@@ -87,7 +77,8 @@
       height: 100%;
     }
     .jobRight{
-      animation: slideInJobInfo .2s ease forwards;
+      animation: slideInJobInfo .4s ease forwards;
+      pointer-events: auto;
     }
  }
 
@@ -147,7 +138,7 @@
 
   .expander{
     width: 0;
-    transition: width .1s;
+    transition: width .2s ease;
   }
 
   .jobRight{
@@ -162,6 +153,7 @@
     transform: translateX(0px);
     opacity: 0;
     overflow-y: auto;
+    pointer-events: none;
     header{
       text-align: center;
       h3, h4{
@@ -173,9 +165,13 @@
     p, ul{
       /* font-size: 1.1em; */
       padding: 30px;
+      margin-bottom: 0;
     }
     ul{
       margin-left: 12px;
+      margin-top: 0;
+      padding-top: 0;
+
     }
 
     &::-webkit-scrollbar {
