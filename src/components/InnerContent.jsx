@@ -231,7 +231,7 @@ function CreateYourOwnGameProject(){
             <div className={styles.description}>
               <h2 >Description</h2>
               "Create Your Own Game" is a project built for incoming students at the C2 Pipeline Engineering Summer Academy. The original inspiration came out of a desire to highlight how computers rely on files and directories for nearly everything they do. One way to do this, I thought, would be to have users 
-              create something completely unique, yet functionally no different than anyone elses.
+              create something completely unique, yet functionally no different than anyone elses. 
               <br /><br />
               While timed, you're meant to draw different aspects of your game. This may include the player being controlled, the background, coins, blocks, enemies, and more. Upon completing the last image,
               the game is generated on the server and served from a link that is sent back. 
@@ -602,7 +602,7 @@ function PlatformerProject(){
               <h2>Description</h2>
               A Hollow Knight inspired game made in Pygame with custom animations! The player can slash, shoot, and swing faced against enemies with unique logic!
               <br/><br/>
-              Gained a lot of skills navigating this somewhat large project and working with more complex solutions.<br/>
+              Gained a lot of skills navigating this somewhat large project and working with more complex solutions.<br/><br />
               Although unfinished, a lot was learned from all the effort dumped into custom enemy behaviors, the terrain system, camera perspectives, and much more. 
               <br /> <br />
               <a href="https://github.com/saleh-programs/platformer-game" target='_blank'>Github Repo</a>

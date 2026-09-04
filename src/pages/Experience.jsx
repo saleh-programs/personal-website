@@ -45,6 +45,37 @@ function Experience({ref}){
     <div className={styles.horizScrollable}>
       <section className={`${styles.job}`} onMouseEnter={scrollToJob} onClick={toggleJob}>
         <div className={styles.jobLeft}>
+          <img src={campImage2} width="3024" height="4032"/>
+          <section className={styles.jobInfo}>
+            <h3>Curriculum / Camp Coordinator</h3>
+            <h4> @ C2 Pipeline Engineering Camp</h4>
+            <section>05/2026 - 08/2026</section>
+          </section>
+        </div>
+        <section className={styles.expander}>
+        </section>
+        <div className={styles.jobRight}>
+          <header>
+            <h3>Curriculum / Camp Coordinator</h3>
+            <h4> @ C2 Pipeline Engineering Camp</h4>
+            <section>05/2026 - 08/2026</section>
+          </header>
+          <p>
+            Served as a member of the staff in charge of running the program, in addition to 
+            creating all curriculum for the Coding & Game Design course.
+            <br /><br />Responsibilities consisted of:
+          </p>
+          <ul>
+            <li>Creating all curriculum for Coding & Game Design.</li>
+            <li>Assisting in curriculum for other courses</li>
+            <li>Organizing / managing events and field trips.</li>
+            <li>Training others to teach and mentor.</li>
+            <li>Creating activities for students (see "Create your own game" in projects).</li>
+          </ul>
+        </div>
+      </section>
+      <section className={`${styles.job}`} onMouseEnter={scrollToJob} onClick={toggleJob}>
+        <div className={styles.jobLeft}>
           <img src={campImage1} width="4032" height="3024"/>
           <section className={styles.jobInfo}>
             <h3>Lead Coding Instructor</h3>
@@ -73,37 +104,6 @@ function Experience({ref}){
             <li>Providing hands on support to students.</li>
             <li>Addressing unique challenges and promoting skill development.</li>
             <li>Coordinating with staff and faculty to improve the student experience.</li>
-          </ul>
-        </div>
-      </section>
-      <section className={`${styles.job}`} onMouseEnter={scrollToJob} onClick={toggleJob}>
-        <div className={styles.jobLeft}>
-          <img src={campImage2} width="3024" height="4032"/>
-          <section className={styles.jobInfo}>
-            <h3>Curriculum / Camp Coordinator</h3>
-            <h4> @ C2 Pipeline Engineering Camp</h4>
-            <section>05/2026 - 08/2026</section>
-          </section>
-        </div>
-        <section className={styles.expander}>
-        </section>
-        <div className={styles.jobRight}>
-          <header>
-            <h3>Curriculum / Camp Coordinator</h3>
-            <h4> @ C2 Pipeline Engineering Camp</h4>
-            <section>05/2026 - 08/2026</section>
-          </header>
-          <p>
-            Served as a member of the staff in charge of running the program, in addition to 
-            creating all curriculum for the Coding & Game Design course.
-            <br /><br />Responsibilities consisted of:
-          </p>
-          <ul>
-            <li>Creating all curriculum for Coding & Game Design.</li>
-            <li>Assisting in curriculum for other courses</li>
-            <li>Organizing / managing events and field trips.</li>
-            <li>Training others to teach and mentor.</li>
-            <li>Creating activities for students (see "Create your own game" in projects).</li>
           </ul>
         </div>
       </section>

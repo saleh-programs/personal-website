@@ -47,7 +47,7 @@ function Bar({name, subname, subname2, contentID, date, link}){
               (link || date || subname2) && (link 
               ? 
                 <div className={styles.barRight} style={{display:"flex", flexDirection: "column"}}>
-                  <a href={link[1]} target='_blank'>{link[0]}</a>
+                  <section><a href={link[1]} target='_blank'>{link[0]}</a></section>
                   {subname2 && <span style={{
                     fontSize: ".7em",
                     opacity: ".6",

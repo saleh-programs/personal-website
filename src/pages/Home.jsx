@@ -84,9 +84,9 @@ function Home({ref}){
             About Me
           </div>
           <div className={styles.description}>
-            Hello! My name is Murad Saleh. This is a site I built to show my experience, education, projects, skills, and a few other things that employers may be looking for.
+            Hello! My name is Murad Saleh. This is a site I built to show my experience, education, projects, skills, and a few other things that employers may be looking for. 
             <br/><br/>
-            I'm looking for opportunities to grow my skills in the field of backend development. <br /><br /> <section style={{fontSize: ".55em"}}>Thank you for visiting! I would appreciate any feedback using the form at the bottom of the page. It will be sent anonymously. </section>
+            I'm searching for opportunities to gain valuable experience in the field of backend development. <br /><br /> <section style={{fontSize: ".55em"}}>Thank you for visiting! I would appreciate any feedback using the form at the bottom of the page. It will be sent anonymously. </section>
           </div>
           <div className={styles.links}>
             <a className={styles["img-container"]} href="https://github.com/saleh-programs" target='_blank'>

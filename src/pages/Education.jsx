@@ -24,7 +24,7 @@ function Education({ref}){
         <hr className={styles['hz-separator']}>
         </hr>
         <div className={styles.info}>
-          A brief breakdown of my education and academic achievements that I am proud to have received.<br/>
+          A brief breakdown of my education as well as academic achievements that I am proud to have received.<br/>
         </div>
       </div>
       <section className={styles.educationItem}>
