@@ -61,13 +61,12 @@ function Experience({ref}){
             <section>05/2026 - 08/2026</section>
           </header>
           <p>
-            Served as a member of the staff in charge of running the program, in addition to 
-            creating all curriculum for the Coding & Game Design course.
+            Served as a member of the staff in charge of running the program. Also designed the curriculum / activities for the "Coding & Game Design" course.
             <br /><br />Responsibilities consisted of:
           </p>
           <ul>
             <li>Creating all curriculum for Coding & Game Design.</li>
-            <li>Assisting in curriculum for other courses</li>
+            <li>Assisting in curriculum for other courses.</li>
             <li>Organizing / managing events and field trips.</li>
             <li>Training others to teach and mentor.</li>
             <li>Creating activities for students (see "Create your own game" in projects).</li>
@@ -132,9 +131,9 @@ function Experience({ref}){
               <ul>
                 <li>Resolving customer conflicts</li>
                 <li>Coordinating with a team</li>
-                <li>A fast paced environment</li>
-                <li>Quick and critical thinking</li>
-                <li>Efficient communication</li>
+                <li>Working in a fast paced environment</li>
+                <li>Offering quick and critical thinking</li>
+                <li>Communicating efficiently</li>
                 <li>Mentoring and encouraging others</li>
               </ul>
 

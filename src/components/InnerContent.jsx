@@ -55,7 +55,7 @@ function ProjectPlaceProject(){
           <div className={styles.descConcContainer}>
             <div className={styles.description}>
               <h2 >Description</h2>
-              Project Place is a communication platform for teams inspired by what I believe is missing from similar applications.
+              Project Place is a communication platform for teams inspired by the simplicity I believe is missing from similar applications.
               <br /><br />
               Teams often need to send messages, share files, hold meetings, and illustrate ideas to others.
               This project was built with these ideas in mind.
@@ -97,7 +97,7 @@ function ProjectPlaceProject(){
               <ul>
                 <li>Signup + login</li>
                 <li>Create + join rooms</li>
-                <li>Create + join protected rooms</li>
+                <li>Create + join password protected rooms</li>
                 <li>Change site appearance</li>
                 <li>Select, upload, and change avatars</li>
                 <li>View active members</li>
@@ -182,7 +182,7 @@ function CarMaintenanceProject(){
                Integrates APIs for maps, images, geocoding, and AI.<br/><br />
                Worked with a team of 5 people as the primary developer and team lead, implementing nearly all core features end to end (except the initial "Find local services" page, the home page, and some frontend work).
                <br /><br />
-               
+              <span style={{color: "red", fontSize: "1.15em"}}><strong>Note:</strong> Upon any <span style={{textDecoration: "underline"}}>initial</span> request to the backend, you must wait 50 seconds to receive a response. This is because the website that hosts the server can go to sleep if inactive for 15 minutes, and therefore there is an initial delay. (I am using a free tier).</span><br /><br />
               <a href="https://github.com/saleh-programs/car-maintenance-site" target='_blank'>Github Repo</a>
             </div>
             <div className={styles.concepts}>
@@ -295,13 +295,13 @@ function OMREFragrancesProject(){
               The following features are included:
               <ul>
                 <li>Create account / Log in</li>
-                <li>Admin Panel</li>
+                <li>Admin panel</li>
                 <li>Orders / Cart</li>
-                <li>Product Reviews</li>
-                <li>Store Credit</li>
+                <li>Product reviews</li>
+                <li>Store credit</li>
                 <li>Search / filter functionalities</li>
-                <li>Create Custom Blends</li> 
-                <li>Profile Management</li>
+                <li>Create custom blends</li> 
+                <li>Profile management</li>
               </ul>
 
               <h3 style={{marginBottom: "0"}}><strong>Main Contributions:</strong> </h3>
@@ -316,12 +316,12 @@ function OMREFragrancesProject(){
                 <li>Managed all "interfaces" (requests, api handlers, api controllers, database classes / methods, tests)</li>
                 <br />
                 <strong>Frontend-Related</strong>
-                <li>Product Detail Page</li>
+                <li>Product detail page</li>
                 <li>Any page with reviews or store credit</li>
                 <li>All image handling</li>
                 <li>All search / filter functionalities</li>
-                <li>Redesigns / enhancements in the admin panel (all tabs)</li>
-                <li>"Save for later" on the Cart page</li>
+                <li>Redesigns / Enhancements in the admin panel (all tabs)</li>
+                <li>"Save for later" on the cart page</li>
               </ul>
 
               Other contributions may include bug fixes, styling adjustments, optimizations (moreso readability and consistency than performance), security enhancements (enforcing token usage),  and logic that was written in the backend for another to develop in the front end.
@@ -339,8 +339,8 @@ function OMREFragrancesProject(){
                 <li>Images: AWS S3</li>
                 <li>Emails: AWS SES</li>
                 <li>Image CDN: AWS CloudFront</li>
-                <li>Database Hosting: AWS RDS</li>
-                <li>Access Management: AWS IAM</li>
+                <li>Database hosting: AWS RDS</li>
+                <li>Access management: AWS IAM</li>
                 <li>Signup + login + tokens: AWS Cognito</li>
 
                 <br />
@@ -561,6 +561,7 @@ function PhysicsToolProject(){
               A game designed to help physics students improve at solving kinematics based physics problems! Join Willow on a journey gliding through the air and sprinting on foot, all while solving word problems related to his situation. Maybe you'll even get to chat with him if you do well enough!
               <br/><br/>
               The game contains 10 levels of progressing difficulty and 3 questions each. Level 10 connects to the OpenAI API to allow you to chat with Willow.<br/><br />
+              <span style={{color: "red", fontSize: "1.15em"}}><strong>Note: </strong>When speaking to Willow in level 10, you must wait 50 seconds for him to respond the first time. This is because the website that hosts the server can go to sleep if inactive for 15 minutes, and therefore there is an initial delay. (I am using a free tier).</span><br /><br />
               <a href="https://github.com/saleh-programs/physics-practice-tool" target='_blank'>Github Repo</a>
             </div>
             <div className={styles.concepts}>
@@ -580,7 +581,6 @@ function PhysicsToolProject(){
                 <li>Problem generation system</li>
                 <li>Custom trails, textboxes, & more</li>
                 <li>UI / UX Design</li>
-
               </ul>
               </div>
           </div>
@@ -654,7 +654,7 @@ function PersonalWebsiteProject(){
                 <br />
                 <strong>Concepts</strong>
                 <li>Optimizing / prerendering assets</li>
-                <li>React Animations & Transitions</li>
+                <li>React animations & transitions</li>
                 <li>Mobile responsiveness</li>
                 <li>React best practices </li>
                 <li>Heavy UI / UX design</li>     

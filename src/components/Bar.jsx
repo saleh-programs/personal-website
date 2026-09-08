@@ -46,7 +46,7 @@ function Bar({name, subname, subname2, contentID, date, link}){
 
   return(
       <div className={styles['dropdown-ref']}>
-        <div className={`${styles.dropdown} ${isExpanded ? styles.rotateDropdown:""}`} onClick={()=>setIsExpanded(prev => !prev)}>
+        <div className={`${styles.dropdown} ${isExpanded ? styles.rotateDropdown:""}`} onClick={toggleBar}>
           <img src={Dropdown} alt="" />
         </div>
         <div className={styles.bar} onClick={toggleBar}>

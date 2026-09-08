@@ -357,8 +357,20 @@ h1, h2, h2{
   }
 }
 
+
 @media (max-width: 500px) {
   .skipAnimation{
     font-size: .8rem;
+  }
+
+  .background{
+      .animationContainer{
+        > canvas{
+          width: 200px;
+        }
+      }
+  }
+  .staticBench{
+    width: 200px;
   }
 }
